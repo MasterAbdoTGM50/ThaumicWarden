@@ -1,0 +1,25 @@
+#################
+## Mod Ignores
+#################
+
+## Gradle
+/.gradle
+/build
+/eclipse
+/gradle
+/gradlew
+/gradlew.bat
+
+## Eclipse
+/.settings
+/.metadata
+/.classpath
+/.project
+/bin
+
+## Misc
+/mcp
+/lib
+/run
+/jar
+/tex
