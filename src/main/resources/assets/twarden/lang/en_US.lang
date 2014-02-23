@@ -1,0 +1,127 @@
+﻿#Misc
+itemGroup.TWarden = Thaumic Warden
+
+#Items
+item.WardenHelmet.name = Warden's Helmet
+item.WardenChestplate.name = Warden's Chestplate
+item.WardenLeggings.name = Warden's Leggings
+item.WardenBoots.name = Warden's Boots
+item.WardenSword.name = Warden's Sword
+item.WardenBow.name = Warden's Bow
+item.WardenResource.0.name = Infused Quartz
+item.WardenResource.1.name = Empty Sigil's Frame
+item.WardenResource.2.name = Warden's Shard
+item.WardenResource.3.name = Warden's Stone
+item.WardenResource.4.name = Tainted Blood Spill
+item.WardenSigil.name = Warden's Sigil
+item.WardenAmulet.name = Abdo's Amulet
+item.TaintedBlood.name = Eldritch Blood Vial
+
+#Blocks
+tile.WardenFlower.name = Warden's Rose
+
+#Aspects
+tc.aspect.wardena = Warden, Vigil, Victory, Sacrifice
+
+#Text
+info.amuletavailible = Right Click to empower
+info.amuletcooldown = Cooldown
+
+# Special formatting codes:
+# <BR> or <BR/>         Paragraph break (<BR/> is included for people using XML for their localization)
+# <LINE> or <LINE/>     Insert a fancy linebreak between sections of text.
+# <IMG>...</IMG>  Insert a centered image into text. Parameters are separated by ':' and are:
+#                    - mod resource location name
+#                    - png file location (assumed to be a 256x256 texture, a sub-image will be grabbed from this png as specified below)
+#                    - x location of sub-image in png
+#                    - y location of sub-image in png
+#                    - x size of sub-image (255 if full x size of png must be used)
+#                    - y size of sub-image (255 if full y size of png must be used)
+#                    - scaling - 1.0 for normal 256x256 images, or smaller for proportionately smaller .png files (a 16x16 image will be 0.0625)   
+#               Examples: 
+#                   <IMG>thaumcraft:textures/gui/gui_researchbook.png:24:184:96:4:1.0</IMG>   <-- line break image as used in <LINE> above
+#                   <IMG>thaumcraft:textures/items/alumentum.png:0:0:255:255:0.0625</IMG>     <-- alumentum item icon
+
+#Research
+tc.research_category.TWARDEN = Wardenic Arts
+
+twresearch.name.TWardens = Thaumic Wardens
+twresearch.text.TWardens = What?
+twresearch.page.TWardens.0 = Thaumic Wardens are an order of thaumics who have helped protect the world from the Eldritch.These men of honour and valour have a grand history.They came to prominence even before the Wither Wars.<BR>Despite that, you seem to not know anything about their history except for them originating from the Master Warden Abdo and his two friends.<BR>You think you'll be able to know more through research.
+
+twresearch.name.TWFlower = Warden's Rose
+twresearch.text.TWFlower = How beautiful
+twresearch.page.TWFlower.0 = This strange rose has been twisted by Thaumic energies, forming a beautiful crystal where its stigma would have otherwise grown.
+
+twresearch.name.Memories = The Memories
+twresearch.text.Memories = That's it
+twresearch.page.Memories.0 = Master Abdo was a brilliant man.You have discovered that he has left fragments of his memory through the flux and the aura in order for others to discover the truth about the Eldritch, Thaumturgy, the Wardens and him.
+
+twresearch.name.TWQuartz = Infused Quartz
+twresearch.text.TWQuartz = With no stars
+twresearch.page.TWQuartz.0 = Through your research you learned the old ways of making Infused Quartz. This material was used for most of the Wardens' armors, weapons and machinery. The origin of this material is unknown and you have no clue how Master Abdo came up with it.
+
+twresearch.name.TWSigil = Warden's Sigil
+twresearch.text.TWSigil = You are sworn
+twresearch.page.TWSigil.0 = By combing Infused Quartz with Obsidian Tiles you were able to discover an empty sigil frame. The sigil appears to lack any energy, and thus charging must be done.<BR>To give power to the Sigil you must combine it with 4 Warden's Shards.
+
+twresearch.name.TWArmor = The Armory
+twresearch.text.TWArmor = Cool and Protective
+twresearch.page.TWArmor.0 = The tales always spoke of the Wardens' armor and how protected the first Wardens.<LINE>Through your research you discovered how to create it again using the Warden's Sigil.<BR>The armor uses the robes and the thaumium armor which gives it a unique look and the Sigil increases the armor's protection making you nearly invincible.
+
+twresearch.name.TWWeapon = The Weaponry
+twresearch.text.TWWeapon = Awesome and Deadly
+twresearch.page.TWWeapon.0 = the tales always spoke of the Wardens' weapons and how it slayed thousands of enemies in a flash.<LINE>Through your research you discovered how to create weapons again using the Warden's Sigil.
+
+twresearch.name.TWStone = Warden's Stone
+twresearch.text.TWStone = Shouldn't it be a shard
+twresearch.page.TWStone.0 = By combining Warden's shards with a Mixed Crystal Cluster you can create the very basic material called the "Warden's Stone".<BR>You can't think of a use for it now but, maybe Master Abdo left you something to look for.
+
+twresearch.name.TWAmulet = The Amulet
+twresearch.text.TWAmulet = Wait!!!Not a stone
+twresearch.page.TWAmulet.0 = Master Abdo was a resourceful man.<BR>He was able to create the magnificent from the mundane and now he has shown you his secret.<BR>The answer was simple. By creating an amulet from the Warden's Stone and fusing it with aspects you will have his secret.<BR>Master Abdo was also known for his strength and you think the Amulet has something to do with it.
+
+twresearch.name.History1 = The Prologue
+twresearch.text.History1 = I know what you're thinking
+twresearch.page.History1.0 = It all began when I joined the college of thaumturges. I thought that if I learn the Thaumic Arts , I could help others and be a better man. <BR>Hhhh, I know what you are thinking now child "why is there a college, shouldn't you just research it?". That's very conservative of you but, you must know that in your time the knowledge is lost and scattered throughout the aura and flux. That's why you research it, so that you may find it just, like what you did with my memory fragments. In my time however the knowledge is not lost but kept and taught by master thaumturges.<BR>
+twresearch.page.History1.1 = On the first day we were taught how to craft our own wands. You won't believe how happy I was when I crafted my first wand. <BR>I kept learning and learning until I could reach my limit. I became a thaumic with only a few weeks till I become a thaumturge and learn the secrets of infusion to become a master.  <BR>Everything went well until that day.
+
+twresearch.name.History2 = The Beginning
+twresearch.text.History2 = More of a turn of events
+twresearch.page.History2.0 = One day I received word that the Eldritch are attacking one of the nearby villages. The problem was that Master Azanor had strict orders about interfering with the Eldritch just, for the simple reason of them being the origin of all of our powers. <BR>I can't get why Master Azanor made that deal with them. I couldn't stay put in my place doing nothing so, I decided to go there. I knew that the consequences will be tragic but, I just had to do it. <BR>Once I had reached the village ,I rushed in without thinking of anything but, saving the poor village.
+twresearch.page.History2.1 = Every time I killed one of them , ten more appeared in it's place. I had to think but, I heard a weird voice coming from the center of the village so, I went there in hope of finding a way to stop this massacre.<BR>When I reached the center of the village, I found an Eldritch Elder with a weird staff. I thought that he was the one reanimating his brethren and so I confronted him but, he stopped me and hung me up in the air. <BR>I thought I was done for until that creature appeared. He cut the elder in halves and just flew away. After he saved me I thought that I should finish what I started and
+twresearch.page.History2.2 = The village suffered many casualties but were thankful for the help. However, I just couldn't forget my failure at protecting the village. After that I went back to the college but, news of my actions were already ahead of me. When Master Azanor knew about this he raged as we have never seen before. He sent me to the court of elders and there the decided my fate.<BR>I became an outcast from that moment, destined to stay in the college no more. You would think that would end my story but, the truth is it's only the beginning.
+
+twresearch.name.History3 = The Damsel in Distress
+twresearch.text.History3 = Catch the reference
+twresearch.page.History3.0 = I became an outcast but, that didn't stop me. I began a journey in hope of finding a way to stop the Eldritch. My first stop was the village of Karia, a small village but, a decent place to have a rest. I went to the INN and had some food. then I went to my camp nearby to sleep. Unfortunately I couldn't sleep that night because I was thinking about my next move. I was only a day away from becoming a thaumturge and now nothing. <BR>Fate sure does play in a weird way. <BR>When sleep finally befell me, I suddenly woke up to a weird voice. The voice was very familiar and I hoped it was not what I was thinking.
+twresearch.page.History3.1 = I put on my clothes and hurried to the source of that voice. It was what I feared "an Eldritch". Usually they are in teams but, this Eldritch is alone. What could he be doing here and why hasn't anybody noticed him? I moved close to investigate and was surprised to know what he was actually doing. <BR>He was kidnapping a girl! When I reached him , he was already aware of me and so we started our battle. The thing was different than the others I have fought before. He was quicker and stronger in a very strange way but, he was less intelligent and that was his weak point. I quicky figured out a way make it ram into a wall, killing itself, by making it go into a blind rage.
+twresearch.page.History3.2 = The girl was still still unconscious and so I decided to take her to my camp.<BR>When putting her to rest on my bed, I noticed something. She had a wand but, it wasn't made out of greatwood, it was made out of silverwood. <BR>Could it be that she is a thaumturge?
+
+twresearch.name.History4 = Awkward Moments
+twresearch.text.History4 = And funny too
+twresearch.page.History4.0 = Sitting near the fire I gazed at her. She had pink hair and the most beautiful face I have ever seen. I stayed awake all night in fear that she might get attacked again. When she awoke in the morning, I expected her to ask were she is and to thank me. However, she pointed her wand right at my head and threatened to kill me if I don't explain why she is here.<BR>"Is that how you treat your savior?" I replied<BR>Then she asked me what I mean by that. I told her everything and how she was going to get kidnapped by that Eldritch.
+twresearch.page.History4.1 = Her face went completely red while she lowered her wand and said, "Well ah... I suppose I should thank you"<BR>"Don't worry about it , it was nothing" I replied.<BR>She asked me what my name was so I said, "Abdo and you"<BR>"just call me Lizbeth" she replied.<BR>We sat down infront of the fire and I asked her about her wand. She told me how she was an outcast and that she left the college in search of new arts. I felt more comfortable knowing that but, then she asked me about my wand and why it's still made of greatwood.
+twresearch.page.History4.2 = I told her that I'm like she in being an outcast but, unlike her I didn't complete my training. "Forgive for my curiosity Abdo but, why were you cast out?" she asked.<BR>I told her that it was because I saved a village from the Eldritch and that's why Master Azanor cast me out.<BR>She looked at my face and I didn't understand the look but, I asked her if she would want to join me in my journey. She accepted with the most beautiful smile.
+
+twresearch.name.History5 = A Good King
+twresearch.text.History5 = Seriously
+twresearch.page.History5.0 = With Lizbeth at my side I now feel stronger but alone we can't defeat the Eldritch. We need just one more and I think I know who. The man I was looking for is known as Wesley and he's an outcast just like us but, he had a different reputation with other thaumturges. He's an aspiring man and nothing stood in his way and that's why I chose him.<BR>Once we have reached the hold of Mesr ,I asked the guard about someone called Wesley. His reply was by hitting me in the stomach. Questions flew through my mind as I asked why to the gaurd, only to be  slapped and put on the ground. The guard's voice rang, "Have respect to his majesty!"
+twresearch.page.History5.1 = "What? His majesty!?!", I said<BR>The guard went away while Lizbeth watched and laughed. I told her to stop and to help me stand up. <BR>"I can't believe you saved me and can't handle a guard?" she said.<BR>"Well I wasn't the sleeping maiden when I got attacked" I replied.<BR>"Well shut up and let's find that wesley guy of yours" she angrily replied.<BR>We went to the castle and apparently there was a very important meeting going on. So We stayed near the crowed to know what they were talking about.
+twresearch.page.History5.2 = "Well , I WON'T stand idly while the Eldritch destroy my hold and slaughter my people" The King shouted!<BR>Only then I was assured that he is the man I need to stop the Eldritch.
+
+twresearch.name.History6 = And A Good Friend
+twresearch.text.History6 = In need
+twresearch.page.History6.0 = I confronted the king and said, "Your majesty , forgive my intrusion but, I have an important matter to discuss with you but that cannot be discussed here"<BR>"And why should I talk to you traveller?" the king said. <BR>I took out my wand and held it high. He saw it and then agree'd to take me to his quarters.<BR>There we discussed the matter of the Eldritch and their rising threat. He seemed to agree to what was said and so I asked him to...
+twresearch.page.History6.1 = Suddenly a guard rushed in the door and said, "My king they have breached the outer walls , we must act fast if we are to save the hold".<BR>Then The king told me that if I help them he shall grant me what I seek. I said, "Don't worry my king it will be taken care of."<BR>I went to the walls and found Lizbeth there fighting."Are you always late like that?" she asked.<BR>"I like to have a dramatic entrance.", I replied. We scattered and fought fiercely but, ...<BR>I saw an Eldritch sneaking to hit Lizbeth from the back. I couldn't allow that to happen. So with out a thought,
+twresearch.page.History6.2 = I rushed in and blocked the hit for her.<BR>"You fool , why did you do that?" Lizbeth said. I smiled at her and collapsed on the ground. As we got surrounded, it would have been the end if not for him.<BR>I saw the Eldritch fall on the ground one after another. My eyes scanned the field and saw the king with a very strange wand. When he struck down the remaining Eldritch, he came close to Lizbeth and I and said, "Guards! Take him to the healer, I want him fine by the morning".
+
+twresearch.name.History7 = One Step Closer
+twresearch.text.History7 = Can't think of a line
+twresearch.page.History7.0 = I opened my eyes to find myself in a weird room and as I looked around me I saw Lizbeth sitting near me. As I stood up she suddenly hit me.<BR>"HEY, What was that for?" I asked,<BR>"Never worry me like that" she replied.<BR>I wanted to tell her but,...<BR>The king came in and said : "How are you holding up my friend?"<BR>"Fine your majesty, thanks for asking"<BR>"Please Abdo , Call me Wesley" the king replied.
+twresearch.page.History7.1 = "Alright your majes... I mean .. Wesley", I commented. Then the king asked me what I had required of him and I told him that I had wanted to build an army so that we may stop the attack of the Eldritch.<BR>Wesley starred at me and said, "Fine, the army will be ready at dawn but, do you know where to strike?"<BR>"Yes Wesley" I replied. And so with thousands of men at my command and with two friends at my side we march to battle in hope of victory.
+
+
+
+
+

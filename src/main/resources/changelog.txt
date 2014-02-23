@@ -1,0 +1,31 @@
+0.5R2:
+-The mod now uses ForgeGradle
+-The mod no longer uses the ItemApi of thaumcraft and references items and blocks directly from the mod
+-The Warden's Boots no longer climb one block spaces
+-Heavily nerfed the recipes
+-Thanks to Eldur and AlmtyBob we now have better research entries.
+0.5R1:
+-The mod is no longer WIP
+-Hopefully enhanced documentation
+-Added the Wardena Aspect
+-All research now requires the Wardena Aspect
+0.5B4:
+-Implemented the lore
+-Assigned custom tags for items
+-Fixed recipe bugs
+0.5B3:
+-All the armors and tools are now breakable
+-The Boots can now climb 1 block space (just like the boots of the traveller)
+-A surprise(P.S:Check the armors)
+0.5B2:
+-Hopefully balanced the mod
+0.5B1:
+-Edited and rearranged most of the research entries
+-Rearranged the IDs
+-Added the "Warden's Bow"
+-Added "Abdo's Amulet":can be used to transform items other items (just like the minium stone from EE3 but, has recipes for thaumcraft) and can be used to buff yourself
+0.5A2:
+-Fixed A typo
+-Added the "Warden's Sword"
+0.5A1:
+-Initial Release
