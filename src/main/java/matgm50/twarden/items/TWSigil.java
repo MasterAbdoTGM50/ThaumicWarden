@@ -2,6 +2,7 @@ package matgm50.twarden.items;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Random;
 
@@ -26,50 +27,55 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class TWSigil extends Item {
 
 	public TWSigil(int ID) {
-		
+
 		super(ID);
 		setUnlocalizedName(TWItemConfig.TWSIGIL_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
-		
+
 	}
-	
+
 	@Override
-    public EnumRarity getRarity(ItemStack Sword) {
-		
-            return EnumRarity.rare;
-            
-    }
-	
-	
+	public EnumRarity getRarity(ItemStack Sword) {
+
+		return EnumRarity.rare;
+
+	}
+
 	@Override
 	public ItemStack onItemRightClick(ItemStack Itemstack, World World, EntityPlayer Player) {
-		
-		ClassLoader Loader = getClass().getClassLoader();
-		
-		File file = new File(Loader.getResource("assets/twarden/schematics/Tesr.schematic").getFile());
-		
-		Random Rand = null;
-		
-		try {
+
+		if (!World.isRemote) {
+
+			ClassLoader Loader = getClass().getClassLoader();
+
+			InputStream Sche = Loader.getResourceAsStream("assets/twarden/schematics/big.schematic");
+
+			Random Rand = null;
+
+			try {
+
+				Player.addChatMessage(Sche.toString());
+
+				TWScheLoader Test = new TWScheLoader(Sche);
+
+				Test.generate(World, Rand, (int) Player.posX,
+						(int) Player.posY + 5, (int) Player.posZ);
+
+			} catch (IOException e) {e.printStackTrace();}
 			
-			Player.addChatMessage(file.getAbsolutePath());
-			
-			TWScheLoader tesr = new TWScheLoader(file);
-			
-			tesr.generate(World, Rand,(int) Player.posX, (int)Player.posY + 5, (int)Player.posZ);
-			
-		} catch (IOException e) {e.printStackTrace();}
+		}
 		
 		return Itemstack;
-		
+
 	}
-	
+
 	@Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister Register) {
-		
-            itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardensigil" );
-            
-    }
-	
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister Register) {
+
+		itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase()
+				+ ":" + "wardensigil");
+
+	}
+
 }
