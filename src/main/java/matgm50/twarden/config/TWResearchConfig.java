@@ -12,10 +12,11 @@ public class TWResearchConfig {
 	public static final String TWARDENS_KEY = "TWardens";
 	public static final String MEMORIES_KEY = "Memories";
 	public static final String TWQUARTZ_KEY = "TWQuartz";
+	public static final String TWFABRIC_KEY = "TWFabric";
+	public static final String TWBLOOD_KEY = "TWBlood";
 	public static final String TWSIGIL_KEY = "TWSigil";
 	public static final String TWARMOR_KEY = "TWArmor";
 	public static final String TWWEAPON_KEY = "TWWeapon";
-	public static final String TWSTONE_KEY = "TWStone";
 	public static final String TWAMULET_KEY = "TWAmulet";
 	public static final String TWFLOWER_KEY = "TWFlower";
 	public static final String HISTORY1_KEY = "History1";
@@ -25,5 +26,10 @@ public class TWResearchConfig {
 	public static final String HISTORY5_KEY = "History5";
 	public static final String HISTORY6_KEY = "History6";
 	public static final String HISTORY7_KEY = "History7";
+	public static final String HISTORY8_KEY = "History8";
+	public static final String HISTORY9_KEY = "History9";
+	public static final String HISTORY10_KEY = "History10";
+	public static final String HISTORY11_KEY = "History11";
+	public static final String HISTORY12_KEY = "History12";
 	
 }

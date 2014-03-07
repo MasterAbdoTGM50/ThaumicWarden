@@ -3,7 +3,6 @@ package matgm50.twarden.items;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
-import matgm50.twarden.models.TWBootsModel;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
@@ -54,34 +53,21 @@ public class TWBoots extends ItemArmor implements IRepairable, IVisDiscountGear 
     }
 	
 	@Override
-	public void onArmorTickUpdate(World World, EntityPlayer Player, ItemStack Itemstack) {
-		
-		Player.fallDistance = 0;
-		
-	}
-	
-	@Override
 	public boolean getIsRepairable(ItemStack Armor, ItemStack ItemInSlot) {
 		
-		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 0)) ? true : super.getIsRepairable(Armor, ItemInSlot);
+		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 1)) ? true : super.getIsRepairable(Armor, ItemInSlot);
 		
 	}
 	
 	@Override
-	@SideOnly(Side.CLIENT)
-	public ModelBiped getArmorModel(EntityLivingBase Entity, ItemStack Itemstack, int Slot) {
+    @SideOnly(Side.CLIENT)
+	public ModelBiped getArmorModel(EntityLivingBase Player, ItemStack Itemstack, int Slot) {
 		
-		ModelBiped Model = new TWBootsModel(1);
+		ModelBiped Model = new ModelBiped(0.5F);
 		
-		Model.isSneak = Entity.isSneaking();
-		Model.isRiding = Entity.isRiding();
-		Model.isChild = Entity.isChild();
-		Model.heldItemRight = Entity.getCurrentItemOrArmor(0) != null ? 1 :0;
-		if(Entity instanceof EntityPlayer) {
-			
-			Model.aimedBow =((EntityPlayer)Entity).getItemInUseDuration() > 2;
-			
-		}
+		Model.isSneak = Player.isSneaking();
+		Model.isRiding = Player.isRiding();
+		Model.isChild = Player.isChild();
 		
 		return Model;
 		
@@ -92,7 +78,7 @@ public class TWBoots extends ItemArmor implements IRepairable, IVisDiscountGear 
 	public String getArmorTexture(ItemStack Stack, Entity Entity, int Slot, int Layer)
     {
 		
-        return "twarden:textures/models/twboots.png";
+        return "twarden:textures/armors/wardenboots.png";
         
     }
 	

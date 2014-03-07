@@ -2,10 +2,11 @@ package matgm50.twarden.items;
 
 import java.util.List;
 
+import thaumcraft.common.config.Config;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
-import matgm50.twarden.misc.TWTab;
+import matgm50.twarden.util.TWTab;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -37,53 +38,6 @@ public class TWAmulet extends Item {
 		
             return EnumRarity.rare;
             
-    }
-	
-	@Override
-	public ItemStack onItemRightClick(ItemStack Itemstack, World World, EntityPlayer Player) {
-		
-		if(Itemstack.getItemDamage() == 0) {
-			
-			Player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 300, 2));
-			Player.addPotionEffect(new PotionEffect(Potion.jump.getId(), 300, 2));
-			Player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 300, 2));
-			Player.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 300, 2));
-			Player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 300, 2));
-			
-			Itemstack.setItemDamage(600);
-			
-		}
-		
-		
-        return Itemstack;
-        
-    }
-	
-	@Override
-	public void onUpdate(ItemStack Itemstack, World World, Entity Entity, int Par4, boolean Par5) {
-		
-		if (Itemstack.getItemDamage() > 0) {
-			
-			Itemstack.setItemDamage(Itemstack.getItemDamage() - 1);
-			
-		}
-		
-	}
-	
-    public void addInformation(ItemStack Itemstack, EntityPlayer Player, List List, boolean Par4) {
-    	
-    	int Cooldown = Itemstack.getItemDamage()/20;
-    	
-    	if(Itemstack.getItemDamage() == 0) {
-    		
-    		List.add(StatCollector.translateToLocal("info.amuletavailible"));
-    		
-    	} else if (Itemstack.getItemDamage() > 0) {
-    		
-    		List.add(StatCollector.translateToLocal("info.amuletcooldown") + " : " + Cooldown);
-    		
-    	}
-    	
     }
 	
 	@Override

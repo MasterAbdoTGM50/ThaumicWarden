@@ -13,12 +13,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TWFlowerGen implements IWorldGenerator {
 	
-	public static void Init() {
-		
-		GameRegistry.registerWorldGenerator(new TWFlowerGen());
-		
-	}
-
 	@Override
 	public void generate(Random Random, int ChunkX, int ChunkZ, World World, IChunkProvider ChunkGenerator, IChunkProvider ChunkProvider) {
 	    

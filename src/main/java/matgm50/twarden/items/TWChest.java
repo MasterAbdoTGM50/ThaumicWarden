@@ -6,13 +6,13 @@ import thaumcraft.api.aspects.Aspect;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
-import matgm50.twarden.misc.TWTab;
-import matgm50.twarden.models.TWChestModel;
+import matgm50.twarden.util.TWTab;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -56,36 +56,45 @@ public class TWChest extends ItemArmor implements IRepairable, IVisDiscountGear 
     }
 	
 	@Override
-	public void onArmorTickUpdate(World World, EntityPlayer Player, ItemStack Itemstack) {
-		
-		if (Player.isBurning()) {
-			
-			Player.extinguish();
-			
-		}
-		
-	}
-	
-	@Override
 	public boolean getIsRepairable(ItemStack Armor, ItemStack ItemInSlot) {
 		
-		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 0)) ? true : super.getIsRepairable(Armor, ItemInSlot);
+		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 1)) ? true : super.getIsRepairable(Armor, ItemInSlot);
 		
 	}
 	
 	@Override
-	@SideOnly(Side.CLIENT)
-	public ModelBiped getArmorModel(EntityLivingBase Entity, ItemStack Itemstack, int Slot) {
+    @SideOnly(Side.CLIENT)
+	public ModelBiped getArmorModel(EntityLivingBase Player, ItemStack Itemstack, int Slot) {
 		
-		ModelBiped Model = new TWChestModel(1);
+		ModelBiped Model = new ModelBiped(0.5F);
 		
-		Model.isSneak = Entity.isSneaking();
-		Model.isRiding = Entity.isRiding();
-		Model.isChild = Entity.isChild();
-		Model.heldItemRight = Entity.getCurrentItemOrArmor(0) != null ? 1 :0;
-		if(Entity instanceof EntityPlayer) {
+		Model.isSneak = Player.isSneaking();
+		Model.isRiding = Player.isRiding();
+		Model.isChild = Player.isChild();
+		
+		if(Player instanceof EntityPlayer) {
 			
-			Model.aimedBow =((EntityPlayer)Entity).getItemInUseDuration() > 2;
+			EntityPlayer PlayerR = (EntityPlayer) Player;
+			
+			ItemStack ItemInUse = PlayerR.getHeldItem();
+			
+			Model.heldItemRight = ItemInUse != null ? 1 : 0;
+			
+			if (ItemInUse != null && PlayerR.getItemInUseCount() > 0) {
+				
+				EnumAction Action = ItemInUse.getItemUseAction();
+				
+				if (Action == EnumAction.block) {
+					
+					Model.heldItemRight = 3;
+					
+				} else if (Action == EnumAction.bow) {
+					
+					Model.aimedBow = true;
+					
+				}
+				
+			}
 			
 		}
 		
@@ -98,7 +107,7 @@ public class TWChest extends ItemArmor implements IRepairable, IVisDiscountGear 
 	public String getArmorTexture(ItemStack Stack, Entity Entity, int Slot, int Layer)
     {
 		
-        return "twarden:textures/models/twchest.png";
+        return "twarden:textures/armors/wardenchest.png";
         
     }
 		

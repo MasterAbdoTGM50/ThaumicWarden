@@ -1,22 +1,22 @@
 package matgm50.twarden;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import matgm50.twarden.aspects.TWAspects;
 import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWConfig;
 import matgm50.twarden.config.TWModConfig;
 import matgm50.twarden.crafting.TWCraftHandler;
-import matgm50.twarden.crafting.TWTransRecipes;
 import matgm50.twarden.crafting.TWRecipes;
-import matgm50.twarden.events.TWEvent;
+import matgm50.twarden.entities.TWEntities;
 import matgm50.twarden.items.TWItems;
-import matgm50.twarden.misc.TWLang;
-import matgm50.twarden.misc.TWTab;
-import matgm50.twarden.network.TWTick;
 import matgm50.twarden.network.packet.TWPacket;
 import matgm50.twarden.network.proxy.TWCommonProxy;
 import matgm50.twarden.research.TWResearch;
-import matgm50.twarden.world.TWFlowerGen;
+import matgm50.twarden.util.TWLang;
+import matgm50.twarden.util.TWTab;
+import matgm50.twarden.util.TWTick;
+import matgm50.twarden.world.TWGen;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -36,7 +36,7 @@ public class TWarden {
 	@Instance(TWModConfig.TWMOD_ID)
     public static TWarden Instance;
 	
-    @SidedProxy(clientSide = TWModConfig.TWMOD_CLIENTPROXY, serverSide = TWModConfig.TWMOD_COMMONPROXY)
+    @SidedProxy(serverSide = TWModConfig.TWMOD_COMMONPROXY, clientSide = TWModConfig.TWMOD_CLIENTPROXY)
     public static TWCommonProxy TWProxy;
     
 	public static CreativeTabs TWTab = new TWTab(TWModConfig.TWMOD_ID);
@@ -45,11 +45,14 @@ public class TWarden {
 	public void PreInit(FMLPreInitializationEvent Event) {
 		
 		TWConfig.Init(Event.getSuggestedConfigurationFile());
-		TWTick.Init();
-		TWFlowerGen.Init();
+		TWProxy.InitTick();
+		TWProxy.InitRenderer();
+		TWGen.Init();
 		TWCraftHandler.Init();
 		TWItems.Init();
 		TWBlocks.Init();
+		TWEntities.Init();
+		
 		
 	}
 	
@@ -62,9 +65,8 @@ public class TWarden {
 	public void PostInit(FMLPostInitializationEvent Event) {
 		
 		TWRecipes.Init();
-		TWTransRecipes.Init();
-		TWResearch.Init();
 		TWAspects.Init();
+		TWResearch.Init();
 		TWLang.Init();
 		
 	}

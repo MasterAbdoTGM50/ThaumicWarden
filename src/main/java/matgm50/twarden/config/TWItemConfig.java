@@ -26,19 +26,15 @@ public class TWItemConfig {
 	public static final String TWBOOTS_KEY = "TWBoots";
 	public static final String TWBOOTS_UN_NAME = "WardenBoots";
 	
-	public static int TWSWORD_ID;
-	public static final int TWSWORD_DID = 15105;
-	public static final String TWSWORD_KEY = "TWSword";
-	public static final String TWSWORD_UN_NAME = "WardenSword";
+	public static int TWCROSS_ID;
+	public static final int TWCROSS_DID = 15105;
+	public static final String TWCROSS_KEY = "TWCross";
+	public static final String TWCROSS_UN_NAME = "WardenCross";
 	
-	public static int TWBOW_ID;
-	public static final int TWBOW_DID = 15106;
-	public static final String TWBOW_KEY = "TWBow";
-	public static final String TWBOW_UN_NAME = "WardenBow";
-	
-	@SideOnly(Side.CLIENT)
-	public static Icon[] TWBOWDRAWN_ICON;
-	public static final String[] TWBOWDRAWN_ICONNAME = { "wardenbowdrawn0", "wardenbowdrawn1", "wardenbowdrawn2"};
+	public static int TWAMULET_ID;
+	public static final int TWAMULET_DID = 15106;
+	public static final String TWAMULET_KEY = "TWAmulet";
+	public static final String TWAMULET_UN_NAME = "WardenAmulet";
 	
 	public static int TWRESOURCE_ID;
 	public static final int TWRESOURCE_DID = 15107;
@@ -47,21 +43,36 @@ public class TWItemConfig {
 	
 	@SideOnly(Side.CLIENT)
 	public static Icon[] TWRESOURCE_ICON;
-	public static final String[] TWRESOURCE_ICONNAME = {"infusedquartz", "wardensigilframe", "wardenshard", "wardenstone", "taintedbloodspill"};
+	public static final String[] TWRESOURCE_ICONNAME = {"wardenquartz", "wardenfabric", "wardensigilframe", "wardenshard", "wardenstone"};
 	
 	public static int TWSIGIL_ID;
 	public static final int TWSIGIL_DID = 15108;
 	public static final String TWSIGIL_KEY = "TWSigil";
 	public static final String TWSIGIL_UN_NAME = "WardenSigil";
 	
-	public static int TWAMULET_ID;
-	public static final int TWAMULET_DID = 15109;
-	public static final String TWAMULET_KEY = "TWAmulet";
-	public static final String TWAMULET_UN_NAME = "WardenAmulet";
+	public static int TWTAINTEDHELM_ID;
+	public static final int TWTAINTEDHELM_DID = 15109;
+	public static final String TWTAINTEDHELM_KEY = "TWTaintedHelmet";
+	public static final String TWTAINTEDHELM_UN_NAME = "TaintedHelmet";
 	
-	public static int TWBLOOD_ID;
-	public static final int TWBLOOD_DID = 15110;
-	public static final String TWBLOOD_KEY = "TWBlood";
-	public static final String TWBLOOD_UN_NAME = "TaintedBlood";
+	public static int TWTAINTEDCHEST_ID;
+	public static final int TWTAINTEDCHEST_DID = 15110;
+	public static final String TWTAINTEDCHEST_KEY = "TWTaintedChestplate";
+	public static final String TWTAINTEDCHEST_UN_NAME = "TaintedChestplate";
+	
+	public static int TWTAINTEDLEGS_ID;
+	public static final int TWTAINTEDLEGS_DID = 15111;
+	public static final String TWTAINTEDLEGS_KEY = "TWTaintedLeggings";
+	public static final String TWTAINTEDLEGS_UN_NAME = "TaintedLeggings";
+	
+	public static int TWTAINTEDBOOTS_ID;
+	public static final int TWTAINTEDBOOTS_DID = 15112;
+	public static final String TWTAINTEDBOOTS_KEY = "TWTaintedBoots";
+	public static final String TWTAINTEDBOOTS_UN_NAME = "TaintedBoots";
+	
+	public static int TWTAINTEDBLADE_ID;
+	public static final int TWTAINTEDBLADE_DID = 15113;
+	public static final String TWTAINTEDBLADE_KEY = "TWTaintedBlade";
+	public static final String TWTAINTEDBLADE_UN_NAME = "TaintedBlade";
 	
 }

@@ -6,26 +6,29 @@ item.WardenHelmet.name = Warden's Helmet
 item.WardenChestplate.name = Warden's Chestplate
 item.WardenLeggings.name = Warden's Leggings
 item.WardenBoots.name = Warden's Boots
-item.WardenSword.name = Warden's Sword
-item.WardenBow.name = Warden's Bow
-item.WardenResource.0.name = Infused Quartz
-item.WardenResource.1.name = Empty Sigil's Frame
-item.WardenResource.2.name = Warden's Shard
-item.WardenResource.3.name = Warden's Stone
-item.WardenResource.4.name = Tainted Blood Spill
+item.WardenCross.name = Warden's Cross
+item.WardenAmulet.name = Warden's Talisman
+item.WardenResource.0.name = Wardenic Quartz
+item.WardenResource.1.name = Wardenic Fibers
+item.WardenResource.2.name = Empty Sigil's Frame
+item.WardenResource.3.name = Warden's Shard
+item.WardenResource.4.name = Warden's Stone
+item.WardenResource.5.name = Tainted Blood Spill
 item.WardenSigil.name = Warden's Sigil
-item.WardenAmulet.name = Abdo's Amulet
-item.TaintedBlood.name = Eldritch Blood Vial
+item.TaintedHelmet.name = Tainted Helemet
+item.TaintedChestplate.name = Tainted Chestplate
+item.TaintedLeggings.name = Tainted Leggings
+item.TaintedBoots.name = Tainted Boots
+item.TaintedBlade.name = Tainted Blade
 
 #Blocks
 tile.WardenFlower.name = Warden's Rose
 
+#Entities
+entity.TaintedHunter.name = Tainted Hunter
+
 #Aspects
 tc.aspect.wardena = Warden, Vigil, Victory, Sacrifice
-
-#Text
-info.amuletavailible = Right Click to empower
-info.amuletcooldown = Cooldown
 
 # Special formatting codes:
 # <BR> or <BR/>         Paragraph break (<BR/> is included for people using XML for their localization)
@@ -51,35 +54,35 @@ twresearch.page.TWardens.0 = Thaumic Wardens are an order of thaumics who have h
 
 twresearch.name.TWFlower = Warden's Rose
 twresearch.text.TWFlower = How beautiful
-twresearch.page.TWFlower.0 = This strange rose has been twisted by Thaumic energies, forming a beautiful crystal where its stigma would have otherwise grown.
+twresearch.page.TWFlower.0 = "This strange rose has been twisted by Thaumic energies, forming a beautiful crystal where its stigma would have otherwise grown" - Almety the keeps's Alchemist<BR>This Rose is rare but, it's energy is the key to create any of the Wardens' weapons or armors.
 
 twresearch.name.Memories = The Memories
 twresearch.text.Memories = That's it
 twresearch.page.Memories.0 = Master Abdo was a brilliant man.You have discovered that he has left fragments of his memory through the flux and the aura in order for others to discover the truth about the Eldritch, Thaumturgy, the Wardens and him.
 
-twresearch.name.TWQuartz = Infused Quartz
+twresearch.name.TWQuartz = Wardenic Quartz
 twresearch.text.TWQuartz = With no stars
-twresearch.page.TWQuartz.0 = Through your research you learned the old ways of making Infused Quartz. This material was used for most of the Wardens' armors, weapons and machinery. The origin of this material is unknown and you have no clue how Master Abdo came up with it.
+twresearch.page.TWQuartz.0 = Through your research you learned the old ways of making Wardenic Quartz. This material was used for most of the Wardens' weapons and machinery.<BR>Because of the concentrated amount of energy you need a whole block in order to create one piece of the quartz.<BR>The origin of this material is unknown and you have no clue how Master Abdo came up with it.
+
+twresearch.name.TWFabric = Wardenic Fibers
+twresearch.text.TWFabric = They are not alive
+twresearch.page.TWFabric.0 = Through your research you learned the old ways of making Wardenic Fibers. These fibers have strange traits and they seem to solidify when hit yet, it's still very light and durable.<BR>These fibers were used to create any warden's robes because of their traits.
 
 twresearch.name.TWSigil = Warden's Sigil
 twresearch.text.TWSigil = You are sworn
 twresearch.page.TWSigil.0 = By combing Infused Quartz with Obsidian Tiles you were able to discover an empty sigil frame. The sigil appears to lack any energy, and thus charging must be done.<BR>To give power to the Sigil you must combine it with 4 Warden's Shards.
 
-twresearch.name.TWArmor = The Armory
+twresearch.name.TWArmor = The Robes
 twresearch.text.TWArmor = Cool and Protective
-twresearch.page.TWArmor.0 = The tales always spoke of the Wardens' armor and how protected the first Wardens.<LINE>Through your research you discovered how to create it again using the Warden's Sigil.<BR>The armor uses the robes and the thaumium armor which gives it a unique look and the Sigil increases the armor's protection making you nearly invincible.
+twresearch.page.TWArmor.0 = The tales always spoke of the Wardens' robes and how it protected the first Wardens.<LINE>Through your research you discovered how to create it again using the Warden's Sigil.<BR>The Warden's Sigl seems to awaken something in the fibers making them connect and create these robes.
 
-twresearch.name.TWWeapon = The Weaponry
+twresearch.name.TWWeapon = The Cross
 twresearch.text.TWWeapon = Awesome and Deadly
-twresearch.page.TWWeapon.0 = the tales always spoke of the Wardens' weapons and how it slayed thousands of enemies in a flash.<LINE>Through your research you discovered how to create weapons again using the Warden's Sigil.
+twresearch.page.TWWeapon.0 = the tales always spoke of the Wardens' battlecross and how it slayed thousands of enemies in a flash.<LINE>Through your research you discovered how to create that battlecross again using the Warden's Sigil.<BR>The battle cross is a unique weapon and because of the Wardenic Quartz used it seems to ignore armor.<BR>It also seems to perform better when used by wardens.
 
-twresearch.name.TWStone = Warden's Stone
-twresearch.text.TWStone = Shouldn't it be a shard
-twresearch.page.TWStone.0 = By combining Warden's shards with a Mixed Crystal Cluster you can create the very basic material called the "Warden's Stone".<BR>You can't think of a use for it now but, maybe Master Abdo left you something to look for.
-
-twresearch.name.TWAmulet = The Amulet
-twresearch.text.TWAmulet = Wait!!!Not a stone
-twresearch.page.TWAmulet.0 = Master Abdo was a resourceful man.<BR>He was able to create the magnificent from the mundane and now he has shown you his secret.<BR>The answer was simple. By creating an amulet from the Warden's Stone and fusing it with aspects you will have his secret.<BR>Master Abdo was also known for his strength and you think the Amulet has something to do with it.
+twresearch.name.TWAmulet = Lizbeth's Amulet
+twresearch.text.TWAmulet = Dear to the heart
+twresearch.page.TWAmulet.0 = Lizbeth became an outcast in order to find new arts to thaumturgy.<BR>She was able to create the magnificent from the mundane and now you know how.<BR>Lizbeth studied the arts of equivalency and this amulet was the result.<BR>The key of this amulet is the Warden's Stone gifted to her by Abdo.
 
 twresearch.name.History1 = The Prologue
 twresearch.text.History1 = I know what you're thinking

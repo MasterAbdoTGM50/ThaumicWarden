@@ -34,7 +34,7 @@ public class TWFlower extends BlockFlower {
 	
 	public int damageDropped(int par1) {
 		
-		return 2;
+		return 3;
 		
 	}
 	
