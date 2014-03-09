@@ -25,6 +25,7 @@ public class TWConfig extends Configuration {
 		TWItemConfig.TWTAINTEDLEGS_ID = Config.getItem(TWItemConfig.TWTAINTEDLEGS_KEY, TWItemConfig.TWTAINTEDLEGS_DID).getInt() - 256;
 		TWItemConfig.TWTAINTEDBOOTS_ID = Config.getItem(TWItemConfig.TWTAINTEDBOOTS_KEY, TWItemConfig.TWTAINTEDBOOTS_DID).getInt() - 256;
 		TWItemConfig.TWTAINTEDBLADE_ID = Config.getItem(TWItemConfig.TWTAINTEDBLADE_KEY, TWItemConfig.TWTAINTEDBLADE_DID).getInt() - 256;
+		TWItemConfig.TWLIZHAMMER_ID = Config.getItem(TWItemConfig.TWLIZHAMMER_KEY, TWItemConfig.TWLIZHAMMER_DID).getInt() - 256;
 		TWBlockConfig.TWFLOWER_ID = Config.getBlock(TWBlockConfig.TWFLOWER_KEY, TWBlockConfig.TWFLOWER_DID).getInt();
 		
 		Config.save();

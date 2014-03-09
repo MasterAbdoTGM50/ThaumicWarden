@@ -75,4 +75,9 @@ public class TWItemConfig {
 	public static final String TWTAINTEDBLADE_KEY = "TWTaintedBlade";
 	public static final String TWTAINTEDBLADE_UN_NAME = "TaintedBlade";
 	
+	public static int TWLIZHAMMER_ID;
+	public static final int TWLIZHAMMER_DID = 15114;
+	public static final String TWLIZHAMMER_KEY = "TWLizbethHammer";
+	public static final String TWLIZHAMMER_UN_NAME = "LizbethHammer";
+	
 }
