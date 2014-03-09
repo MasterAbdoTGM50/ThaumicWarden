@@ -2,7 +2,6 @@ package matgm50.twarden.config;
 
 import java.io.File;
 
-import matgm50.twarden.config.TWItemConfig;
 import net.minecraftforge.common.Configuration;
 
 public class TWConfig extends Configuration {

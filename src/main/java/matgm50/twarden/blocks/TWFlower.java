@@ -2,8 +2,6 @@ package matgm50.twarden.blocks;
 
 import java.util.Random;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWBlockConfig;
 import matgm50.twarden.config.TWModConfig;
@@ -12,12 +10,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumRarity;
-import net.minecraft.item.ItemStack;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWFlower extends BlockFlower {
 
-	protected TWFlower(int ID, Material Material) {
+	public TWFlower(int ID, Material Material) {
 		
 		super(ID, Material);
 		setUnlocalizedName(TWBlockConfig.TWFLOWER_UN_NAME);
@@ -26,12 +24,14 @@ public class TWFlower extends BlockFlower {
 		
 	}
 	
+	@Override
 	public int idDropped(int ID, Random Random, int Par3) {
 		
 		return TWItems.TWResource.itemID;
 		
 	}
 	
+	@Override
 	public int damageDropped(int par1) {
 		
 		return 3;

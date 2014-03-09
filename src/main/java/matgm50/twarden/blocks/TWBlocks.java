@@ -1,9 +1,9 @@
 package matgm50.twarden.blocks;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import matgm50.twarden.config.TWBlockConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TWBlocks {
 	

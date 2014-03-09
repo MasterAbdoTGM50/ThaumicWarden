@@ -2,16 +2,12 @@ package matgm50.twarden.util;
 
 import java.util.EnumSet;
 
-import thaumcraft.common.config.Config;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import matgm50.twarden.config.TWModConfig;
 import matgm50.twarden.items.TWItems;
+import net.minecraft.entity.player.EntityPlayer;
+import thaumcraft.common.config.Config;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
-import cpw.mods.fml.common.registry.TickRegistry;
-import cpw.mods.fml.relauncher.Side;
 
 public class TWTick implements ITickHandler {
 

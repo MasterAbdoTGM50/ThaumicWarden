@@ -1,12 +1,11 @@
 package matgm50.twarden.items;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import matgm50.twarden.config.TWItemConfig;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
-import net.minecraft.potion.Potion;
 import net.minecraftforge.common.EnumHelper;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TWItems {
 	

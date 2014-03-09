@@ -1,10 +1,9 @@
 package matgm50.twarden.crafting;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import matgm50.twarden.config.TWResearchConfig;
 import matgm50.twarden.items.TWItems;
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;

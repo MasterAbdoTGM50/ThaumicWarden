@@ -1,6 +1,5 @@
 package matgm50.twarden.config;
 
-import thaumcraft.api.aspects.AspectList;
 import net.minecraft.util.ResourceLocation;
 
 public class TWResearchConfig {

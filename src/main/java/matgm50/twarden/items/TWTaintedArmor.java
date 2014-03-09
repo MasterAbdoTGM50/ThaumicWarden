@@ -1,7 +1,5 @@
 package matgm50.twarden.items;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWModConfig;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -11,6 +9,8 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWTaintedArmor extends ItemArmor {
 

@@ -1,7 +1,5 @@
 package matgm50.twarden.items;
 
-import java.util.List;
-
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
@@ -13,9 +11,7 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.World;
 import thaumcraft.api.IRepairable;
 import thaumcraft.common.entities.ITaintedMob;

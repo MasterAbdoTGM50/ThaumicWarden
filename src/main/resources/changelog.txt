@@ -1,3 +1,5 @@
+0.6A1:
+-Mostly everything
 0.5R2:
 -The mod now uses ForgeGradle
 -The mod no longer uses the ItemApi of thaumcraft and references items and blocks directly from the mod

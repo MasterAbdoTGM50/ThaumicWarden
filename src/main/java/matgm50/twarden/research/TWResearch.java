@@ -6,8 +6,6 @@ import matgm50.twarden.config.TWResearchConfig;
 import matgm50.twarden.crafting.TWRecipes;
 import matgm50.twarden.items.TWItems;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StatCollector;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.research.ResearchCategories;

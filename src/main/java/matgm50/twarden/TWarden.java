@@ -1,7 +1,5 @@
 package matgm50.twarden;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.common.MinecraftForge;
 import matgm50.twarden.aspects.TWAspects;
 import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWConfig;
@@ -15,9 +13,8 @@ import matgm50.twarden.network.proxy.TWCommonProxy;
 import matgm50.twarden.research.TWResearch;
 import matgm50.twarden.util.TWLang;
 import matgm50.twarden.util.TWTab;
-import matgm50.twarden.util.TWTick;
 import matgm50.twarden.world.TWGen;
-import cpw.mods.fml.common.FMLCommonHandler;
+import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -26,7 +23,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
-import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = TWModConfig.TWMOD_ID, name = TWModConfig.TWMOD_NAME, version = TWModConfig.TWMOD_VERSION, dependencies = TWModConfig.TWMOD_DEPENDENCIES)
 @NetworkMod(channels = {TWModConfig.TWMOD_CHANNEL}, clientSideRequired = true, serverSideRequired = true, packetHandler = TWPacket.class)

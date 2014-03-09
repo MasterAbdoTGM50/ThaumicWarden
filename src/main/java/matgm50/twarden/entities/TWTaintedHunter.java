@@ -1,25 +1,18 @@
 package matgm50.twarden.entities;
 
-import thaumcraft.common.entities.ITaintedMob;
 import matgm50.twarden.items.TWItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIBreakDoor;
-import net.minecraft.entity.ai.EntityAIHurtByTarget;
-import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
-import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.EntityAIMoveTowardsTarget;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import thaumcraft.common.entities.ITaintedMob;
 
 public class TWTaintedHunter extends EntityMob implements ITaintedMob{
 	
@@ -64,6 +57,7 @@ public class TWTaintedHunter extends EntityMob implements ITaintedMob{
 		
     }
 	
+	@Override
 	protected void attackEntity(Entity Entity, float Par) {
 		
         if (this.attackTime <= 0 && Par < 1.2F && Entity.boundingBox.maxY > this.boundingBox.minY && Entity.boundingBox.minY < this.boundingBox.maxY) {

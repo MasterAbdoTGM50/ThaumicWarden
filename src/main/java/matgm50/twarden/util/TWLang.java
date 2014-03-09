@@ -1,7 +1,7 @@
 package matgm50.twarden.util;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import matgm50.twarden.config.TWModConfig;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class TWLang {
 	
