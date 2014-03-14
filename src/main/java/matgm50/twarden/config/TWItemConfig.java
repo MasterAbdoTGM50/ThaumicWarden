@@ -41,7 +41,6 @@ public class TWItemConfig {
 	public static final String TWRESOURCE_KEY = "TWResource";
 	public static final String TWRESOURCE_UN_NAME = "WardenResource";
 	
-	@SideOnly(Side.CLIENT)
 	public static Icon[] TWRESOURCE_ICON;
 	public static final String[] TWRESOURCE_ICONNAME = {"wardenquartz", "wardenfabric", "wardensigilframe", "wardenshard", "wardenstone"};
 	
@@ -79,5 +78,15 @@ public class TWItemConfig {
 	public static final int TWLIZHAMMER_DID = 15114;
 	public static final String TWLIZHAMMER_KEY = "TWLizbethHammer";
 	public static final String TWLIZHAMMER_UN_NAME = "LizbethHammer";
+	
+	public static int TWFEATHER_ID;
+	public static final int TWFEATHER_DID = 15115;
+	public static final String TWFEATHER_KEY = "TWFeather";
+	public static final String TWFEATHER_UN_NAME = "GryphonFeather";
+	
+	public static int TWMAGICAMULET_ID;
+	public static final int TWMAGICAMULET_DID = 15116;
+	public static final String TWMAGICAMULET_KEY = "TWMagicAmulet";
+	public static final String TWMAGICAMULET_UN_NAME = "MagicAmulet";
 	
 }

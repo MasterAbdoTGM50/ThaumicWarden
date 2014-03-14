@@ -15,12 +15,12 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TWAmulet extends Item {
+public class TWFeather extends Item {
 
-	public TWAmulet(int ID) {
+	public TWFeather(int ID) {
 		
 		super(ID);
-		setUnlocalizedName(TWItemConfig.TWAMULET_UN_NAME);
+		setUnlocalizedName(TWItemConfig.TWFEATHER_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
 		setMaxStackSize(1);
 		
@@ -40,17 +40,7 @@ public class TWAmulet extends Item {
 			
 			EntityPlayer Player = (EntityPlayer)Entity;
 			
-			if(Player.isPotionActive(Config.potionFluxTaintID)) {
-				
-				Player.removePotionEffect(Config.potionFluxTaintID);
-				
-			}
-			
-			if(Player.isPotionActive(Potion.wither.id)) {
-				
-				Player.removePotionEffect(Potion.wither.id);
-				
-			}
+			Player.fallDistance = 0F;
 			
 		}
 		
@@ -60,7 +50,7 @@ public class TWAmulet extends Item {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister Register) {
 		
-            itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamulet" );
+            itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "gryphonfeather" );
             
     }
 	

@@ -36,13 +36,7 @@ public class TWTick implements ITickHandler {
 		
 	}
 	
-	private void OnTick(EntityPlayer Player) {
-		
-		if(Player.inventory.hasItem(TWItems.TWAmulet.itemID)) {
-			
-			Player.removePotionEffect(Config.potionFluxTaintID);
-			
-		}
+	public void OnTick(EntityPlayer Player) {
 		
 	}
 

@@ -1,5 +1,7 @@
 package matgm50.twarden.crafting;
 
+import matgm50.twarden.aspects.TWAspects;
+import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWResearchConfig;
 import matgm50.twarden.items.TWItems;
 import net.minecraft.block.Block;
@@ -8,6 +10,7 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.CrucibleRecipe;
+import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.config.ConfigItems;
@@ -23,13 +26,14 @@ public class TWRecipes {
 	public static ShapedArcaneRecipe TWCross;
 	public static ShapedArcaneRecipe TWStone;
 	public static ShapedArcaneRecipe TWFrame;
-	public static ShapedArcaneRecipe TWSigil;
-	public static ShapedArcaneRecipe TWAmulet;
+	public static InfusionRecipe TWSigil;
+	public static InfusionRecipe TWFlower;
 	
 	public static void Init() {
 		
 		InitCrucible();
 		InitArcane();
+		InitInfusion();
 		
 	}
 	
@@ -53,11 +57,16 @@ public class TWRecipes {
 		TWCross = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWARMOR_KEY, new ItemStack(TWItems.TWCross, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
 				" X ", "XOX", " X ", 'X', new ItemStack(TWItems.TWResource, 1, 0), 'O', new ItemStack(TWItems.TWSigil, 1));
 		TWFrame = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWSIGIL_KEY, new ItemStack(TWItems.TWResource, 1, 2), new AspectList().add(Aspect.ORDER, 60).add(Aspect.ENTROPY, 60).add(Aspect.AIR, 60).add(Aspect.EARTH, 60).add(Aspect.FIRE, 60).add(Aspect.WATER, 60),
-				"OXO", "X X", "OXO", 'X', new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 1), 'O', new ItemStack(TWItems.TWResource, 1, 0));
-		TWSigil = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWSIGIL_KEY, new ItemStack(TWItems.TWSigil, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
-				" X ", "XOX", " X ", 'X', new ItemStack(TWItems.TWResource, 1, 3), 'O', new ItemStack(TWItems.TWResource, 1, 2));
-		TWAmulet = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWAMULET_KEY, new ItemStack(TWItems.TWAmulet, 1), new AspectList().add(Aspect.ORDER, 50).add(Aspect.ENTROPY, 50).add(Aspect.AIR, 50).add(Aspect.EARTH, 50).add(Aspect.FIRE, 50).add(Aspect.WATER, 50),
-				"XXX", "X X", "XOX", 'X', new ItemStack(ConfigItems.itemResource, 1, 7), 'O', new ItemStack(TWItems.TWResource, 1, 4));
+				" X ", "XOX", " X ", 'X', new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 1), 'O', new ItemStack(TWItems.TWResource, 1, 0));
+		
+	}
+	
+	public static void InitInfusion() {
+		
+		TWSigil = ThaumcraftApi.addInfusionCraftingRecipe(TWResearchConfig.TWSIGIL_KEY, new ItemStack(TWItems.TWSigil, 1), 25, new AspectList().add(TWAspects.TWAspect, 32).add(Aspect.MAGIC, 32), new ItemStack(TWItems.TWResource, 1, 2),
+				new ItemStack [] {new ItemStack(TWItems.TWResource, 1, 3), new ItemStack(TWItems.TWResource, 1, 3), new ItemStack(TWItems.TWResource, 1, 3), new ItemStack(TWItems.TWResource, 1, 3)});
+		TWFlower = ThaumcraftApi.addInfusionCraftingRecipe(TWResearchConfig.TWFLOWER_KEY, new ItemStack(TWBlocks.TWFlower, 1), 25, new AspectList().add(TWAspects.TWAspect, 32).add(Aspect.MAGIC, 32), new ItemStack(ConfigBlocks.blockCustomPlant, 1, 3),
+				new ItemStack [] {new ItemStack(TWItems.TWResource, 1, 0), new ItemStack(TWItems.TWResource, 1, 0)});
 		
 	}
 	

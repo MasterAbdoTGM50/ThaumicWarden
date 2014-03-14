@@ -1,7 +1,7 @@
 package matgm50.twarden.network.proxy;
 
 import matgm50.twarden.config.TWModConfig;
-import matgm50.twarden.entities.TWTaintedHunter;
+import matgm50.twarden.entities.TWTaintedHunterBoss;
 import matgm50.twarden.util.TWTick;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderBiped;
@@ -16,7 +16,7 @@ public class TWClientProxy extends TWCommonProxy {
 	@Override
 	public void InitRenderer() {
 		
-			RenderingRegistry.registerEntityRenderingHandler(TWTaintedHunter.class, new RenderBiped(new ModelBiped(), 0.5F) {
+			RenderingRegistry.registerEntityRenderingHandler(TWTaintedHunterBoss.class, new RenderBiped(new ModelBiped(), 3.0F) {
 			
 			@Override
 			protected ResourceLocation getEntityTexture(Entity Entity) {
@@ -26,13 +26,13 @@ public class TWClientProxy extends TWCommonProxy {
 			}
 			
 		});
-		
+			
 	}
 	
 	@Override
 	public void InitTick() {
 		
-		TickRegistry.registerTickHandler(new TWTick(), Side.SERVER);
+		TickRegistry.registerTickHandler(new TWTick(), Side.CLIENT);
 		
 	}
 

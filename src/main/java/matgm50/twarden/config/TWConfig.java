@@ -2,6 +2,7 @@ package matgm50.twarden.config;
 
 import java.io.File;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.common.Configuration;
 
 public class TWConfig extends Configuration {
@@ -26,7 +27,10 @@ public class TWConfig extends Configuration {
 		TWItemConfig.TWTAINTEDBOOTS_ID = Config.getItem(TWItemConfig.TWTAINTEDBOOTS_KEY, TWItemConfig.TWTAINTEDBOOTS_DID).getInt() - 256;
 		TWItemConfig.TWTAINTEDBLADE_ID = Config.getItem(TWItemConfig.TWTAINTEDBLADE_KEY, TWItemConfig.TWTAINTEDBLADE_DID).getInt() - 256;
 		TWItemConfig.TWLIZHAMMER_ID = Config.getItem(TWItemConfig.TWLIZHAMMER_KEY, TWItemConfig.TWLIZHAMMER_DID).getInt() - 256;
+		TWItemConfig.TWFEATHER_ID = Config.getItem(TWItemConfig.TWFEATHER_KEY, TWItemConfig.TWFEATHER_DID).getInt() - 256;
+		TWItemConfig.TWMAGICAMULET_ID = Config.getItem(TWItemConfig.TWMAGICAMULET_KEY, TWItemConfig.TWMAGICAMULET_DID).getInt() - 256;
 		TWBlockConfig.TWFLOWER_ID = Config.getBlock(TWBlockConfig.TWFLOWER_KEY, TWBlockConfig.TWFLOWER_DID).getInt();
+		TWBlockConfig.TWSPAWNER_ID = Config.getBlock(TWBlockConfig.TWSPAWNER_KEY, TWBlockConfig.TWSPAWNER_DID).getInt();
 		
 		Config.save();
 		

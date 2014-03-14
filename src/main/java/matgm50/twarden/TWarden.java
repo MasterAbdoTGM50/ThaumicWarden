@@ -4,7 +4,6 @@ import matgm50.twarden.aspects.TWAspects;
 import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWConfig;
 import matgm50.twarden.config.TWModConfig;
-import matgm50.twarden.crafting.TWCraftHandler;
 import matgm50.twarden.crafting.TWRecipes;
 import matgm50.twarden.entities.TWEntities;
 import matgm50.twarden.items.TWItems;
@@ -44,11 +43,9 @@ public class TWarden {
 		TWProxy.InitTick();
 		TWProxy.InitRenderer();
 		TWGen.Init();
-		TWCraftHandler.Init();
 		TWItems.Init();
 		TWBlocks.Init();
 		TWEntities.Init();
-		
 		
 	}
 	
@@ -60,8 +57,8 @@ public class TWarden {
 	@EventHandler
 	public void PostInit(FMLPostInitializationEvent Event) {
 		
-		TWRecipes.Init();
 		TWAspects.Init();
+		TWRecipes.Init();
 		TWResearch.Init();
 		TWLang.Init();
 		

@@ -1,6 +1,7 @@
 package matgm50.twarden.entities;
 
 import matgm50.twarden.TWarden;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import thaumcraft.common.lib.world.ThaumcraftWorldGenerator;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -9,9 +10,9 @@ public class TWEntities {
 	
 	public static void Init() {
 		
-		EntityRegistry.registerModEntity(TWTaintedHunter.class, "TaintedHunter", 0, TWarden.Instance, 80, 3, true);
+		EntityRegistry.registerModEntity(TWTaintedHunterBoss.class, "TaintedHunterBoss", 0, TWarden.Instance, 80, 3, true);
 		
-		EntityRegistry.addSpawn(TWTaintedHunter.class, 5, 1, 2, EnumCreatureType.monster, ThaumcraftWorldGenerator.biomeTaint);
+		EntityList.addMapping(TWTaintedHunterBoss.class, "TaintedHunterBoss", 0, 000000, 000000);
 		
 	}
 	

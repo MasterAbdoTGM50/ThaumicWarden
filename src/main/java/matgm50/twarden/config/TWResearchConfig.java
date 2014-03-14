@@ -9,7 +9,6 @@ public class TWResearchConfig {
 	public static final ResourceLocation TWCATEGORY_BACK = new ResourceLocation("thaumcraft" ,"textures/gui/gui_researchback.png");
 	
 	public static final String TWARDENS_KEY = "TWardens";
-	public static final String MEMORIES_KEY = "Memories";
 	public static final String TWQUARTZ_KEY = "TWQuartz";
 	public static final String TWFABRIC_KEY = "TWFabric";
 	public static final String TWBLOOD_KEY = "TWBlood";
@@ -18,17 +17,5 @@ public class TWResearchConfig {
 	public static final String TWWEAPON_KEY = "TWWeapon";
 	public static final String TWAMULET_KEY = "TWAmulet";
 	public static final String TWFLOWER_KEY = "TWFlower";
-	public static final String HISTORY1_KEY = "History1";
-	public static final String HISTORY2_KEY = "History2";
-	public static final String HISTORY3_KEY = "History3";
-	public static final String HISTORY4_KEY = "History4";
-	public static final String HISTORY5_KEY = "History5";
-	public static final String HISTORY6_KEY = "History6";
-	public static final String HISTORY7_KEY = "History7";
-	public static final String HISTORY8_KEY = "History8";
-	public static final String HISTORY9_KEY = "History9";
-	public static final String HISTORY10_KEY = "History10";
-	public static final String HISTORY11_KEY = "History11";
-	public static final String HISTORY12_KEY = "History12";
 	
 }
