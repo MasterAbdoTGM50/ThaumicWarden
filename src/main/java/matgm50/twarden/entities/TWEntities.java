@@ -12,8 +12,6 @@ public class TWEntities {
 		
 		EntityRegistry.registerModEntity(TWTaintedHunterBoss.class, "TaintedHunterBoss", 0, TWarden.Instance, 80, 3, true);
 		
-		EntityList.addMapping(TWTaintedHunterBoss.class, "TaintedHunterBoss", 0, 000000, 000000);
-		
 	}
 	
 }

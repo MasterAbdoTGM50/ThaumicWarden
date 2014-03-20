@@ -52,7 +52,7 @@ public class TWCross extends Item implements IRepairable {
 			
 		}
 		
-		Itemstack.setItemDamage(Itemstack.getItemDamage() + 1);
+		Itemstack.damageItem(1, Player);
 		
 		return super.onLeftClickEntity(Itemstack, Player, Target);
 		

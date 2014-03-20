@@ -27,6 +27,7 @@ item.MagicAmulet.1.name = Shadow Amulet
 
 #Blocks
 tile.WardenFlower.name = Exubitura
+tile.LizbethTable.name = Lizbeth's Table
 
 #Entities
 entity.TaintedHunter.name = Tainted Hunter

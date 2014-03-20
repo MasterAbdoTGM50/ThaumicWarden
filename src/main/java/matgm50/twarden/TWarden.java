@@ -45,7 +45,6 @@ public class TWarden {
 		TWGen.Init();
 		TWItems.Init();
 		TWBlocks.Init();
-		TWEntities.Init();
 		
 	}
 	

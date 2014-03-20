@@ -8,15 +8,15 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class TWBlocks {
 	
 	public static Block TWFlower;
-	public static Block TWAnvil;
+	public static Block TWLizTable;
 	
 	public static void Init() {
 		
 		TWFlower = new TWFlower(TWBlockConfig.TWFLOWER_ID, Material.grass);
-		TWAnvil = new TWSpawner(TWBlockConfig.TWSPAWNER_ID, Material.anvil);
+		TWLizTable = new TWLizTable(TWBlockConfig.TWLIZTABLE_ID, Material.rock);
 		
 		GameRegistry.registerBlock(TWFlower, TWBlockConfig.TWFLOWER_KEY);
-		GameRegistry.registerBlock(TWAnvil, TWBlockConfig.TWSPAWNER_KEY);
+		GameRegistry.registerBlock(TWLizTable, TWBlockConfig.TWLIZTABLE_KEY);
 		
 	}
 	

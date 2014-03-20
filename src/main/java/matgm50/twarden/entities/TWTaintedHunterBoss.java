@@ -39,7 +39,7 @@ public class TWTaintedHunterBoss extends EntityMob implements ITaintedMob{
 	protected void applyEntityAttributes() {
 		
 		super.applyEntityAttributes();
-	    this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(400.0D);
+	    this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(80.0D);
 	    this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(5.0D);
 	    this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4D);
 	    

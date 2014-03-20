@@ -26,6 +26,7 @@ public class TWLizHammer extends Item {
 		super(ID);
 		setUnlocalizedName(TWItemConfig.TWLIZHAMMER_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
+		canRepair = true;
 		
 	}
 
@@ -50,7 +51,7 @@ public class TWLizHammer extends Item {
 					
 					TileArcaneWorkbench Bench = (TileArcaneWorkbench)Player.worldObj.getBlockTileEntity(Target.blockX, Target.blockY, Target.blockZ);
 					
-					if (Bench.getStackInSlot(4) != null && Bench.getStackInSlot(4).isItemDamaged()) {
+					if (Bench.getStackInSlot(4) != null && Bench.getStackInSlot(4).getItem().isRepairable() && Bench.getStackInSlot(4).isItemDamaged()) {
 						
 						ItemStack Smithed = Bench.getStackInSlot(4).copy();
 						Smithed.setItemDamage(0);

@@ -30,7 +30,7 @@ public class TWConfig extends Configuration {
 		TWItemConfig.TWFEATHER_ID = Config.getItem(TWItemConfig.TWFEATHER_KEY, TWItemConfig.TWFEATHER_DID).getInt() - 256;
 		TWItemConfig.TWMAGICAMULET_ID = Config.getItem(TWItemConfig.TWMAGICAMULET_KEY, TWItemConfig.TWMAGICAMULET_DID).getInt() - 256;
 		TWBlockConfig.TWFLOWER_ID = Config.getBlock(TWBlockConfig.TWFLOWER_KEY, TWBlockConfig.TWFLOWER_DID).getInt();
-		TWBlockConfig.TWSPAWNER_ID = Config.getBlock(TWBlockConfig.TWSPAWNER_KEY, TWBlockConfig.TWSPAWNER_DID).getInt();
+		TWBlockConfig.TWLIZTABLE_ID = Config.getBlock(TWBlockConfig.TWLIZTABLE_KEY, TWBlockConfig.TWLIZTABLE_DID).getInt();
 		
 		Config.save();
 		
