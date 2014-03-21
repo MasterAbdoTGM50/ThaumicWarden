@@ -1,7 +1,5 @@
 package matgm50.twarden.client.renderers;
 
-import java.awt.Color;
-
 import org.lwjgl.opengl.GL11;
 
 import matgm50.twarden.blocks.tiles.TWLizTableTile;
@@ -24,45 +22,25 @@ public class TWLizTableRender extends TileEntitySpecialRenderer {
 		ItemStack ToRender = Table.getStackInSlot(0);
 		
 		GL11.glPushMatrix();
+		
 		GL11.glTranslated(X, Y + 0.75, Z);
 		
 		if(ToRender != null) {
 			
-			GL11.glPushMatrix();
-			GL11.glRotatef(90F, 1F, 0F, 0F);
-			final float Scale = 1F;
-			GL11.glScalef(Scale, Scale, Scale);
-			GL11.glTranslatef(0.6F, -0.2F, 0F);
-			GL11.glRotatef(30F, 0F, 0F, 1F);
-			
-			Minecraft.getMinecraft().renderEngine.bindTexture(TextureMap.locationItemsTexture);
-			
-			int RP = 0;
-			
-			do {
+			GL11.glScalef(12, 12, 12);
 				
-				Icon WTF = ToRender.getItem().getIcon(ToRender, 0);
+			Icon WTF = ToRender.getItem().getIcon(ToRender, 0);
 				
-				if(WTF != null) {
+			if(WTF != null) {
 					
-					Color Hate = new Color(ToRender.getItem().getColorFromItemStack(ToRender, RP));
-					GL11.glColor3ub((byte) Hate.getRed(), (byte) Hate.getGreen(), (byte) Hate.getBlue());
+				float S1 = WTF.getMinU();
+				float S2 = WTF.getMaxU();
+				float S3 = WTF.getMinV();
+				float S4 = WTF.getMaxV();
 					
-					float S1 = WTF.getMinU();
-					float S2 = WTF.getMaxU();
-					float S3 = WTF.getMinV();
-					float S4 = WTF.getMaxV();
-					
-					ItemRenderer.renderItemIn2D(Tessellator.instance, S2, S3, S1, S4, WTF.getIconWidth(), WTF.getIconHeight(), 1F / 16F);
-					GL11.glColor3f(1F, 1F, 1F);
-					
-				}
+				ItemRenderer.renderItemIn2D(Tessellator.instance, S1, S2, S3, S4, WTF.getIconWidth(), WTF.getIconHeight(), 1F / 16F);
 				
-				RP++;
-				
-			} while(RP < ToRender.getItem().getRenderPasses(ToRender.getItemDamage()));
-			
-			GL11.glPopMatrix();
+			}
 			
 		}
 		
