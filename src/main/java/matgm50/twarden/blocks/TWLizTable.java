@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
@@ -76,7 +77,7 @@ public class TWLizTable extends BlockContainer {
 				
 				if(Table.getStackInSlot(0) == null && Held != null) {
 					
-					if(!Held.isStackable()) {
+					if(Table.isItemValidForSlot(0, Held)) {
 						
 						Table.setInventorySlotContents(0, Held);
 						Player.destroyCurrentEquippedItem();
@@ -100,6 +101,41 @@ public class TWLizTable extends BlockContainer {
 		return true;
 		
 	}
+	
+	@Override
+	public void breakBlock(World World, int X, int Y, int Z, int ID, int Meta) {
+		
+		TWLizTableTile Table = (TWLizTableTile)World.getBlockTileEntity(X, Y, Z);
+		if(Table != null) {
+			
+			for(int I = 0; I < Table.getSizeInventory(); I++) {
+				
+				ItemStack Drop = Table.getStackInSlotOnClosing(I);
+				
+				if(Drop != null) {
+					
+					float X2 = X + World.rand.nextFloat();
+					float Y2 = Y + World.rand.nextFloat();
+					float Z2 = Z + World.rand.nextFloat();
+					
+					EntityItem Dropped = new EntityItem(World, X2, Y2, Z2, Drop);
+					
+					Dropped.motionX = (-0.5F + World.rand.nextFloat()) * 0.05;
+					Dropped.motionY = (2.0F + World.rand.nextFloat()) * 0.05;
+					Dropped.motionZ = (-0.5F + World.rand.nextFloat()) * 0.05;
+					
+					World.spawnEntityInWorld(Dropped);
+					
+				}
+				
+			}
+			
+		}
+		
+		super.breakBlock(World, X, Y, Z, ID, Meta);
+		
+	}
+	
 	
 	@Override
 	public boolean renderAsNormalBlock() {return false;}

@@ -2,6 +2,7 @@ package matgm50.twarden.items;
 
 import thaumcraft.common.tiles.TileArcaneWorkbench;
 import matgm50.twarden.TWarden;
+import matgm50.twarden.blocks.tiles.TWLizTableTile;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
 import net.minecraft.client.Minecraft;
@@ -47,20 +48,11 @@ public class TWLizHammer extends Item {
 			if(Target != null && Target.typeOfHit == EnumMovingObjectType.TILE) {
 				
 				if(Player.worldObj.getBlockTileEntity(Target.blockX, Target.blockY, Target.blockZ) != null
-						&& Player.worldObj.getBlockTileEntity(Target.blockX, Target.blockY, Target.blockZ) instanceof TileArcaneWorkbench) {
+						&& Player.worldObj.getBlockTileEntity(Target.blockX, Target.blockY, Target.blockZ) instanceof TWLizTableTile) {
 					
-					TileArcaneWorkbench Bench = (TileArcaneWorkbench)Player.worldObj.getBlockTileEntity(Target.blockX, Target.blockY, Target.blockZ);
+					TWLizTableTile Table = (TWLizTableTile)Player.worldObj.getBlockTileEntity(Target.blockX, Target.blockY, Target.blockZ);
 					
-					if (Bench.getStackInSlot(4) != null && Bench.getStackInSlot(4).getItem().isRepairable() && Bench.getStackInSlot(4).isItemDamaged()) {
-						
-						ItemStack Smithed = Bench.getStackInSlot(4).copy();
-						Smithed.setItemDamage(0);
-						Bench.setInventorySlotContents(4, Smithed);
-						
-						Player.worldObj.playSoundEffect((double)Target.blockX + 0.5D, (double)Target.blockY + 0.5D, (double)Target.blockZ + 0.5D,
-								"random.anvil_use", 1.0F, Player.worldObj.rand.nextFloat() * 0.1F + 0.9F);
-						
-					}
+					Table.Repair(0);
 					
 				}
 				

@@ -97,7 +97,29 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 	@Override
 	public boolean isItemValidForSlot(int Slot, ItemStack Itemstack) {
 		
-		return false;
+		if(!Itemstack.isStackable() && Itemstack.isItemStackDamageable() && Itemstack.getItem().isRepairable()) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+	
+	public void Repair(int Slot) {
+		
+		ItemStack ToRepair = Inv[Slot];
+		
+		if(ToRepair != null) {
+			
+			if(ToRepair.getItemDamage() != 0) {
+				
+				ToRepair.setItemDamage(0);
+				
+				worldObj.playSoundEffect(xCoord + 0.5D, yCoord + 0.5D, zCoord + 0.5D, "random.anvil_use", 1.0F, worldObj.rand.nextFloat() * 0.1F + 0.9F);
+				
+			}
+			
+		}
 		
 	}
 	

@@ -15,9 +15,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import thaumcraft.common.entities.ITaintedMob;
 
-public class TWTaintedHunterBoss extends EntityMob implements ITaintedMob{
+public class TWTaintedHunter extends EntityMob implements ITaintedMob{
 	
-	public TWTaintedHunterBoss(World World) {
+	public TWTaintedHunter(World World) {
 		
 		super(World);
 		setCurrentItemOrArmor(0, new ItemStack(TWItems.TWTaintedBlade));
