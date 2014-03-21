@@ -28,6 +28,7 @@ public class TWLizTable extends BlockContainer {
 		super(ID, Material);
 		setUnlocalizedName(TWBlockConfig.TWLIZTABLE_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
+		setHardness(4.0F);
 		setStepSound(Block.soundStoneFootstep);
 		setBlockBounds(0F, 0F, 0F, 1F, 0.75F, 1F);
 		

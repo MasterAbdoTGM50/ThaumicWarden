@@ -12,5 +12,6 @@ public class TWBlockConfig {
 	public static final int TWLIZTABLE_DID = 1502;
 	public static final String TWLIZTABLE_KEY = "TWLizbethTable";
 	public static final String TWLIZTABLE_UN_NAME = "LizbethTable";
+	public static final String TWLIZTABLE_TILE_NAME = "LizbethTableTile";
 	public static final String TWLIZTABLE_CONT_NAME = "LizbethTableContainer";
 }

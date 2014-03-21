@@ -1,5 +1,6 @@
 package matgm50.twarden.blocks;
 
+import matgm50.twarden.blocks.tiles.TWLizTableTile;
 import matgm50.twarden.config.TWBlockConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -17,6 +18,8 @@ public class TWBlocks {
 		
 		GameRegistry.registerBlock(TWFlower, TWBlockConfig.TWFLOWER_KEY);
 		GameRegistry.registerBlock(TWLizTable, TWBlockConfig.TWLIZTABLE_KEY);
+		
+		GameRegistry.registerTileEntity(TWLizTableTile.class, TWBlockConfig.TWLIZTABLE_TILE_NAME);
 		
 	}
 	

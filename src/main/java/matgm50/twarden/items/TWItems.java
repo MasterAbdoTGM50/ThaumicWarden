@@ -64,6 +64,7 @@ public class TWItems {
 		GameRegistry.registerItem(TWTaintedLegs, TWItemConfig.TWTAINTEDLEGS_KEY);
 		GameRegistry.registerItem(TWTaintedBoots, TWItemConfig.TWTAINTEDBOOTS_KEY);
 		GameRegistry.registerItem(TWTaintedBlade, TWItemConfig.TWTAINTEDBLADE_KEY);
+		GameRegistry.registerItem(TWLizHammer, TWItemConfig.TWLIZHAMMER_KEY);
 		GameRegistry.registerItem(TWFeather, TWItemConfig.TWFEATHER_KEY);
 		GameRegistry.registerItem(TWMagicAmulet, TWItemConfig.TWMAGICAMULET_KEY);
 		
