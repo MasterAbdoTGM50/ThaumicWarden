@@ -6,8 +6,10 @@ import matgm50.twarden.blocks.tiles.TWLizTableTile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
@@ -16,36 +18,30 @@ public class TWLizTableRender extends TileEntitySpecialRenderer {
 
 	@Override
 	public void renderTileEntityAt(TileEntity Tile, double X, double Y, double Z, float PartialTick) {
+
+		TWLizTableTile Table = (TWLizTableTile) Tile;
 		
-		TWLizTableTile Table = (TWLizTableTile)Tile;
-		
-		ItemStack ToRender = Table.getStackInSlot(0);
-		
-		GL11.glPushMatrix();
-		
-		GL11.glTranslated(X, Y + 0.75, Z);
-		
-		if(ToRender != null) {
+		if(Table.getStackInSlot(0) != null) {
 			
-			GL11.glScalef(12, 12, 12);
+			GL11.glPushMatrix();
+			GL11.glTranslated(X + 0.5, Y + 0.8, Z + 0.25);
+			GL11.glScalef(1.0F, 1.0F, 1.0F);
+			GL11.glRotated(90, 90, 0, 0);
+			
+			ItemStack ToRender = Table.getStackInSlot(0);
 				
-			Icon WTF = ToRender.getItem().getIcon(ToRender, 0);
-				
-			if(WTF != null) {
-					
-				float S1 = WTF.getMinU();
-				float S2 = WTF.getMaxU();
-				float S3 = WTF.getMinV();
-				float S4 = WTF.getMaxV();
-					
-				ItemRenderer.renderItemIn2D(Tessellator.instance, S1, S2, S3, S4, WTF.getIconWidth(), WTF.getIconHeight(), 1F / 16F);
-				
-			}
+			EntityItem Renderity= new EntityItem(Tile.getWorldObj(), 0, 0, 0, ToRender);
+			Renderity.age = 0;
+			Renderity.hoverStart = 0;
+			
+			RenderManager Heck = RenderManager.instance;
+			
+			Heck.renderEntityWithPosYaw(Renderity, 0, 0, 0, 0, 0);
+			
+			GL11.glPopMatrix();
 			
 		}
-		
-		GL11.glPopMatrix();
-		
+			
 	}
 
 }

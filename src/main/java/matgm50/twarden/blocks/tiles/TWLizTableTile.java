@@ -1,6 +1,11 @@
 package matgm50.twarden.blocks.tiles;
 
+import cpw.mods.fml.common.network.PacketDispatcher;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import matgm50.twarden.config.TWBlockConfig;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -75,7 +80,7 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 		onInventoryChanged();
 		
 	}
-
+	
 	@Override
 	public String getInvName() {return TWBlockConfig.TWLIZTABLE_CONT_NAME;}
 
@@ -169,6 +174,23 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 			}
 			
 		}
+		
+	}
+	
+	@Override
+	public Packet getDescriptionPacket() {
+		
+		NBTTagCompound Tag = new NBTTagCompound();
+		writeToNBT(Tag);
+        return new Packet132TileEntityData(xCoord, yCoord, zCoord, 1, Tag);
+		
+	}
+
+	@Override
+	public void onDataPacket(INetworkManager Manager, Packet132TileEntityData Packet) {
+		
+		super.onDataPacket(Manager, Packet);
+		readFromNBT(Packet.data);
 		
 	}
 	
