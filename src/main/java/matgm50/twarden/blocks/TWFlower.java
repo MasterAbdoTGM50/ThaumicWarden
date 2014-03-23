@@ -1,5 +1,6 @@
 package matgm50.twarden.blocks;
 
+import java.util.List;
 import java.util.Random;
 
 import matgm50.twarden.TWarden;
@@ -8,9 +9,10 @@ import matgm50.twarden.config.TWModConfig;
 import matgm50.twarden.items.TWItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -36,6 +38,13 @@ public class TWFlower extends BlockFlower {
 	public int damageDropped(int par1) {
 		
 		return 3;
+		
+	}
+	
+	@Override
+	public void getSubBlocks(Item Item, CreativeTabs Tab, List List) {
+		
+		List.add(new ItemStack(Item));
 		
 	}
 	
