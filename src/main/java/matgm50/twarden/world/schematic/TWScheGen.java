@@ -46,7 +46,7 @@ public class TWScheGen extends WorldGenerator {
 	
 	public void FillChest(World World, int X, int Y, int Z, int Slot, ItemStack Itemstack) {
 		
-		TileEntityChest Chest = (TileEntityChest) World.getBlockTileEntity(X, Y, Z);
+		TileEntityChest Chest = (TileEntityChest) World.getTileEntity(X, Y, Z);
 		
 		Chest.setInventorySlotContents(Slot, Itemstack);
 		
@@ -63,7 +63,7 @@ public class TWScheGen extends WorldGenerator {
 
 				for (int A = 0; A < Width; A++) {
 						
-						World.setBlock(I + A, J + E, K + T, Blocks[TBP], Meta[TBP], 2);
+						//World.setBlock(I + A, J + E, K + T, Blocks[TBP], Meta[TBP], 2);
 						
 						TBP = TBP + 1;
 						

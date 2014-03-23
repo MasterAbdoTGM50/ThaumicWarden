@@ -5,6 +5,7 @@ import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWResearchConfig;
 import matgm50.twarden.items.TWItems;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
@@ -39,7 +40,7 @@ public class TWRecipes {
 	
 	public static void InitCrucible() {
 		
-		TWQuartz = ThaumcraftApi.addCrucibleRecipe(TWResearchConfig.TWQUARTZ_KEY, new ItemStack(TWItems.TWResource, 1, 0), new ItemStack(Block.blockNetherQuartz), new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.MAGIC, 8).add(Aspect.CRYSTAL, 16));
+		TWQuartz = ThaumcraftApi.addCrucibleRecipe(TWResearchConfig.TWQUARTZ_KEY, new ItemStack(TWItems.TWResource, 1, 0), new ItemStack(Blocks.quartz_block), new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.MAGIC, 8).add(Aspect.CRYSTAL, 16));
 		TWFabric = ThaumcraftApi.addCrucibleRecipe(TWResearchConfig.TWFABRIC_KEY, new ItemStack(TWItems.TWResource, 1, 1), new ItemStack(ConfigItems.itemResource, 1, 7), new AspectList().add(Aspect.ELDRITCH, 4).add(Aspect.MAGIC, 4).add(Aspect.CLOTH, 8).add(Aspect.METAL, 8));
 		
 	}

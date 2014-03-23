@@ -4,7 +4,7 @@ import thaumcraft.common.config.Config;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -17,9 +17,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWAmulet extends Item {
 
-	public TWAmulet(int ID) {
+	public TWAmulet() {
 		
-		super(ID);
+		super();
 		setUnlocalizedName(TWItemConfig.TWAMULET_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
 		setMaxStackSize(1);
@@ -58,7 +58,7 @@ public class TWAmulet extends Item {
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister Register) {
+    public void registerIcons(IIconRegister Register) {
 		
             itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamulet" );
             

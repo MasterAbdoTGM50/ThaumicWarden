@@ -2,6 +2,7 @@ package matgm50.twarden.util;
 
 import matgm50.twarden.items.TWItems;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -14,10 +15,9 @@ public class TWTab extends CreativeTabs {
 	}
 	
 	@Override
-    @SideOnly(Side.CLIENT)
-    public int getTabIconItemIndex() {
+	public Item getTabIconItem() {
 		
-		return TWItems.TWSigil.itemID;
+		return TWItems.TWCross;
 		
 	}
 	

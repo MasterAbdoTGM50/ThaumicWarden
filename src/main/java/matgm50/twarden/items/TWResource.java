@@ -2,27 +2,28 @@ package matgm50.twarden.items;
 
 import java.util.List;
 
+import javax.swing.Icon;
+
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWResource extends Item {
 
-	public TWResource(int ID) {
+	public TWResource() {
 		
-		super(ID);
+		super();
 		setUnlocalizedName(TWItemConfig.TWRESOURCE_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
 		setHasSubtypes(true);
-		setMaxDamage(0);
 		
 	}
 	
@@ -41,12 +42,11 @@ public class TWResource extends Item {
     }
 	
 	@Override
-	public void getSubItems(int ID, CreativeTabs Tab, List List) {
+	public void getSubItems(Item Item, CreativeTabs Tab, List List) {
 		
 		for(int D = 0; D < TWItemConfig.TWRESOURCE_ICONNAME.length; D++) {
 			
-			ItemStack Itemstack = new ItemStack(ID, 1, D);
-			List.add(Itemstack);
+			List.add(new ItemStack(Item, 1, D));
 			
 		}
 		
@@ -54,7 +54,7 @@ public class TWResource extends Item {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public Icon getIconFromDamage(int Damage) {
+	public IIcon getIconFromDamage(int Damage) {
 		
 		return TWItemConfig.TWRESOURCE_ICON[Damage];
 	
@@ -62,9 +62,9 @@ public class TWResource extends Item {
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister Register) {
+    public void registerIcons(IIconRegister Register) {
 		
-		TWItemConfig.TWRESOURCE_ICON = new Icon[TWItemConfig.TWRESOURCE_ICONNAME.length];
+		TWItemConfig.TWRESOURCE_ICON = new IIcon[TWItemConfig.TWRESOURCE_ICONNAME.length];
 		
 		for(int D = 0; D < TWItemConfig.TWRESOURCE_ICON.length; D++) {
 			

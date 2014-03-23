@@ -10,8 +10,6 @@ public class TWEntities {
 	
 	public static void Init() {
 		
-		EntityRegistry.registerModEntity(TWTaintedHunter.class, "TaintedHunter", 0, TWarden.Instance, 80, 3, true);
-		
 	}
 	
 }

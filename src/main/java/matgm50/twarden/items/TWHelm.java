@@ -4,11 +4,10 @@ import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
 import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -22,9 +21,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWHelm extends ItemArmor implements IRepairable, IVisDiscountGear, IGoggles, IRevealer {
 
-	public TWHelm(int ID, EnumArmorMaterial Material) {
+	public TWHelm(ArmorMaterial Material) {
 		
-		super(ID, Material, 3, 0);
+		super(Material, 3, 0);
 		setUnlocalizedName(TWItemConfig.TWHELM_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
 		setMaxDamage(1000);
@@ -33,7 +32,7 @@ public class TWHelm extends ItemArmor implements IRepairable, IVisDiscountGear, 
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister Register) {
+    public void registerIcons(IIconRegister Register) {
 		
             itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenhelm" );
             
@@ -90,11 +89,11 @@ public class TWHelm extends ItemArmor implements IRepairable, IVisDiscountGear, 
 	
 	@Override
     @SideOnly(Side.CLIENT)
-	public String getArmorTexture(ItemStack Stack, Entity Entity, int Slot, int Layer)
-    {
+	public String getArmorTexture(ItemStack Stack, Entity Entity, int Slot, String Type) {
 		
-        return "twarden:textures/armors/wardenhelm.png";
-        
-    }
+		return "twarden:textures/armors/wardenhelm.png";
+		
+	}
+	
 	
 }

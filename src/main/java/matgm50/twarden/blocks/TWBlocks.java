@@ -13,8 +13,8 @@ public class TWBlocks {
 	
 	public static void Init() {
 		
-		TWFlower = new TWFlower(TWBlockConfig.TWFLOWER_ID, Material.grass);
-		TWLizTable = new TWLizTable(TWBlockConfig.TWLIZTABLE_ID, Material.rock);
+		TWFlower = new TWFlower();
+		TWLizTable = new TWLizTable(Material.rock);
 		
 		GameRegistry.registerBlock(TWFlower, TWBlockConfig.TWFLOWER_KEY);
 		GameRegistry.registerBlock(TWLizTable, TWBlockConfig.TWLIZTABLE_KEY);

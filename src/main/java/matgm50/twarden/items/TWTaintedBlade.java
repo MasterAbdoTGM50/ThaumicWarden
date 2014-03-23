@@ -3,9 +3,8 @@ package matgm50.twarden.items;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import cpw.mods.fml.relauncher.Side;
@@ -13,9 +12,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWTaintedBlade extends ItemSword {
 
-	public TWTaintedBlade(int ID, EnumToolMaterial Material) {
+	public TWTaintedBlade(ToolMaterial Material) {
 
-		super(ID, Material);
+		super(Material);
 		setUnlocalizedName(TWItemConfig.TWTAINTEDBLADE_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
 
@@ -30,7 +29,7 @@ public class TWTaintedBlade extends ItemSword {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister Register) {
+	public void registerIcons(IIconRegister Register) {
 
 		itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedblade");
 

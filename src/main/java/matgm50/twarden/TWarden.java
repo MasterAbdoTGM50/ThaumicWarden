@@ -7,7 +7,6 @@ import matgm50.twarden.config.TWModConfig;
 import matgm50.twarden.crafting.TWRecipes;
 import matgm50.twarden.entities.TWEntities;
 import matgm50.twarden.items.TWItems;
-import matgm50.twarden.network.packet.TWPacket;
 import matgm50.twarden.network.proxy.TWCommonProxy;
 import matgm50.twarden.research.TWResearch;
 import matgm50.twarden.util.TWLang;
@@ -21,10 +20,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = TWModConfig.TWMOD_ID, name = TWModConfig.TWMOD_NAME, version = TWModConfig.TWMOD_VERSION, dependencies = TWModConfig.TWMOD_DEPENDENCIES)
-@NetworkMod(channels = {TWModConfig.TWMOD_CHANNEL}, clientSideRequired = true, serverSideRequired = true, packetHandler = TWPacket.class)
 
 public class TWarden {
 	

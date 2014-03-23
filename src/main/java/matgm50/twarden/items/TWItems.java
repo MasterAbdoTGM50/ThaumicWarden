@@ -1,19 +1,19 @@
 package matgm50.twarden.items;
 
 import matgm50.twarden.config.TWItemConfig;
-import net.minecraft.item.EnumArmorMaterial;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.EnumHelper;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TWItems {
 	
-	public static EnumArmorMaterial ArmorWardenMaterial = EnumHelper.addArmorMaterial("WARDENENIC", 50, new int[] {3, 8, 6, 3}, 50);
-	public static EnumToolMaterial ToolWardenMaterial = EnumHelper.addToolMaterial("WARDENIC", 4, 3000, 15F, 5.0F, 50);
+	public static ArmorMaterial ArmorWardenMaterial = EnumHelper.addArmorMaterial("WARDENENIC", 50, new int[] {3, 8, 6, 3}, 50);
+	public static ToolMaterial ToolWardenMaterial = EnumHelper.addToolMaterial("WARDENIC", 4, 3000, 15F, 5.0F, 50);
 	
-	public static EnumArmorMaterial ArmorTaintedMaterial = EnumHelper.addArmorMaterial("TAINTED", 50, new int[] {2, 6, 5, 2}, 50);
-	public static EnumToolMaterial ToolTaintedMaterial = EnumHelper.addToolMaterial("TAINTED", 4, 500, 15F, 5.0F, 50);
+	public static ArmorMaterial ArmorTaintedMaterial = EnumHelper.addArmorMaterial("TAINTED", 50, new int[] {2, 6, 5, 2}, 50);
+	public static ToolMaterial ToolTaintedMaterial = EnumHelper.addToolMaterial("TAINTED", 4, 500, 15F, 5.0F, 50);
 	
 	public static Item TWHelm;
 	public static Item TWChest;
@@ -34,22 +34,22 @@ public class TWItems {
 	
 	public static void Init() {
 		
-		TWHelm = new TWHelm(TWItemConfig.TWHELM_ID, ArmorWardenMaterial);
-		TWChest = new TWChest(TWItemConfig.TWCHEST_ID, ArmorWardenMaterial);
-		TWLegs = new TWLegs(TWItemConfig.TWLEGS_ID, ArmorWardenMaterial);
-		TWBoots = new TWBoots(TWItemConfig.TWBOOTS_ID, ArmorWardenMaterial);
-		TWCross = new TWCross(TWItemConfig.TWCROSS_ID);
-		TWResource = new TWResource(TWItemConfig.TWRESOURCE_ID);
-		TWSigil = new TWSigil(TWItemConfig.TWSIGIL_ID);
-		TWAmulet = new TWAmulet(TWItemConfig.TWAMULET_ID);
-		TWTaintedHelm = new TWTaintedArmor(TWItemConfig.TWTAINTEDHELM_ID, ArmorTaintedMaterial, 0).setUnlocalizedName(TWItemConfig.TWTAINTEDHELM_UN_NAME);
-		TWTaintedChest = new TWTaintedArmor(TWItemConfig.TWTAINTEDCHEST_ID, ArmorTaintedMaterial, 1).setUnlocalizedName(TWItemConfig.TWTAINTEDCHEST_UN_NAME);
-		TWTaintedLegs = new TWTaintedArmor(TWItemConfig.TWTAINTEDLEGS_ID, ArmorTaintedMaterial, 2).setUnlocalizedName(TWItemConfig.TWTAINTEDLEGS_UN_NAME);
-		TWTaintedBoots = new TWTaintedArmor(TWItemConfig.TWTAINTEDBOOTS_ID, ArmorTaintedMaterial, 3).setUnlocalizedName(TWItemConfig.TWTAINTEDBOOTS_UN_NAME);
-		TWTaintedBlade = new TWTaintedBlade(TWItemConfig.TWTAINTEDBLADE_ID, ToolTaintedMaterial);
-		TWLizHammer = new TWLizHammer(TWItemConfig.TWLIZHAMMER_ID);
-		TWFeather = new TWFeather(TWItemConfig.TWFEATHER_ID);
-		TWMagicAmulet = new TWMagicAmulet(TWItemConfig.TWMAGICAMULET_ID);
+		TWHelm = new TWHelm(ArmorWardenMaterial);
+		TWChest = new TWChest(ArmorWardenMaterial);
+		TWLegs = new TWLegs(ArmorWardenMaterial);
+		TWBoots = new TWBoots(ArmorWardenMaterial);
+		TWCross = new TWCross();
+		TWResource = new TWResource();
+		TWSigil = new TWSigil();
+		TWAmulet = new TWAmulet();
+		TWTaintedHelm = new TWTaintedArmor(ArmorTaintedMaterial, 0).setUnlocalizedName(TWItemConfig.TWTAINTEDHELM_UN_NAME);
+		TWTaintedChest = new TWTaintedArmor(ArmorTaintedMaterial, 1).setUnlocalizedName(TWItemConfig.TWTAINTEDCHEST_UN_NAME);
+		TWTaintedLegs = new TWTaintedArmor(ArmorTaintedMaterial, 2).setUnlocalizedName(TWItemConfig.TWTAINTEDLEGS_UN_NAME);
+		TWTaintedBoots = new TWTaintedArmor(ArmorTaintedMaterial, 3).setUnlocalizedName(TWItemConfig.TWTAINTEDBOOTS_UN_NAME);
+		TWTaintedBlade = new TWTaintedBlade(ToolTaintedMaterial);
+		TWLizHammer = new TWLizHammer();
+		TWFeather = new TWFeather();
+		TWMagicAmulet = new TWMagicAmulet();
 		
 		GameRegistry.registerItem(TWHelm, TWItemConfig.TWHELM_KEY);
 		GameRegistry.registerItem(TWChest, TWItemConfig.TWCHEST_KEY);

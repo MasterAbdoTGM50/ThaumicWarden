@@ -8,8 +8,6 @@ public class TWModConfig {
     
     public static final String TWMOD_DEPENDENCIES = "required-after:Thaumcraft;";
     
-    public static final String TWMOD_CHANNEL = TWMOD_ID;
-    
     public static final String TWMOD_CLIENTPROXY = "matgm50.twarden.network.proxy.TWClientProxy";
     public static final String TWMOD_COMMONPROXY = "matgm50.twarden.network.proxy.TWCommonProxy";
     

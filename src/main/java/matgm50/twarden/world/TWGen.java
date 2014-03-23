@@ -6,7 +6,7 @@ public class TWGen {
 	
 public static void Init() {
 		
-		GameRegistry.registerWorldGenerator(new TWFlowerGen());
+		GameRegistry.registerWorldGenerator(new TWFlowerGen(), 1);
 		
 	}
 	

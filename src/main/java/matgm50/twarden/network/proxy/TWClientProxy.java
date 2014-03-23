@@ -4,8 +4,7 @@ import matgm50.twarden.blocks.tiles.TWLizTableTile;
 import matgm50.twarden.client.renderers.TWLizTableRender;
 import matgm50.twarden.util.TWTick;
 import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.common.registry.TickRegistry;
-import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.common.FMLCommonHandler;
 
 public class TWClientProxy extends TWCommonProxy {
 	
@@ -19,7 +18,7 @@ public class TWClientProxy extends TWCommonProxy {
 	@Override
 	public void InitTick() {
 		
-		TickRegistry.registerTickHandler(new TWTick(), Side.CLIENT);
+		FMLCommonHandler.instance().bus().register(new TWTick());
 		
 	}
 

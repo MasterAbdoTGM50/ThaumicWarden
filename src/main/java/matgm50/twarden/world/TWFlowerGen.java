@@ -4,6 +4,7 @@ import java.util.Random;
 
 import matgm50.twarden.blocks.TWBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
@@ -21,9 +22,9 @@ public class TWFlowerGen implements IWorldGenerator {
 		    int Z = ChunkZ * 16 + Random.nextInt(128);
 		    int Y = World.getHeightValue(X, Z);
 		    
-			if (World.isAirBlock(X, Y, Z) && Block.blocksList[TWBlocks.TWFlower.blockID].canBlockStay(World, X, Y, Z) && Random.nextInt(100) <= 5) {
+			if (World.isAirBlock(X, Y, Z) && TWBlocks.TWFlower.canBlockStay(World, X, Y, Z) && Random.nextInt(100) <= 5) {
 				
-				World.setBlock(X, Y, Z, TWBlocks.TWFlower.blockID, 0, 2);
+				World.setBlock(X, Y, Z, TWBlocks.TWFlower, 0, 2);
 				
 			}
 			

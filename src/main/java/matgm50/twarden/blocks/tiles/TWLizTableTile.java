@@ -1,6 +1,5 @@
 package matgm50.twarden.blocks.tiles;
 
-import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import matgm50.twarden.config.TWBlockConfig;
@@ -11,9 +10,8 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.network.INetworkManager;
-import net.minecraft.network.packet.Packet;
-import net.minecraft.network.packet.Packet132TileEntityData;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 public class TWLizTableTile extends TileEntity implements IInventory {
@@ -46,7 +44,6 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 			} else {
 				
 				Split = Split.splitStack(Decrease);
-				onInventoryChanged();
 				
 			}
 			
@@ -77,15 +74,13 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 			
 		}
 		
-		onInventoryChanged();
-		
 	}
 	
 	@Override
-	public String getInvName() {return TWBlockConfig.TWLIZTABLE_CONT_NAME;}
+	public String getInventoryName() {return TWBlockConfig.TWLIZTABLE_CONT_NAME;}
 
 	@Override
-	public boolean isInvNameLocalized() {return true;}
+	public boolean hasCustomInventoryName() {return true;}
 
 	@Override
 	public int getInventoryStackLimit() {return Inv.length;}
@@ -94,10 +89,10 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 	public boolean isUseableByPlayer(EntityPlayer Player) {return true;}
 
 	@Override
-	public void openChest() {}
+	public void openInventory() {}
 
 	@Override
-	public void closeChest() {}
+	public void closeInventory() {}
 	
 	@Override
 	public boolean isItemValidForSlot(int Slot, ItemStack Itemstack) {
@@ -159,11 +154,11 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 		
 		super.readFromNBT(Tag);
 		
-		NBTTagList InvList = Tag.getTagList("Inventory");
+		NBTTagList InvList = Tag.getTagList("Inventory", Tag.getId());
 		
 		for(int S = 0; S < InvList.tagCount(); S++) {
 			
-			NBTTagCompound InvComp = (NBTTagCompound)InvList.tagAt(S);
+			NBTTagCompound InvComp = (NBTTagCompound)InvList.getCompoundTagAt(S);
 			
 			int Slot = InvComp.getByte("Slot");
 			
@@ -177,20 +172,17 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 		
 	}
 	
-	@Override
-	public Packet getDescriptionPacket() {
-		
-		NBTTagCompound Tag = new NBTTagCompound();
-		writeToNBT(Tag);
-        return new Packet132TileEntityData(xCoord, yCoord, zCoord, 1, Tag);
-		
-	}
+	
 
 	@Override
-	public void onDataPacket(INetworkManager Manager, Packet132TileEntityData Packet) {
+	public void onDataPacket(NetworkManager Manager, S35PacketUpdateTileEntity Packet) {
 		
 		super.onDataPacket(Manager, Packet);
-		readFromNBT(Packet.data);
+		if ((worldObj != null) && (worldObj.isRemote)) {
+			
+			worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+			
+		}
 		
 	}
 	

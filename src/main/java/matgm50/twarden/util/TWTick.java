@@ -1,52 +1,13 @@
 package matgm50.twarden.util;
 
-import java.util.EnumSet;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 
-import matgm50.twarden.config.TWModConfig;
-import matgm50.twarden.items.TWItems;
-import net.minecraft.entity.player.EntityPlayer;
-import thaumcraft.common.config.Config;
-import cpw.mods.fml.common.ITickHandler;
-import cpw.mods.fml.common.TickType;
-
-public class TWTick implements ITickHandler {
-
-	@Override
-	public void tickStart(EnumSet<TickType> Type, Object... TickData) {
-		
-		if (Type.equals(EnumSet.of(TickType.PLAYER))) {
-			
-			EntityPlayer Player = (EntityPlayer) TickData[0];
-			
-			OnTick(Player);
-			
-		}
-		
-	}
-
-	@Override
-	public void tickEnd(EnumSet<TickType> Type, Object... TickData) {
-		
-	}
-
-	@Override
-	public EnumSet<TickType> ticks() {
-		
-		return EnumSet.of(TickType.PLAYER);
-		
-	}
+public class TWTick{
 	
-	public void OnTick(EntityPlayer Player) {
+	@SubscribeEvent
+	public void onTick(TickEvent.ClientTickEvent Event) {
 		
 	}
-
-	@Override
-	public String getLabel() {
-		
-		return TWModConfig.TWMOD_NAME;
-		
-	}
-	
-	
 	
 }

@@ -4,7 +4,7 @@ import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
 import matgm50.twarden.util.TWCrossDamage;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
@@ -20,9 +20,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWCross extends Item implements IRepairable {
 
-	public TWCross(int ID) {
+	public TWCross() {
 
-		super(ID);
+		super();
 		setUnlocalizedName(TWItemConfig.TWCROSS_UN_NAME);
 		setCreativeTab(TWarden.TWTab);
 		setMaxDamage(TWItems.ToolWardenMaterial.getMaxUses());
@@ -96,7 +96,7 @@ public class TWCross extends Item implements IRepairable {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister Register) {
+	public void registerIcons(IIconRegister Register) {
 
 		itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardencross");
 
