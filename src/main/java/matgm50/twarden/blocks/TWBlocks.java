@@ -8,16 +8,16 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TWBlocks {
 	
-	public static Block TWFlower;
-	public static Block TWLizTable;
+	public static Block twFlower;
+	public static Block twLizTable;
 	
-	public static void Init() {
+	public static void init() {
 		
-		TWFlower = new TWFlower();
-		TWLizTable = new TWLizTable(Material.rock);
+		twFlower = new TWFlower();
+		twLizTable = new TWLizTable(Material.rock);
 		
-		GameRegistry.registerBlock(TWFlower, TWBlockConfig.TWFLOWER_KEY);
-		GameRegistry.registerBlock(TWLizTable, TWBlockConfig.TWLIZTABLE_KEY);
+		GameRegistry.registerBlock(twFlower, TWBlockConfig.TWFLOWER_KEY);
+		GameRegistry.registerBlock(twLizTable, TWBlockConfig.TWLIZTABLE_KEY);
 		
 		GameRegistry.registerTileEntity(TWLizTableTile.class, TWBlockConfig.TWLIZTABLE_TILE_NAME);
 		

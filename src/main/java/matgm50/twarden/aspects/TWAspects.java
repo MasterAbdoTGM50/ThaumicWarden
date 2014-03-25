@@ -10,53 +10,53 @@ import thaumcraft.api.aspects.AspectList;
 
 public class TWAspects {
 
-	public static Aspect TWAspect;
+	public static Aspect WARDEN;
 
-	public static AspectList TWFlowerTag;
-	public static AspectList TWHelmTag;
-	public static AspectList TWChestTag;
-	public static AspectList TWLegsTag;
-	public static AspectList TWBootsTag;
-	public static AspectList TWCrossTag;
-	public static AspectList TWQuartzTag;
-	public static AspectList TWFabricTag;
-	public static AspectList TWFrameTag;
-	public static AspectList TWShardTag;
-	public static AspectList TWStoneTag;
-	public static AspectList TWSigilTag;
-	public static AspectList TWAmuletTag;
+	public static AspectList twFlowerTag;
+	public static AspectList twHelmTag;
+	public static AspectList twChestTag;
+	public static AspectList twLegsTag;
+	public static AspectList twBootsTag;
+	public static AspectList twCrossTag;
+	public static AspectList twQuartzTag;
+	public static AspectList twFabricTag;
+	public static AspectList twFrameTag;
+	public static AspectList twShardTag;
+	public static AspectList twStoneTag;
+	public static AspectList twSigilTag;
+	public static AspectList twAmuletTag;
 
-	public static void Init() {
+	public static void init() {
 		
-		TWAspect = new Aspect(TWAspectConfig.TWAspect_KEY, 0x3cd4fc, new Aspect[] {Aspect.ELDRITCH, Aspect.DEATH}, TWAspectConfig.TWAspectIcon, 771);
+		WARDEN = new Aspect(TWAspectConfig.TWAspect_KEY, 0x3cd4fc, new Aspect[] {Aspect.ELDRITCH, Aspect.DEATH}, TWAspectConfig.TWAspectIcon, 771);
 		
-		TWFlowerTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.CROP, 16).add(Aspect.EARTH, 16);
-		TWHelmTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16).add(Aspect.SENSES, 16);
-		TWChestTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16);
-		TWLegsTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16);
-		TWBootsTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16);
-		TWCrossTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.WEAPON, 16);
-		TWQuartzTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.CRYSTAL, 16);
-		TWFabricTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 16);
-		TWFrameTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.VOID, 16);
-		TWShardTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.CRYSTAL, 16).add(Aspect.ENTROPY, 16);
-		TWStoneTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.CRYSTAL, 16).add(Aspect.ORDER, 16);
-		TWSigilTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16);
-		TWAmuletTag = new AspectList().add(TWAspect, 16).add(Aspect.MAGIC, 16).add(Aspect.EXCHANGE, 16);
+		twFlowerTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.CROP, 16).add(Aspect.EARTH, 16);
+		twHelmTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16).add(Aspect.SENSES, 16);
+		twChestTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16);
+		twLegsTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16);
+		twBootsTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.ARMOR, 16);
+		twCrossTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.WEAPON, 16);
+		twQuartzTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.CRYSTAL, 16);
+		twFabricTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.CLOTH, 16);
+		twFrameTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.VOID, 16);
+		twShardTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.CRYSTAL, 16).add(Aspect.ENTROPY, 16);
+		twStoneTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.CRYSTAL, 16).add(Aspect.ORDER, 16);
+		twSigilTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16);
+		twAmuletTag = new AspectList().add(WARDEN, 16).add(Aspect.MAGIC, 16).add(Aspect.EXCHANGE, 16);
 		
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWBlocks.TWFlower), TWFlowerTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWHelm), TWHelmTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWChest), TWChestTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWLegs), TWLegsTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWBoots), TWBootsTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWCross), TWCrossTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWResource, 0, 0), TWQuartzTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWResource, 0, 1), TWFabricTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWResource, 0, 2), TWFrameTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWResource, 0, 3), TWShardTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWResource, 0, 4), TWStoneTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWSigil), TWSigilTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.TWAmulet), TWAmuletTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWBlocks.twFlower), twFlowerTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twHelm), twHelmTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twChest), twChestTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twLegs), twLegsTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twBoots), twBootsTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twCross), twCrossTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 0), twQuartzTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 1), twFabricTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 2), twFrameTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 3), twShardTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 4), twStoneTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twSigil), twSigilTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twAmulet), twAmuletTag);
 		
 	}
 }

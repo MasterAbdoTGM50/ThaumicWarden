@@ -9,64 +9,64 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TWItems {
 	
-	public static ArmorMaterial ArmorWardenMaterial = EnumHelper.addArmorMaterial("WARDENENIC", 50, new int[] {3, 8, 6, 3}, 50);
-	public static ToolMaterial ToolWardenMaterial = EnumHelper.addToolMaterial("WARDENIC", 4, 3000, 15F, 5.0F, 50);
+	public static ArmorMaterial wardenArmorMaterial = EnumHelper.addArmorMaterial("WARDENIC", 50, new int[] {3, 8, 6, 3}, 50);
+	public static ToolMaterial wardenToolMaterial = EnumHelper.addToolMaterial("WARDENIC", 4, 3000, 15F, 5.0F, 50);
 	
-	public static ArmorMaterial ArmorTaintedMaterial = EnumHelper.addArmorMaterial("TAINTED", 50, new int[] {2, 6, 5, 2}, 50);
-	public static ToolMaterial ToolTaintedMaterial = EnumHelper.addToolMaterial("TAINTED", 4, 500, 15F, 5.0F, 50);
+	public static ArmorMaterial taintArmorMaterial = EnumHelper.addArmorMaterial("TAINTED", 50, new int[] {2, 6, 5, 2}, 50);
+	public static ToolMaterial taintToolMaterial = EnumHelper.addToolMaterial("TAINTED", 4, 500, 15F, 5.0F, 50);
 	
-	public static Item TWHelm;
-	public static Item TWChest;
-	public static Item TWLegs;
-	public static Item TWBoots;
-	public static Item TWCross;
-	public static Item TWResource;
-	public static Item TWSigil;
-	public static Item TWAmulet;
-	public static Item TWTaintedHelm;
-	public static Item TWTaintedChest;
-	public static Item TWTaintedLegs;
-	public static Item TWTaintedBoots;
-	public static Item TWTaintedBlade;
-	public static Item TWLizHammer;
-	public static Item TWFeather;
-	public static Item TWMagicAmulet;
+	public static Item twHelm;
+	public static Item twChest;
+	public static Item twLegs;
+	public static Item twBoots;
+	public static Item twCross;
+	public static Item twResource;
+	public static Item twSigil;
+	public static Item twAmulet;
+	public static Item twTaintedHelm;
+	public static Item twTaintedChest;
+	public static Item twTaintedLegs;
+	public static Item twTaintedBoots;
+	public static Item twTaintedBlade;
+	public static Item twLizHammer;
+	public static Item twFeather;
+	public static Item twMagicAmulet;
 	
-	public static void Init() {
+	public static void init() {
 		
-		TWHelm = new TWHelm(ArmorWardenMaterial);
-		TWChest = new TWChest(ArmorWardenMaterial);
-		TWLegs = new TWLegs(ArmorWardenMaterial);
-		TWBoots = new TWBoots(ArmorWardenMaterial);
-		TWCross = new TWCross();
-		TWResource = new TWResource();
-		TWSigil = new TWSigil();
-		TWAmulet = new TWAmulet();
-		TWTaintedHelm = new TWTaintedArmor(ArmorTaintedMaterial, 0).setUnlocalizedName(TWItemConfig.TWTAINTEDHELM_UN_NAME);
-		TWTaintedChest = new TWTaintedArmor(ArmorTaintedMaterial, 1).setUnlocalizedName(TWItemConfig.TWTAINTEDCHEST_UN_NAME);
-		TWTaintedLegs = new TWTaintedArmor(ArmorTaintedMaterial, 2).setUnlocalizedName(TWItemConfig.TWTAINTEDLEGS_UN_NAME);
-		TWTaintedBoots = new TWTaintedArmor(ArmorTaintedMaterial, 3).setUnlocalizedName(TWItemConfig.TWTAINTEDBOOTS_UN_NAME);
-		TWTaintedBlade = new TWTaintedBlade(ToolTaintedMaterial);
-		TWLizHammer = new TWLizHammer();
-		TWFeather = new TWFeather();
-		TWMagicAmulet = new TWMagicAmulet();
+		twHelm = new TWHelm(wardenArmorMaterial);
+		twChest = new TWChest(wardenArmorMaterial);
+		twLegs = new TWLegs(wardenArmorMaterial);
+		twBoots = new TWBoots(wardenArmorMaterial);
+		twCross = new TWCross();
+		twResource = new TWResource();
+		twSigil = new TWSigil();
+		twAmulet = new TWAmulet();
+		twTaintedHelm = new TWTaintedArmor(taintArmorMaterial, 0).setUnlocalizedName(TWItemConfig.TWTAINTEDHELM_UN_NAME);
+		twTaintedChest = new TWTaintedArmor(taintArmorMaterial, 1).setUnlocalizedName(TWItemConfig.TWTAINTEDCHEST_UN_NAME);
+		twTaintedLegs = new TWTaintedArmor(taintArmorMaterial, 2).setUnlocalizedName(TWItemConfig.TWTAINTEDLEGS_UN_NAME);
+		twTaintedBoots = new TWTaintedArmor(taintArmorMaterial, 3).setUnlocalizedName(TWItemConfig.TWTAINTEDBOOTS_UN_NAME);
+		twTaintedBlade = new TWTaintedBlade(taintToolMaterial);
+		twLizHammer = new TWLizHammer();
+		twFeather = new TWFeather();
+		twMagicAmulet = new TWMagicAmulet();
 		
-		GameRegistry.registerItem(TWHelm, TWItemConfig.TWHELM_KEY);
-		GameRegistry.registerItem(TWChest, TWItemConfig.TWCHEST_KEY);
-		GameRegistry.registerItem(TWLegs, TWItemConfig.TWLEGS_KEY);
-		GameRegistry.registerItem(TWBoots, TWItemConfig.TWBOOTS_KEY);
-		GameRegistry.registerItem(TWCross, TWItemConfig.TWCROSS_KEY);
-		GameRegistry.registerItem(TWResource, TWItemConfig.TWRESOURCE_KEY);
-		GameRegistry.registerItem(TWSigil, TWItemConfig.TWSIGIL_KEY);
-		GameRegistry.registerItem(TWAmulet, TWItemConfig.TWAMULET_KEY);
-		GameRegistry.registerItem(TWTaintedHelm, TWItemConfig.TWTAINTEDHELM_KEY);
-		GameRegistry.registerItem(TWTaintedChest, TWItemConfig.TWTAINTEDCHEST_KEY);
-		GameRegistry.registerItem(TWTaintedLegs, TWItemConfig.TWTAINTEDLEGS_KEY);
-		GameRegistry.registerItem(TWTaintedBoots, TWItemConfig.TWTAINTEDBOOTS_KEY);
-		GameRegistry.registerItem(TWTaintedBlade, TWItemConfig.TWTAINTEDBLADE_KEY);
-		GameRegistry.registerItem(TWLizHammer, TWItemConfig.TWLIZHAMMER_KEY);
-		GameRegistry.registerItem(TWFeather, TWItemConfig.TWFEATHER_KEY);
-		GameRegistry.registerItem(TWMagicAmulet, TWItemConfig.TWMAGICAMULET_KEY);
+		GameRegistry.registerItem(twHelm, TWItemConfig.TWHELM_KEY);
+		GameRegistry.registerItem(twChest, TWItemConfig.TWCHEST_KEY);
+		GameRegistry.registerItem(twLegs, TWItemConfig.TWLEGS_KEY);
+		GameRegistry.registerItem(twBoots, TWItemConfig.TWBOOTS_KEY);
+		GameRegistry.registerItem(twCross, TWItemConfig.TWCROSS_KEY);
+		GameRegistry.registerItem(twResource, TWItemConfig.TWRESOURCE_KEY);
+		GameRegistry.registerItem(twSigil, TWItemConfig.TWSIGIL_KEY);
+		GameRegistry.registerItem(twAmulet, TWItemConfig.TWAMULET_KEY);
+		GameRegistry.registerItem(twTaintedHelm, TWItemConfig.TWTAINTEDHELM_KEY);
+		GameRegistry.registerItem(twTaintedChest, TWItemConfig.TWTAINTEDCHEST_KEY);
+		GameRegistry.registerItem(twTaintedLegs, TWItemConfig.TWTAINTEDLEGS_KEY);
+		GameRegistry.registerItem(twTaintedBoots, TWItemConfig.TWTAINTEDBOOTS_KEY);
+		GameRegistry.registerItem(twTaintedBlade, TWItemConfig.TWTAINTEDBLADE_KEY);
+		GameRegistry.registerItem(twLizHammer, TWItemConfig.TWLIZHAMMER_KEY);
+		GameRegistry.registerItem(twFeather, TWItemConfig.TWFEATHER_KEY);
+		GameRegistry.registerItem(twMagicAmulet, TWItemConfig.TWMAGICAMULET_KEY);
 		
 	}
 	

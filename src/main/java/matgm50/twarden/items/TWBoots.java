@@ -23,7 +23,7 @@ public class TWBoots extends ItemArmor implements IRepairable, IVisDiscountGear 
 		
 		super(Material, 3, 3);
 		setUnlocalizedName(TWItemConfig.TWBOOTS_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setMaxDamage(1000);
 		
 	}
@@ -37,7 +37,7 @@ public class TWBoots extends ItemArmor implements IRepairable, IVisDiscountGear 
     }
 
 	@Override
-	public int getVisDiscount(ItemStack Itemstack, EntityPlayer Player, Aspect Aspect) {
+	public int getVisDiscount(ItemStack stack, EntityPlayer Player, Aspect Aspect) {
 		
 		return 5;
 		
@@ -53,27 +53,27 @@ public class TWBoots extends ItemArmor implements IRepairable, IVisDiscountGear 
 	@Override
 	public boolean getIsRepairable(ItemStack Armor, ItemStack ItemInSlot) {
 		
-		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 1)) ? true : super.getIsRepairable(Armor, ItemInSlot);
+		return ItemInSlot.isItemEqual(new ItemStack(TWItems.twResource, 1, 1)) ? true : super.getIsRepairable(Armor, ItemInSlot);
 		
 	}
 	
 	@Override
     @SideOnly(Side.CLIENT)
-	public ModelBiped getArmorModel(EntityLivingBase Player, ItemStack Itemstack, int Slot) {
+	public ModelBiped getArmorModel(EntityLivingBase Player, ItemStack stack, int slot) {
 		
-		ModelBiped Model = new ModelBiped(0.5F);
+		ModelBiped model = new ModelBiped(0.5F);
 		
-		Model.isSneak = Player.isSneaking();
-		Model.isRiding = Player.isRiding();
-		Model.isChild = Player.isChild();
+		model.isSneak = Player.isSneaking();
+		model.isRiding = Player.isRiding();
+		model.isChild = Player.isChild();
 		
-		return Model;
+		return model;
 		
 	}
 	
 	@Override
     @SideOnly(Side.CLIENT)
-	public String getArmorTexture(ItemStack Stack, Entity Entity, int Slot, String Type) {
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
 		
 		return "twarden:textures/armors/wardenboots.png";
 		

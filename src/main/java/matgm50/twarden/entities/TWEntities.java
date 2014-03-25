@@ -8,7 +8,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class TWEntities {
 	
-	public static void Init() {
+	public static void init() {
 		
 	}
 	

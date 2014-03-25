@@ -21,75 +21,75 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWHelm extends ItemArmor implements IRepairable, IVisDiscountGear, IGoggles, IRevealer {
 
-	public TWHelm(ArmorMaterial Material) {
+	public TWHelm(ArmorMaterial material) {
 		
-		super(Material, 3, 0);
+		super(material, 3, 0);
 		setUnlocalizedName(TWItemConfig.TWHELM_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setMaxDamage(1000);
 		
 	}
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister Register) {
+    public void registerIcons(IIconRegister register) {
 		
-            itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenhelm" );
+            itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenhelm" );
             
     }
 
 	@Override
-	public int getVisDiscount(ItemStack Itemstack, EntityPlayer Player, Aspect Aspect) {
+	public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
 			
 			return 5;
 		
 	}
 
 	@Override
-	public boolean showNodes(ItemStack Itemstack, EntityLivingBase Player) {
+	public boolean showNodes(ItemStack stack, EntityLivingBase player) {
 		
 		return true;
 		
 	}
 
 	@Override
-	public boolean showIngamePopups(ItemStack Itemstack, EntityLivingBase Player) {
+	public boolean showIngamePopups(ItemStack stack, EntityLivingBase player) {
 		
 		return true;
 		
 	}
 	
 	@Override
-    public EnumRarity getRarity(ItemStack Armor) {
+    public EnumRarity getRarity(ItemStack stack) {
 		
             return EnumRarity.epic;
             
     }
 	
 	@Override
-	public boolean getIsRepairable(ItemStack Armor, ItemStack ItemInSlot) {
+	public boolean getIsRepairable(ItemStack armor, ItemStack itemInSlot) {
 		
-		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 1)) ? true : super.getIsRepairable(Armor, ItemInSlot);
-		
-	}
-	
-	@Override
-    @SideOnly(Side.CLIENT)
-	public ModelBiped getArmorModel(EntityLivingBase Player, ItemStack Itemstack, int Slot) {
-		
-		ModelBiped Model = new ModelBiped(0.5F);
-		
-		Model.isSneak = Player.isSneaking();
-		Model.isRiding = Player.isRiding();
-		Model.isChild = Player.isChild();
-		
-		return Model;
+		return itemInSlot.isItemEqual(new ItemStack(TWItems.twResource, 1, 1)) ? true : super.getIsRepairable(armor, itemInSlot);
 		
 	}
 	
 	@Override
     @SideOnly(Side.CLIENT)
-	public String getArmorTexture(ItemStack Stack, Entity Entity, int Slot, String Type) {
+	public ModelBiped getArmorModel(EntityLivingBase player, ItemStack stack, int slot) {
+		
+		ModelBiped model = new ModelBiped(0.5F);
+		
+		model.isSneak = player.isSneaking();
+		model.isRiding = player.isRiding();
+		model.isChild = player.isChild();
+		
+		return model;
+		
+	}
+	
+	@Override
+    @SideOnly(Side.CLIENT)
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
 		
 		return "twarden:textures/armors/wardenhelm.png";
 		

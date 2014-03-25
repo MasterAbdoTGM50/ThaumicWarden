@@ -5,9 +5,9 @@ import net.minecraft.util.EntityDamageSource;
 
 public class TWCrossDamage extends EntityDamageSource {
 
-	public TWCrossDamage(String Name, Entity Source) {
+	public TWCrossDamage(String name, Entity source) {
 		
-		super(Name, Source);
+		super(name, source);
 		setDamageBypassesArmor();
 		
 	}

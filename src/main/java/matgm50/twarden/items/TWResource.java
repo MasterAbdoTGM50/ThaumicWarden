@@ -22,31 +22,31 @@ public class TWResource extends Item {
 		
 		super();
 		setUnlocalizedName(TWItemConfig.TWRESOURCE_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setHasSubtypes(true);
 		
 	}
 	
 	@Override
-	public String getUnlocalizedName(ItemStack Itemstack) {
+	public String getUnlocalizedName(ItemStack stack) {
 		
-		return super.getUnlocalizedName() + "." + Itemstack.getItemDamage();
+		return super.getUnlocalizedName() + "." + stack.getItemDamage();
 		
 	}
 	
 	@Override
-    public EnumRarity getRarity(ItemStack Itemstack) {
+    public EnumRarity getRarity(ItemStack stack) {
 		
 		return EnumRarity.uncommon;
 		
     }
 	
 	@Override
-	public void getSubItems(Item Item, CreativeTabs Tab, List List) {
+	public void getSubItems(Item item, CreativeTabs tab, List list) {
 		
 		for(int D = 0; D < TWItemConfig.TWRESOURCE_ICONNAME.length; D++) {
 			
-			List.add(new ItemStack(Item, 1, D));
+			list.add(new ItemStack(item, 1, D));
 			
 		}
 		
@@ -54,21 +54,21 @@ public class TWResource extends Item {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIconFromDamage(int Damage) {
+	public IIcon getIconFromDamage(int damage) {
 		
-		return TWItemConfig.TWRESOURCE_ICON[Damage];
+		return TWItemConfig.TWRESOURCE_ICON[damage];
 	
 	}
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister Register) {
+    public void registerIcons(IIconRegister register) {
 		
 		TWItemConfig.TWRESOURCE_ICON = new IIcon[TWItemConfig.TWRESOURCE_ICONNAME.length];
 		
 		for(int D = 0; D < TWItemConfig.TWRESOURCE_ICON.length; D++) {
 			
-			TWItemConfig.TWRESOURCE_ICON[D] = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + TWItemConfig.TWRESOURCE_ICONNAME[D] );
+			TWItemConfig.TWRESOURCE_ICON[D] = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + TWItemConfig.TWRESOURCE_ICONNAME[D] );
 			
 		}
 		

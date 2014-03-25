@@ -21,34 +21,34 @@ public class TWAmulet extends Item {
 		
 		super();
 		setUnlocalizedName(TWItemConfig.TWAMULET_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setMaxStackSize(1);
 		
 	}
 	
 	@Override
-    public EnumRarity getRarity(ItemStack Itemstack) {
+    public EnumRarity getRarity(ItemStack stack) {
 		
             return EnumRarity.rare;
             
     }
 	
 	@Override
-	public void onUpdate(ItemStack Itemstack, World World, Entity Entity, int Par1, boolean Par2) {
+	public void onUpdate(ItemStack stack, World world, Entity entity, int par1, boolean par2) {
 		
-		if(Entity instanceof EntityPlayer) {
+		if(entity instanceof EntityPlayer) {
 			
-			EntityPlayer Player = (EntityPlayer)Entity;
+			EntityPlayer player = (EntityPlayer)entity;
 			
-			if(Player.isPotionActive(Config.potionFluxTaintID)) {
+			if(player.isPotionActive(Config.potionFluxTaintID)) {
 				
-				Player.removePotionEffect(Config.potionFluxTaintID);
+				player.removePotionEffect(Config.potionFluxTaintID);
 				
 			}
 			
-			if(Player.isPotionActive(Potion.wither.id)) {
+			if(player.isPotionActive(Potion.wither.id)) {
 				
-				Player.removePotionEffect(Potion.wither.id);
+				player.removePotionEffect(Potion.wither.id);
 				
 			}
 			
@@ -58,9 +58,9 @@ public class TWAmulet extends Item {
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister Register) {
+    public void registerIcons(IIconRegister register) {
 		
-            itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamulet" );
+            itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamulet" );
             
     }
 	

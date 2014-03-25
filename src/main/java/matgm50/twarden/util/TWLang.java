@@ -5,7 +5,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class TWLang {
 	
-	public static void Init () {
+	public static void init () {
 		
 		for(String Locale : TWModConfig.TWMOD_LANGS) {
 			

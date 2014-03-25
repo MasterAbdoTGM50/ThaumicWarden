@@ -17,7 +17,7 @@ public class TWTab extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		
-		return TWItems.TWCross;
+		return TWItems.twCross;
 		
 	}
 	

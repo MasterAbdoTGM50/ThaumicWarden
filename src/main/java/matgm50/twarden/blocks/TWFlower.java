@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -22,15 +23,15 @@ public class TWFlower extends BlockFlower {
 		
 		super(0);
 		setBlockName(TWBlockConfig.TWFLOWER_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setStepSound(Block.soundTypeGrass);
 		
 	}
 	
 	@Override
-	public Item getItemDropped(int Par1, Random Random, int Par2) {
+	public Item getItemDropped(int par1, Random random, int par2) {
 		
-		return TWItems.TWResource;
+		return TWItems.twResource;
 		
 	}
 	
@@ -41,18 +42,26 @@ public class TWFlower extends BlockFlower {
 		
 	}
 	
+	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item Item, CreativeTabs Tab, List List) {
+    public IIcon getIcon(int par1, int par2) {
 		
-		List.add(new ItemStack(Item));
+		return blockIcon;
+		
+	}
+	
+	@Override
+	public void getSubBlocks(Item item, CreativeTabs tab, List list) {
+		
+		list.add(new ItemStack(item));
 		
 	}
 	
 	@SideOnly(Side.CLIENT)
     @Override
-    public void registerBlockIcons(IIconRegister Register) {
+    public void registerBlockIcons(IIconRegister register) {
 		
-		blockIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenflower" );
+		blockIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenflower" );
 		
 	}
 	

@@ -1,4 +1,4 @@
-package matgm50.twarden.network.proxy;
+package matgm50.twarden.client.proxies;
 
 import matgm50.twarden.blocks.tiles.TWLizTableTile;
 import matgm50.twarden.client.renderers.TWLizTableRender;
@@ -9,14 +9,14 @@ import cpw.mods.fml.common.FMLCommonHandler;
 public class TWClientProxy extends TWCommonProxy {
 	
 	@Override
-	public void InitRenderer() {
+	public void initRenderer() {
 		
 		ClientRegistry.bindTileEntitySpecialRenderer(TWLizTableTile.class, new TWLizTableRender());
 		
 	}
 	
 	@Override
-	public void InitTick() {
+	public void initTick() {
 		
 		FMLCommonHandler.instance().bus().register(new TWTick());
 		

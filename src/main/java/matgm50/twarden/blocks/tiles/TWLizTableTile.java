@@ -1,10 +1,6 @@
 package matgm50.twarden.blocks.tiles;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import matgm50.twarden.config.TWBlockConfig;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -16,63 +12,68 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TWLizTableTile extends TileEntity implements IInventory {
 	
-	private ItemStack[] Inv;
+	private ItemStack[] inv;
 	
 	public TWLizTableTile() {
 		
-		Inv = new ItemStack[1];
+		inv = new ItemStack[1];
 		
 	}
 	
 	@Override
-	public int getSizeInventory() {return Inv.length;}
+	public int getSizeInventory() {return inv.length;}
 
 	@Override
-	public ItemStack getStackInSlot(int Slot) {return Inv[Slot];}
+	public ItemStack getStackInSlot(int slot) {return inv[slot];}
 
 	@Override
-	public ItemStack decrStackSize(int Slot, int Decrease) {
+	public ItemStack decrStackSize(int slot, int decrease) {
 		
-		ItemStack Split = getStackInSlot(Slot);
+		ItemStack split = getStackInSlot(slot);
 		
-		if(Split != null) {
+		if(split != null) {
 			
-			if(Split.stackSize <= Decrease) {
+			if(split.stackSize <= decrease) {
 				
-				setInventorySlotContents(Slot, null);
+				setInventorySlotContents(slot, null);
 				
 			} else {
 				
-				Split = Split.splitStack(Decrease);
+				split = split.splitStack(decrease);
 				
 			}
 			
 		}
 		
-		return Split;
+		return split;
 		
 	}
 
 	@Override
-	public ItemStack getStackInSlotOnClosing(int Slot) {
+	public ItemStack getStackInSlotOnClosing(int slot) {
 		
-		ItemStack Get = getStackInSlot(Slot);
-		setInventorySlotContents(Slot, null);
+		ItemStack get = getStackInSlot(slot);
+		setInventorySlotContents(slot, null);
 		
-		return Get;
+		return get;
 		
 	}
+	
+	@Override
+	public void markDirty() {
+		
+		super.markDirty();
+		
+        worldObj.markBlockForUpdate(xCoord,yCoord,zCoord);
+        
+	}
+
 
 	@Override
-	public void setInventorySlotContents(int Slot, ItemStack Itemstack) {
+	public void setInventorySlotContents(int slot, ItemStack stack) {
 		
-		Inv[Slot] = Itemstack;
-		
-		if(Itemstack != null && Itemstack.stackSize > getInventoryStackLimit()) {
-			
-			Itemstack.stackSize = getInventoryStackLimit();
-			
-		}
+		inv[slot] = stack;
+		markDirty();
 		
 	}
 	
@@ -83,10 +84,10 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 	public boolean hasCustomInventoryName() {return true;}
 
 	@Override
-	public int getInventoryStackLimit() {return Inv.length;}
+	public int getInventoryStackLimit() {return inv.length;}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer Player) {return true;}
+	public boolean isUseableByPlayer(EntityPlayer player) {return true;}
 
 	@Override
 	public void openInventory() {}
@@ -95,9 +96,9 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 	public void closeInventory() {}
 	
 	@Override
-	public boolean isItemValidForSlot(int Slot, ItemStack Itemstack) {
+	public boolean isItemValidForSlot(int slot, ItemStack stack) {
 		
-		if(!Itemstack.isStackable() && Itemstack.isItemStackDamageable() && Itemstack.getItem().isRepairable()) {
+		if(!stack.isStackable() && stack.isItemStackDamageable() && stack.getItem().isRepairable()) {
 			return true;
 		} else {
 			return false;
@@ -105,18 +106,20 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 		
 	}
 	
-	public void Repair(int Slot) {
+	public void Repair(int slot) {
 		
-		ItemStack ToRepair = Inv[Slot];
+		ItemStack toRepair = inv[slot];
 		
-		if(ToRepair != null) {
+		if(toRepair != null) {
 			
-			if(ToRepair.getItemDamage() != 0) {
+			if(toRepair.getItemDamage() != 0) {
 				
-				ToRepair.setItemDamage(0);
+				toRepair.setItemDamage(0);
 				
 				worldObj.playSoundEffect(xCoord + 0.5D, yCoord + 0.5D, zCoord + 0.5D, "random.anvil_use", 1.0F, worldObj.rand.nextFloat() * 0.1F + 0.9F);
 				
+				markDirty();
+				
 			}
 			
 		}
@@ -124,47 +127,59 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 	}
 	
 	@Override
-	public void writeToNBT(NBTTagCompound Tag) {
+	public void writeToNBT(NBTTagCompound tag) {
 		
-		super.writeToNBT(Tag);
+		super.writeToNBT(tag);
 		
-		NBTTagList InvList = new NBTTagList();
-		
-		for(int S = 0; S < getSizeInventory(); S++) {
-			
-			ItemStack ToSave = getStackInSlot(S);
-			
-			if(ToSave != null) {
-				
-				NBTTagCompound InvComp = new NBTTagCompound();
-				InvComp.setByte("Slot", (byte)S);
-				ToSave.writeToNBT(InvComp);
-				InvList.appendTag(InvComp);
-				
-			}
-			
-		}
-		
-		Tag.setTag("Inventory", InvList);
+		writeCustomNBT(tag);
 		
 	}
 	
 	@Override
-	public void readFromNBT(NBTTagCompound Tag) {
+	public void readFromNBT(NBTTagCompound tag) {
 		
-		super.readFromNBT(Tag);
+		super.readFromNBT(tag);
 		
-		NBTTagList InvList = Tag.getTagList("Inventory", Tag.getId());
+		readCustomNBT(tag);
 		
-		for(int S = 0; S < InvList.tagCount(); S++) {
+	}
+	
+	public void writeCustomNBT(NBTTagCompound tag) {
+		
+		NBTTagList invList = new NBTTagList();
+		
+		for(int s = 0; s < getSizeInventory(); s++) {
 			
-			NBTTagCompound InvComp = (NBTTagCompound)InvList.getCompoundTagAt(S);
+			ItemStack toSave = getStackInSlot(s);
 			
-			int Slot = InvComp.getByte("Slot");
-			
-			if(Slot >= 0 && Slot < getSizeInventory()) {
+			if(toSave != null) {
 				
-				setInventorySlotContents(Slot, ItemStack.loadItemStackFromNBT(InvComp));
+				NBTTagCompound invComp = new NBTTagCompound();
+				invComp.setByte("Slot", (byte)s);
+				toSave.writeToNBT(invComp);
+				invList.appendTag(invComp);
+				
+			}
+			
+		}
+		
+		tag.setTag("Inventory", invList);
+		
+	}
+	
+	public void readCustomNBT(NBTTagCompound tag) {
+		
+		NBTTagList invList = tag.getTagList("Inventory", tag.getId());
+		
+		for(int s = 0; s < invList.tagCount(); s++) {
+			
+			NBTTagCompound invComp = (NBTTagCompound)invList.getCompoundTagAt(s);
+			
+			int slot = invComp.getByte("Slot");
+			
+			if(slot >= 0 && slot < getSizeInventory()) {
+				
+				setInventorySlotContents(slot, ItemStack.loadItemStackFromNBT(invComp));
 				
 			}
 			
@@ -172,18 +187,21 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 		
 	}
 	
-	
+	@Override
+	public void onDataPacket(NetworkManager manager, S35PacketUpdateTileEntity packet) {
 
-	@Override
-	public void onDataPacket(NetworkManager Manager, S35PacketUpdateTileEntity Packet) {
-		
-		super.onDataPacket(Manager, Packet);
-		if ((worldObj != null) && (worldObj.isRemote)) {
-			
-			worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-			
-		}
+		super.onDataPacket(manager, packet);
+		readCustomNBT(packet.func_148857_g());
 		
 	}
 	
+	@Override
+	public S35PacketUpdateTileEntity getDescriptionPacket() {
+
+		NBTTagCompound tag = new NBTTagCompound();
+		writeCustomNBT(tag);
+        return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, 1, tag);
+        
+	}
+
 }

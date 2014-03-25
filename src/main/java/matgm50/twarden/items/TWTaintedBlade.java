@@ -12,16 +12,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWTaintedBlade extends ItemSword {
 
-	public TWTaintedBlade(ToolMaterial Material) {
+	public TWTaintedBlade(ToolMaterial material) {
 
-		super(Material);
+		super(material);
 		setUnlocalizedName(TWItemConfig.TWTAINTEDBLADE_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 
 	}
 
 	@Override
-	public EnumRarity getRarity(ItemStack Sword) {
+	public EnumRarity getRarity(ItemStack stack) {
 
 		return EnumRarity.uncommon;
 
@@ -29,9 +29,9 @@ public class TWTaintedBlade extends ItemSword {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister Register) {
+	public void registerIcons(IIconRegister register) {
 
-		itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedblade");
+		itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedblade");
 
 	}
 

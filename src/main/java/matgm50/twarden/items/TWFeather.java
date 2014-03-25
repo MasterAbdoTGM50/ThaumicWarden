@@ -19,24 +19,24 @@ public class TWFeather extends Item {
 		
 		super();
 		setUnlocalizedName(TWItemConfig.TWFEATHER_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setMaxStackSize(1);
 		
 	}
 	
 	@Override
-    public EnumRarity getRarity(ItemStack Itemstack) {
+    public EnumRarity getRarity(ItemStack stack) {
 		
             return EnumRarity.rare;
             
     }
 	
 	@Override
-	public void onUpdate(ItemStack Itemstack, World World, Entity Entity, int Par1, boolean Par2) {
+	public void onUpdate(ItemStack stack, World world, Entity entity, int par1, boolean par2) {
 		
-		if(Entity instanceof EntityPlayer) {
+		if(entity instanceof EntityPlayer) {
 			
-			EntityPlayer Player = (EntityPlayer)Entity;
+			EntityPlayer Player = (EntityPlayer)entity;
 			
 			Player.fallDistance = 0F;
 			
@@ -46,9 +46,9 @@ public class TWFeather extends Item {
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister Register) {
+    public void registerIcons(IIconRegister register) {
 		
-            itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "gryphonfeather" );
+            itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "gryphonfeather" );
             
     }
 	

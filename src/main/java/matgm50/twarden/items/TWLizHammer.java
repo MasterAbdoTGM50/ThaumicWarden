@@ -21,33 +21,33 @@ public class TWLizHammer extends Item {
 
 		super();
 		setUnlocalizedName(TWItemConfig.TWLIZHAMMER_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		canRepair = true;
 		
 	}
 
 	@Override
-	public EnumRarity getRarity(ItemStack Sword) {
+	public EnumRarity getRarity(ItemStack stack) {
 
 		return EnumRarity.rare;
 		
 	}
 	
 	@Override
-	public boolean onEntitySwing(EntityLivingBase Player, ItemStack Itemstack) {
+	public boolean onEntitySwing(EntityLivingBase player, ItemStack stack) {
 		
-		if(!Player.worldObj.isRemote) {
+		if(!player.worldObj.isRemote) {
 			
-			MovingObjectPosition Target = getMovingObjectPositionFromPlayer(Player.worldObj, (EntityPlayer) Player, true);
+			MovingObjectPosition target = getMovingObjectPositionFromPlayer(player.worldObj, (EntityPlayer) player, true);
 			
-			if(Target != null && Target.typeOfHit == MovingObjectType.BLOCK) {
+			if(target != null && target.typeOfHit == MovingObjectType.BLOCK) {
 				
-				if(Player.worldObj.getTileEntity(Target.blockX, Target.blockY, Target.blockZ) != null
-						&& Player.worldObj.getTileEntity(Target.blockX, Target.blockY, Target.blockZ) instanceof TWLizTableTile) {
+				if(player.worldObj.getTileEntity(target.blockX, target.blockY, target.blockZ) != null
+						&& player.worldObj.getTileEntity(target.blockX, target.blockY, target.blockZ) instanceof TWLizTableTile) {
 					
-					TWLizTableTile Table = (TWLizTableTile)Player.worldObj.getTileEntity(Target.blockX, Target.blockY, Target.blockZ);
+					TWLizTableTile table = (TWLizTableTile)player.worldObj.getTileEntity(target.blockX, target.blockY, target.blockZ);
 					
-					Table.Repair(0);
+					table.Repair(0);
 					
 				}
 				
@@ -55,12 +55,12 @@ public class TWLizHammer extends Item {
 			
 		}
 		
-		return super.onEntitySwing(Player, Itemstack);
+		return super.onEntitySwing(player, stack);
 		
 	}
 	
 	@Override
-	public boolean isItemTool(ItemStack Itemstack) {
+	public boolean isItemTool(ItemStack stack) {
 		
 		return true;
 		
@@ -68,9 +68,9 @@ public class TWLizHammer extends Item {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister Register) {
+	public void registerIcons(IIconRegister register) {
 
-		itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "lizhammer");
+		itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "lizhammer");
 
 	}
 	

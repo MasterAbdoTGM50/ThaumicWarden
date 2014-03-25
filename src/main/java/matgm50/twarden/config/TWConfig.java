@@ -7,13 +7,13 @@ import net.minecraftforge.common.config.Configuration;
 
 public class TWConfig extends Configuration {
 	
-	public static void Init (File File) {
+	public static void Init (File file) {
 		
-		Configuration Config = new Configuration(File);
+		Configuration config = new Configuration(file);
 		
-		Config.load();
+		config.load();
 		
-		Config.save();
+		config.save();
 		
 	}
 	

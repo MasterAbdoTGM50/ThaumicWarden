@@ -20,15 +20,15 @@ import net.minecraft.world.World;
 
 public class TWLizTable extends BlockContainer {
 	
-	public IIcon TopIcon;
-	public IIcon BotIcon;
-	public IIcon SideIcon;
+	public IIcon topIcon;
+	public IIcon botIcon;
+	public IIcon sideIcon;
 	
-	public TWLizTable(Material Material) {
+	public TWLizTable(Material material) {
 
-		super(Material);
+		super(material);
 		setBlockName(TWBlockConfig.TWLIZTABLE_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setHardness(4.0F);
 		setStepSound(Block.soundTypeStone);
 		setBlockBounds(0F, 0F, 0F, 1F, 0.75F, 1F);
@@ -37,62 +37,62 @@ public class TWLizTable extends BlockContainer {
 	
 	@SideOnly(Side.CLIENT)
     @Override
-    public void registerBlockIcons(IIconRegister Register) {
+    public void registerBlockIcons(IIconRegister register) {
 		
-		TopIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "liztabletop" );
-		BotIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "liztablebot" );
-		SideIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "liztableside" );
+		topIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "liztabletop" );
+		botIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "liztablebot" );
+		sideIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "liztableside" );
 		
 	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int Side, int Meta) {
+	public IIcon getIcon(int side, int meta) {
 		
-		if(Side == 0) {
+		if(side == 0) {
 			
-			return BotIcon;
+			return botIcon;
 			
-		} else if(Side == 1) {
+		} else if(side == 1) {
 			
-			return TopIcon;
+			return topIcon;
 			
 		} else {
 			
-			return SideIcon;
+			return sideIcon;
 			
 		}
 		
 	}
 	
 	@Override
-    public boolean onBlockActivated(World World, int X, int Y, int Z, EntityPlayer Player, int Side, float HitX, float HitY, float HitZ) {
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 		
-		if(!World.isRemote) {
+		TWLizTableTile table = (TWLizTableTile)world.getTileEntity(x, y, z);
+		ItemStack held = player.getCurrentEquippedItem();
+		
+		if(!world.isRemote) {
 			
-			TWLizTableTile Table = (TWLizTableTile)World.getTileEntity(X, Y, Z);
-			ItemStack Held = Player.getCurrentEquippedItem();
-			
-			if(Table != null) {
+			if(table != null) {
 				
-				if(Table.getStackInSlot(0) == null && Held != null) {
+				if(table.getStackInSlot(0) == null && held != null) {
 					
-					if(Table.isItemValidForSlot(0, Held)) {
+					if(table.isItemValidForSlot(0, held)) {
 						
-						Table.setInventorySlotContents(0, Held);
-						Player.destroyCurrentEquippedItem();
+						table.setInventorySlotContents(0, held);
+						player.destroyCurrentEquippedItem();
+						player.inventory.markDirty();
 						
 					}
 					
-				} else if(Table.getStackInSlot(0) != null) {
+				} else if(table.getStackInSlot(0) != null) {
 						
-					EntityItem Spawned = new EntityItem(Player.worldObj, Player.posX + 0.5D, Player.posY + 0.5D, Player.posZ + 0.5D, Table.getStackInSlot(0));
-					World.spawnEntityInWorld(Spawned);
-					Table.setInventorySlotContents(0, null);
+					EntityItem spawned = new EntityItem(player.worldObj, player.posX + 0.5D, player.posY + 0.5D, player.posZ + 0.5D, table.getStackInSlot(0));
+					world.spawnEntityInWorld(spawned);
+					table.setInventorySlotContents(0, null);
+					table.markDirty();
 					
 				}
-				
-				World.markBlockForUpdate(X, Y, Z);
 				
 			}
 			
@@ -103,28 +103,28 @@ public class TWLizTable extends BlockContainer {
 	}
 	
 	@Override
-	public void breakBlock(World World, int X, int Y, int Z, Block Block, int Meta) {
+	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
 		
-		TWLizTableTile Table = (TWLizTableTile)World.getTileEntity(X, Y, Z);
-		if(Table != null) {
+		TWLizTableTile table = (TWLizTableTile)world.getTileEntity(x, y, z);
+		if(table != null) {
 			
-			for(int I = 0; I < Table.getSizeInventory(); I++) {
+			for(int I = 0; I < table.getSizeInventory(); I++) {
 				
-				ItemStack Drop = Table.getStackInSlotOnClosing(I);
+				ItemStack drop = table.getStackInSlotOnClosing(I);
 				
-				if(Drop != null) {
+				if(drop != null) {
 					
-					float X2 = X + World.rand.nextFloat();
-					float Y2 = Y + World.rand.nextFloat();
-					float Z2 = Z + World.rand.nextFloat();
+					float x2 = x + world.rand.nextFloat();
+					float y2 = y + world.rand.nextFloat();
+					float z2 = z + world.rand.nextFloat();
 					
-					EntityItem Dropped = new EntityItem(World, X2, Y2, Z2, Drop);
+					EntityItem dropped = new EntityItem(world, x2, y2, z2, drop);
 					
-					Dropped.motionX = (-0.5F + World.rand.nextFloat()) * 0.05;
-					Dropped.motionY = (2.0F + World.rand.nextFloat()) * 0.05;
-					Dropped.motionZ = (-0.5F + World.rand.nextFloat()) * 0.05;
+					dropped.motionX = (-0.5F + world.rand.nextFloat()) * 0.05;
+					dropped.motionY = (2.0F + world.rand.nextFloat()) * 0.05;
+					dropped.motionZ = (-0.5F + world.rand.nextFloat()) * 0.05;
 					
-					World.spawnEntityInWorld(Dropped);
+					world.spawnEntityInWorld(dropped);
 					
 				}
 				
@@ -132,7 +132,7 @@ public class TWLizTable extends BlockContainer {
 			
 		}
 		
-		super.breakBlock(World, X, Y, Z, Block, Meta);
+		super.breakBlock(world, x, y, z, block, meta);
 		
 	}
 	
@@ -144,7 +144,7 @@ public class TWLizTable extends BlockContainer {
 	public boolean isOpaqueCube() {return false;}
 
 	@Override
-	public TileEntity createNewTileEntity(World World, int Par2) {
+	public TileEntity createNewTileEntity(World world, int par2) {
 		
 		return new TWLizTableTile();
 		

@@ -16,31 +16,29 @@ import net.minecraft.tileentity.TileEntity;
 public class TWLizTableRender extends TileEntitySpecialRenderer {
 
 	@Override
-	public void renderTileEntityAt(TileEntity Tile, double X, double Y, double Z, float PartialTick) {
+	public void renderTileEntityAt(TileEntity tile, double x, double y, double z, float partialTick) {
 
-		TWLizTableTile Table = (TWLizTableTile) Tile;
+		TWLizTableTile table = (TWLizTableTile)tile;
+		ItemStack toRender = table.getStackInSlot(0);
 		
-		if(Table.getStackInSlot(0) != null) {
+		if(toRender != null) {
 			
 			GL11.glPushMatrix();
-			GL11.glTranslated(X + 0.5, Y + 0.8, Z + 0.25);
+			GL11.glTranslated(x + 0.5, y + 0.8, z + 0.25);
 			GL11.glScalef(1.0F, 1.0F, 1.0F);
 			GL11.glRotated(90, 90, 0, 0);
-			
-			ItemStack ToRender = Table.getStackInSlot(0);
 				
-			EntityItem Renderity= new EntityItem(Tile.getWorldObj(), 0, 0, 0, ToRender);
-			Renderity.age = 0;
-			Renderity.hoverStart = 0;
+			EntityItem renderity = new EntityItem(table.getWorldObj(), 0, 0, 0, toRender);
+			renderity.hoverStart = 0;
 			
-			RenderManager Heck = RenderManager.instance;
+			RenderManager rm = RenderManager.instance;
 			
-			Heck.renderEntityWithPosYaw(Renderity, 0, 0, 0, 0, 0);
+			rm.renderEntityWithPosYaw(renderity, 0, 0, 0, 0, 0);
 			
 			GL11.glPopMatrix();
 			
 		}
-			
+		
 	}
 
 }

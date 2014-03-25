@@ -18,16 +18,16 @@ public class TWTaintedArmor extends ItemArmor {
 	public IIcon Legs;
 	public IIcon Boots;
 
-	public TWTaintedArmor(ArmorMaterial Material, int Type) {
+	public TWTaintedArmor(ArmorMaterial material, int type) {
 
-		super(Material, 3, Type);
-		setCreativeTab(TWarden.TWTab);
+		super(material, 3, type);
+		setCreativeTab(TWarden.twTab);
 		setMaxDamage(500);
 		
 	}
 	
 	@Override
-    public EnumRarity getRarity(ItemStack Armor) {
+    public EnumRarity getRarity(ItemStack stack) {
 		
             return EnumRarity.uncommon;
             
@@ -35,18 +35,18 @@ public class TWTaintedArmor extends ItemArmor {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister Register) {
+	public void registerIcons(IIconRegister register) {
 
-		Helm = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedhelm");
-		Chest = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedchest");
-		Legs = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedlegs");
-		Boots = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedboots");
+		Helm = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedhelm");
+		Chest = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedchest");
+		Legs = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedlegs");
+		Boots = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "taintedboots");
 
 	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIconFromDamage(int Damage) {
+	public IIcon getIconFromDamage(int damage) {
 		
 		return this.armorType == 2 ? Legs : armorType == 1 ? Chest : armorType == 0 ? Helm : Boots;
 		
@@ -54,9 +54,9 @@ public class TWTaintedArmor extends ItemArmor {
 	
 	@Override
     @SideOnly(Side.CLIENT)
-	public String getArmorTexture(ItemStack Stack, Entity Entity, int Slot, String Type)
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-		if ((Stack.getItem() == TWItems.TWTaintedLegs)) {
+		if ((stack.getItem() == TWItems.twTaintedLegs)) {
 			
 			return "twarden:textures/armors/tainted_2.png";
 			

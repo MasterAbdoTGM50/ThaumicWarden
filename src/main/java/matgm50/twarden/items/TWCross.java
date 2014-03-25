@@ -24,66 +24,66 @@ public class TWCross extends Item implements IRepairable {
 
 		super();
 		setUnlocalizedName(TWItemConfig.TWCROSS_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
-		setMaxDamage(TWItems.ToolWardenMaterial.getMaxUses());
+		setCreativeTab(TWarden.twTab);
+		setMaxDamage(TWItems.wardenToolMaterial.getMaxUses());
 		setMaxStackSize(1);
 		
 	}
 
 	@Override
-	public EnumRarity getRarity(ItemStack Itemstack) {
+	public EnumRarity getRarity(ItemStack stack) {
 
 		return EnumRarity.epic;
 
 	}
 	
 	@Override
-	public boolean onLeftClickEntity(ItemStack Itemstack, EntityPlayer Player, Entity Target) {
+	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity target) {
 		
-		DamageSource CrossDamage = new TWCrossDamage("Cross", Player);
+		DamageSource CrossDamage = new TWCrossDamage("cross", player);
 		
-		if (Target instanceof ITaintedMob) {
+		if (target instanceof ITaintedMob) {
 			
-			Target.attackEntityFrom(CrossDamage, 10);
+			target.attackEntityFrom(CrossDamage, 10);
 			
 		} else {
 			
-			Target.attackEntityFrom(CrossDamage, 5);
+			target.attackEntityFrom(CrossDamage, 5);
 			
 		}
 		
-		Itemstack.damageItem(1, Player);
+		stack.damageItem(1, player);
 		
-		return super.onLeftClickEntity(Itemstack, Player, Target);
+		return super.onLeftClickEntity(stack, player, target);
 		
 	}
 	
 	@Override
-	public EnumAction getItemUseAction(ItemStack Itemstack) {
+	public EnumAction getItemUseAction(ItemStack stack) {
 		
 		return EnumAction.block;
 		
 	}
 	
 	@Override
-	public int getMaxItemUseDuration(ItemStack Itemstack) {
+	public int getMaxItemUseDuration(ItemStack stack) {
 		
 		return 72000;
 		
 	}
 	
 	@Override
-	public ItemStack onItemRightClick(ItemStack Itemstack, World World, EntityPlayer Player) {
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		
-		Player.setItemInUse(Itemstack, this.getMaxItemUseDuration(Itemstack));
-		return Itemstack;
+		player.setItemInUse(stack, this.getMaxItemUseDuration(stack));
+		return stack;
 		
     }
 
 	@Override
-	public boolean getIsRepairable(ItemStack Weapon, ItemStack ItemInSlot) {
+	public boolean getIsRepairable(ItemStack weapon, ItemStack itemInSlot) {
 
-		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 0)) ? true : super.getIsRepairable(Weapon, ItemInSlot);
+		return itemInSlot.isItemEqual(new ItemStack(TWItems.twResource, 1, 0)) ? true : super.getIsRepairable(weapon, itemInSlot);
 
 	}
 	
@@ -96,9 +96,9 @@ public class TWCross extends Item implements IRepairable {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister Register) {
+	public void registerIcons(IIconRegister register) {
 
-		itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardencross");
+		itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardencross");
 
 	}
 

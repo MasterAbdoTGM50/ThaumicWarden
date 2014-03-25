@@ -20,61 +20,61 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWChest extends ItemArmor implements IRepairable, IVisDiscountGear {
 	
-	public TWChest(ArmorMaterial Material) {
+	public TWChest(ArmorMaterial material) {
 		
-		super(Material, 3, 1);
+		super(material, 3, 1);
 		setUnlocalizedName(TWItemConfig.TWCHEST_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setMaxDamage(1000);
 		
 	}
 	
 	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister Register) {
+    public void registerIcons(IIconRegister register) {
 		
-            itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenchest" );
+            itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenchest" );
             
     }
 
 	@Override
-	public int getVisDiscount(ItemStack Itemstack, EntityPlayer Player, Aspect Aspect) {
+	public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {
 		
 		return 5;
 		
 	}
 	
 	@Override
-    public EnumRarity getRarity(ItemStack Armor) {
+    public EnumRarity getRarity(ItemStack stack) {
 		
             return EnumRarity.epic;
             
     }
 	
 	@Override
-	public boolean getIsRepairable(ItemStack Armor, ItemStack ItemInSlot) {
+	public boolean getIsRepairable(ItemStack armor, ItemStack itemInSlot) {
 		
-		return ItemInSlot.isItemEqual(new ItemStack(TWItems.TWResource, 1, 1)) ? true : super.getIsRepairable(Armor, ItemInSlot);
+		return itemInSlot.isItemEqual(new ItemStack(TWItems.twResource, 1, 1)) ? true : super.getIsRepairable(armor, itemInSlot);
 		
 	}
 	
 	@Override
     @SideOnly(Side.CLIENT)
-	public ModelBiped getArmorModel(EntityLivingBase Player, ItemStack Itemstack, int Slot) {
+	public ModelBiped getArmorModel(EntityLivingBase player, ItemStack stack, int slot) {
 		
-		ModelBiped Model = new ModelBiped(0.5F);
+		ModelBiped model = new ModelBiped(0.5F);
 		
-		Model.isSneak = Player.isSneaking();
-		Model.isRiding = Player.isRiding();
-		Model.isChild = Player.isChild();
+		model.isSneak = player.isSneaking();
+		model.isRiding = player.isRiding();
+		model.isChild = player.isChild();
 		
-		if(Player instanceof EntityPlayer) {
+		if(player instanceof EntityPlayer) {
 			
-			EntityPlayer PlayerR = (EntityPlayer) Player;
+			EntityPlayer PlayerR = (EntityPlayer) player;
 			
 			ItemStack ItemInUse = PlayerR.getHeldItem();
 			
-			Model.heldItemRight = ItemInUse != null ? 1 : 0;
+			model.heldItemRight = ItemInUse != null ? 1 : 0;
 			
 			if (ItemInUse != null && PlayerR.getItemInUseCount() > 0) {
 				
@@ -82,11 +82,11 @@ public class TWChest extends ItemArmor implements IRepairable, IVisDiscountGear 
 				
 				if (Action == EnumAction.block) {
 					
-					Model.heldItemRight = 3;
+					model.heldItemRight = 3;
 					
 				} else if (Action == EnumAction.bow) {
 					
-					Model.aimedBow = true;
+					model.aimedBow = true;
 					
 				}
 				
@@ -94,7 +94,7 @@ public class TWChest extends ItemArmor implements IRepairable, IVisDiscountGear 
 			
 		}
 		
-		return Model;
+		return model;
 		
 	}
 	

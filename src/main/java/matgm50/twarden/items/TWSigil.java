@@ -16,12 +16,12 @@ public class TWSigil extends Item {
 
 		super();
 		setUnlocalizedName(TWItemConfig.TWSIGIL_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 
 	}
 
 	@Override
-	public EnumRarity getRarity(ItemStack Sword) {
+	public EnumRarity getRarity(ItemStack stack) {
 
 		return EnumRarity.rare;
 
@@ -29,9 +29,9 @@ public class TWSigil extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister Register) {
+	public void registerIcons(IIconRegister register) {
 
-		itemIcon = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardensigil");
+		itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardensigil");
 
 	}
 

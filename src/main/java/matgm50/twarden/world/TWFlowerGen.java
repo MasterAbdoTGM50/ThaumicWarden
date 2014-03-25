@@ -12,19 +12,19 @@ import cpw.mods.fml.common.IWorldGenerator;
 public class TWFlowerGen implements IWorldGenerator {
 	
 	@Override
-	public void generate(Random Random, int ChunkX, int ChunkZ, World World, IChunkProvider ChunkGenerator, IChunkProvider ChunkProvider) {
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 	    
-		int Chance = Random.nextInt(2);
+		int chance = random.nextInt(2);
 		
-		for(int I = 0; I < Chance; I++) {
+		for(int I = 0; I < chance; I++) {
 			
-			int X = ChunkX * 16 + Random.nextInt(128);
-		    int Z = ChunkZ * 16 + Random.nextInt(128);
-		    int Y = World.getHeightValue(X, Z);
+			int X = chunkX * 16 + random.nextInt(128);
+		    int Z = chunkZ * 16 + random.nextInt(128);
+		    int Y = world.getHeightValue(X, Z);
 		    
-			if (World.isAirBlock(X, Y, Z) && TWBlocks.TWFlower.canBlockStay(World, X, Y, Z) && Random.nextInt(100) <= 5) {
+			if (world.isAirBlock(X, Y, Z) && TWBlocks.twFlower.canBlockStay(world, X, Y, Z) && random.nextInt(100) <= 5) {
 				
-				World.setBlock(X, Y, Z, TWBlocks.TWFlower, 0, 2);
+				world.setBlock(X, Y, Z, TWBlocks.twFlower, 0, 2);
 				
 			}
 			

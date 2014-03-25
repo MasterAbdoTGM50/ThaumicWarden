@@ -15,45 +15,45 @@ import thaumcraft.common.config.ConfigItems;
 
 public class TWResearch {
 	
-	public static ResearchItem TWardens;
-	public static ResearchItem TWQuartz;
-	public static ResearchItem TWFabric;
-	public static ResearchItem TWSigil;
-	public static ResearchItem TWArmor;
-	public static ResearchItem TWWeapon;
-	public static ResearchItem TWStone;
-	public static ResearchItem TWAmulet;
-	public static ResearchItem TWFlower;
+	public static ResearchItem TWARDEN;
+	public static ResearchItem TWQUARTZ;
+	public static ResearchItem TWFABRIC;
+	public static ResearchItem TWSIGIL;
+	public static ResearchItem TWARMOR;
+	public static ResearchItem TWCROSS;
+	public static ResearchItem TWSTONE;
+	public static ResearchItem TWAMULET;
+	public static ResearchItem TWFLOWER;
 	
-	public static void Init() {
+	public static void init() {
 		
-		InitCategory();
-		InitEntry();
+		initCategory();
+		initEntry();
 		
 	}
 	
-	public static void InitCategory() {
+	public static void initCategory() {
 		
 		ResearchCategories.registerCategory(TWResearchConfig.TWCATEGORY, TWResearchConfig.TWCATEGORY_ICON, TWResearchConfig.TWCATEGORY_BACK);
 		
 	}
 	
-	public static void InitEntry() {
+	public static void initEntry() {
 		
-		TWardens = new TWResearchItem(TWResearchConfig.TWARDENS_KEY, TWResearchConfig.TWCATEGORY, new AspectList(), 0, 0, 0, new ItemStack(TWItems.TWSigil, 1)).setRound().setAutoUnlock().registerResearchItem();
-		TWardens.setPages(new ResearchPage("0"));
-		TWFlower = new TWResearchItem(TWResearchConfig.TWFLOWER_KEY, TWResearchConfig.TWCATEGORY, new AspectList(), 0, -2, 0, new ItemStack(TWBlocks.TWFlower, 1)).setRound().setParents(TWResearchConfig.TWARDENS_KEY).setAutoUnlock().registerResearchItem();
-		TWFlower.setPages(new ResearchPage("0"));
-		TWQuartz = new TWResearchItem(TWResearchConfig.TWQUARTZ_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.TWAspect, 3).add(Aspect.CRYSTAL, 3), 2, -1, 2, new ItemStack(TWItems.TWResource, 1, 0)).setStub().setParents(TWResearchConfig.TWARDENS_KEY).registerResearchItem();
-		TWQuartz.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.TWQuartz));
-		TWFabric = new TWResearchItem(TWResearchConfig.TWFABRIC_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.TWAspect, 3).add(Aspect.CLOTH, 3), 2, 1, 2, new ItemStack(TWItems.TWResource, 1, 1)).setStub().setParents(TWResearchConfig.TWARDENS_KEY, "ENCHFABRIC").registerResearchItem();
-		TWFabric.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.TWFabric));
-		TWSigil = new TWResearchItem(TWResearchConfig.TWSIGIL_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.TWAspect, 3).add(Aspect.MAGIC, 3), 4, 0, 2, new ItemStack(TWItems.TWSigil)).setStub().setParents(TWResearchConfig.TWQUARTZ_KEY, TWResearchConfig.TWFABRIC_KEY).registerResearchItem();
-		TWSigil.setPages(new ResearchPage("0"),new ResearchPage(TWRecipes.TWFrame), new ResearchPage(TWRecipes.TWSigil));
-		TWArmor = new TWResearchItem(TWResearchConfig.TWARMOR_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.TWAspect, 3).add(Aspect.MAGIC, 3).add(Aspect.ARMOR, 3), 6, -1, 5, new ItemStack(TWItems.TWChest)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
-		TWArmor.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.TWHelm), new ResearchPage(TWRecipes.TWChest), new ResearchPage(TWRecipes.TWLegs), new ResearchPage(TWRecipes.TWBoots));
-		TWWeapon = new TWResearchItem(TWResearchConfig.TWWEAPON_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.TWAspect, 3).add(Aspect.MAGIC, 3).add(Aspect.WEAPON, 3), 6, 1, 5, new ItemStack(TWItems.TWCross)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
-		TWWeapon.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.TWCross));
+		TWARDEN = new TWResearchItem(TWResearchConfig.TWARDENS_KEY, TWResearchConfig.TWCATEGORY, new AspectList(), 0, 0, 0, new ItemStack(TWItems.twSigil, 1)).setRound().setAutoUnlock().registerResearchItem();
+		TWARDEN.setPages(new ResearchPage("0"));
+		TWFLOWER = new TWResearchItem(TWResearchConfig.TWFLOWER_KEY, TWResearchConfig.TWCATEGORY, new AspectList(), 0, -2, 0, new ItemStack(TWBlocks.twFlower, 1)).setRound().setParents(TWResearchConfig.TWARDENS_KEY).setAutoUnlock().registerResearchItem();
+		TWFLOWER.setPages(new ResearchPage("0"));
+		TWQUARTZ = new TWResearchItem(TWResearchConfig.TWQUARTZ_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.CRYSTAL, 3), 2, -1, 2, new ItemStack(TWItems.twResource, 1, 0)).setStub().setParents(TWResearchConfig.TWARDENS_KEY).registerResearchItem();
+		TWQUARTZ.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twQuartz));
+		TWFABRIC = new TWResearchItem(TWResearchConfig.TWFABRIC_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.CLOTH, 3), 2, 1, 2, new ItemStack(TWItems.twResource, 1, 1)).setStub().setParents(TWResearchConfig.TWARDENS_KEY, "ENCHFABRIC").registerResearchItem();
+		TWFABRIC.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twFabric));
+		TWSIGIL = new TWResearchItem(TWResearchConfig.TWSIGIL_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3), 4, 0, 2, new ItemStack(TWItems.twSigil)).setStub().setParents(TWResearchConfig.TWQUARTZ_KEY, TWResearchConfig.TWFABRIC_KEY).registerResearchItem();
+		TWSIGIL.setPages(new ResearchPage("0"),new ResearchPage(TWRecipes.twFrame), new ResearchPage(TWRecipes.twSigil));
+		TWARMOR = new TWResearchItem(TWResearchConfig.TWARMOR_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3).add(Aspect.ARMOR, 3), 6, -1, 5, new ItemStack(TWItems.twChest)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
+		TWARMOR.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twHelm), new ResearchPage(TWRecipes.twChest), new ResearchPage(TWRecipes.twLegs), new ResearchPage(TWRecipes.twBoots));
+		TWCROSS = new TWResearchItem(TWResearchConfig.TWWEAPON_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3).add(Aspect.WEAPON, 3), 6, 1, 5, new ItemStack(TWItems.twCross)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
+		TWCROSS.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twCross));
 		
 	}
 	

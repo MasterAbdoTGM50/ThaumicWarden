@@ -6,7 +6,7 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 public class TWTick{
 	
 	@SubscribeEvent
-	public void onTick(TickEvent.ClientTickEvent Event) {
+	public void onTick(TickEvent.ClientTickEvent event) {
 		
 	}
 	

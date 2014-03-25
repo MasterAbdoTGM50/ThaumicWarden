@@ -16,45 +16,45 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWMagicAmulet extends Item {
 	
-	public IIcon[] Icon = new IIcon[2];
+	public IIcon[] icon = new IIcon[2];
 	
 	public TWMagicAmulet() {
 		
 		super();
 		setUnlocalizedName(TWItemConfig.TWMAGICAMULET_UN_NAME);
-		setCreativeTab(TWarden.TWTab);
+		setCreativeTab(TWarden.twTab);
 		setMaxStackSize(1);
 		setHasSubtypes(true);
 		
 	}
 	
 	@Override
-	public String getUnlocalizedName(ItemStack Itemstack) {
+	public String getUnlocalizedName(ItemStack stack) {
 		
-		return super.getUnlocalizedName() + "." + Itemstack.getItemDamage();
+		return super.getUnlocalizedName() + "." + stack.getItemDamage();
 		
 	}
 	
 	@Override
-    public EnumRarity getRarity(ItemStack Itemstack) {
+    public EnumRarity getRarity(ItemStack stack) {
 		
             return EnumRarity.rare;
             
     }
 	
 	@Override
-	public void getSubItems(Item Item, CreativeTabs Tab, List List) {
+	public void getSubItems(Item item, CreativeTabs tab, List list) {
 		
-		List.add(new ItemStack(Item, 1, 0));
-		List.add(new ItemStack(Item, 1, 1));
+		list.add(new ItemStack(item, 1, 0));
+		list.add(new ItemStack(item, 1, 1));
 		
 	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIconFromDamage(int Damage) {
+	public IIcon getIconFromDamage(int damage) {
 		
-		return Icon[Damage];
+		return icon[damage];
 	
 	}
 	
@@ -62,8 +62,8 @@ public class TWMagicAmulet extends Item {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister Register) {
 		
-            Icon[0] = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamuletl" );
-            Icon[1] = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamulets" );
+            icon[0] = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamuletl" );
+            icon[1] = Register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardenamulets" );
             
     }
 	

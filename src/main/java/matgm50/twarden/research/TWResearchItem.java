@@ -11,9 +11,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TWResearchItem extends ResearchItem {
 
-	public TWResearchItem(String Key, String Category, AspectList Tags, int Column, int Row, int Complexity, ItemStack Icon) {
+	public TWResearchItem(String key, String category, AspectList tags, int column, int row, int complexity, ItemStack icon) {
 		
-		super(Key, Category, Tags, Column, Row, Complexity, Icon);
+		super(key, category, tags, column, row, complexity, icon);
 		
 	}
 	
@@ -34,9 +34,9 @@ public class TWResearchItem extends ResearchItem {
 	}
 	
 	@Override
-	public ResearchItem setPages(ResearchPage... Par) {
+	public ResearchItem setPages(ResearchPage... par) {
 		
-		for(ResearchPage Page : Par) {
+		for(ResearchPage Page : par) {
 			
 			if(Page.type == PageType.TEXT)
 				
@@ -45,7 +45,7 @@ public class TWResearchItem extends ResearchItem {
 		}
 
 
-		return super.setPages(Par);
+		return super.setPages(par);
 		
 	}
 	
