@@ -29,8 +29,6 @@ public class TWItems {
 	public static Item twTaintedBoots;
 	public static Item twTaintedBlade;
 	public static Item twLizHammer;
-	public static Item twFeather;
-	public static Item twMagicAmulet;
 	
 	public static void init() {
 		
@@ -48,8 +46,6 @@ public class TWItems {
 		twTaintedBoots = new TWTaintedArmor(taintArmorMaterial, 3).setUnlocalizedName(TWItemConfig.TWTAINTEDBOOTS_UN_NAME);
 		twTaintedBlade = new TWTaintedBlade(taintToolMaterial);
 		twLizHammer = new TWLizHammer();
-		twFeather = new TWFeather();
-		twMagicAmulet = new TWMagicAmulet();
 		
 		GameRegistry.registerItem(twHelm, TWItemConfig.TWHELM_KEY);
 		GameRegistry.registerItem(twChest, TWItemConfig.TWCHEST_KEY);
@@ -65,8 +61,6 @@ public class TWItems {
 		GameRegistry.registerItem(twTaintedBoots, TWItemConfig.TWTAINTEDBOOTS_KEY);
 		GameRegistry.registerItem(twTaintedBlade, TWItemConfig.TWTAINTEDBLADE_KEY);
 		GameRegistry.registerItem(twLizHammer, TWItemConfig.TWLIZHAMMER_KEY);
-		GameRegistry.registerItem(twFeather, TWItemConfig.TWFEATHER_KEY);
-		GameRegistry.registerItem(twMagicAmulet, TWItemConfig.TWMAGICAMULET_KEY);
 		
 	}
 	

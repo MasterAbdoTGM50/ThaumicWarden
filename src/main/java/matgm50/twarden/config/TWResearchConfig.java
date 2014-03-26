@@ -16,5 +16,6 @@ public class TWResearchConfig {
 	public static final String TWWEAPON_KEY = "TWCROSS";
 	public static final String TWAMULET_KEY = "TWAMULET";
 	public static final String TWFLOWER_KEY = "TWFLOWER";
+	public static final String TWLIZBETH_KEY = "TWLIZBETH";
 	
 }

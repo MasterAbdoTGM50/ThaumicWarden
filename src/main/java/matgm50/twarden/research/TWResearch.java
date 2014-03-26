@@ -24,6 +24,7 @@ public class TWResearch {
 	public static ResearchItem TWSTONE;
 	public static ResearchItem TWAMULET;
 	public static ResearchItem TWFLOWER;
+	public static ResearchItem TWLIZBETH;
 	
 	public static void init() {
 		
@@ -54,7 +55,8 @@ public class TWResearch {
 		TWARMOR.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twHelm), new ResearchPage(TWRecipes.twChest), new ResearchPage(TWRecipes.twLegs), new ResearchPage(TWRecipes.twBoots));
 		TWCROSS = new TWResearchItem(TWResearchConfig.TWWEAPON_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3).add(Aspect.WEAPON, 3), 6, 1, 5, new ItemStack(TWItems.twCross)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
 		TWCROSS.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twCross));
-		
+		TWLIZBETH = new TWResearchItem(TWResearchConfig.TWLIZBETH_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 10).add(Aspect.MAGIC, 10).add(Aspect.EXCHANGE, 10), -2, 1, 5, new ItemStack(TWItems.twLizHammer)).setStub().setSpecial().setParents(TWResearchConfig.TWARDENS_KEY).registerResearchItem();
+		TWLIZBETH.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twLizHammer), new ResearchPage(TWRecipes.twLizTable));
 	}
 	
 }

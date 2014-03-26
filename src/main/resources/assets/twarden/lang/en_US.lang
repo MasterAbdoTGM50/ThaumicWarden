@@ -21,16 +21,10 @@ item.TaintedLeggings.name = Tainted Leggings
 item.TaintedBoots.name = Tainted Boots
 item.TaintedBlade.name = Tainted Blade
 item.LizbethHammer.name = Lizbeth's Hammer
-item.GryphonFeather.name = Gryphon's Feather
-item.MagicAmulet.0.name = Light Amulet
-item.MagicAmulet.1.name = Shadow Amulet
 
 #Blocks
 tile.WardenFlower.name = Exubitura
 tile.LizbethTable.name = Lizbeth's Table
-
-#Entities
-entity.TaintedHunter.name = Tainted Hunter
 
 #Aspects
 tc.aspect.wardena = Warden, Vigil, Victory, Sacrifice
@@ -53,37 +47,37 @@ tc.aspect.wardena = Warden, Vigil, Victory, Sacrifice
 #Research
 tc.research_category.TWARDEN = Wardenic Arts
 
-twresearch.name.TWardens = Thaumic Wardens
-twresearch.text.TWardens = What?
-twresearch.page.TWardens.0 = The Thaumic Wardens are an order of Ex-thaumics who dedicated their selves to fight the Eldritch and protect minecraftia.<BR>Despite everyone forgetting about them, they will have a great role in the events yet to come.
+twresearch.name.TWARDENS = Thaumic Wardens
+twresearch.text.TWARDENS = What?
+twresearch.page.TWARDENS.0 = The Thaumic Wardens are an order of Ex-thaumics who dedicated their selves to fight the Eldritch and protect minecraftia.<BR>Despite everyone forgetting about them, they will have a great role in the events yet to come.
 
-twresearch.name.TWFlower = Exubitura
-twresearch.text.TWFlower = How beautiful
-twresearch.page.TWFlower.0 = This strange rose has been twisted by Thaumic energies, forming a beautiful crystal where its stigma would have otherwise grown<BR>Despite it's small size, the petals contain alot of energy.
+twresearch.name.TWFLOWER = Exubitura
+twresearch.text.TWFLOWER = How beautiful
+twresearch.page.TWFLOWER.0 = This strange rose has been twisted by Thaumic energies, forming a beautiful crystal where its stigma would have otherwise grown<BR>Despite it's small size, the petals contain alot of energy.
 
-twresearch.name.TWQuartz = Wardenic Quartz
-twresearch.text.TWQuartz = With no stars
-twresearch.page.TWQuartz.0 = Through your research you learned the old ways of making Wardenic Quartz. This material was used for most of the Wardens' weapons and machinery.<BR>Because of the concentrated amount of energy it seems to ignore metals and other mundane types of protection.
+twresearch.name.TWQUARTZ = Wardenic Quartz
+twresearch.text.TWQUARTZ = With no stars
+twresearch.page.TWQUARTZ.0 = Through your research you learned the old ways of making Wardenic Quartz. This material was used for most of the Wardens' weapons and machinery.<BR>Because of the concentrated amount of energy it seems to ignore metals and other mundane types of protection.
 
-twresearch.name.TWFabric = Wardenic Fibers
-twresearch.text.TWFabric = They are not alive
-twresearch.page.TWFabric.0 = Through your research you learned the old ways of making Wardenic Fibers. These fibers have strange traits and they seem to solidify when hit yet, it's still very light and durable.<BR>These fibers were used to create any warden's robes because of their traits.
+twresearch.name.TWFABRIC = Wardenic Fibers
+twresearch.text.TWFABRIC = They are not alive
+twresearch.page.TWFABRIC.0 = Through your research you learned the old ways of making Wardenic Fibers. These fibers have strange traits and they seem to solidify when hit yet, it's still very light and durable.<BR>These fibers were used to create any warden's robes because of their traits.
 
-twresearch.name.TWSigil = Warden's Sigil
-twresearch.text.TWSigil = You are sworn
-twresearch.page.TWSigil.0 = By combing Infused Quartz with Obsidian Tiles you were able to discover an empty sigil frame. The sigil appears to lack any energy, and thus charging must be done.<BR>To give power to the Sigil you'll need to infuse it with the energy from the petals dropped by the Exubitura roses.
+twresearch.name.TWSIGIL = Warden's Sigil
+twresearch.text.TWSIGIL = You are sworn
+twresearch.page.TWSIGIL.0 = By combing Infused Quartz with Obsidian Tiles you were able to discover an empty sigil frame. The sigil appears to lack any energy, and thus charging must be done.<BR>To give power to the Sigil you'll need to infuse it with the energy from the petals dropped by the Exubitura roses.
 
-twresearch.name.TWArmor = The Robes
-twresearch.text.TWArmor = Cool and Protective
-twresearch.page.TWArmor.0 = The tales always spoke of the Wardens' robes and how it protected the first Wardens.<LINE>Through your research you discovered how to create it again using the Warden's Sigil.<BR>The Warden's Sigl seems to awaken something in the fibers making them connect and create these robes.
+twresearch.name.TWARMOR = The Robes
+twresearch.text.TWARMOR = Cool and Protective
+twresearch.page.TWARMOR.0 = The tales always spoke of the Wardens' robes and how it protected the first Wardens.<LINE>Through your research you discovered how to create it again using the Warden's Sigil.<BR>The Warden's Sigl seems to awaken something in the fibers making them connect and create these robes.
 
-twresearch.name.TWWeapon = The Cross
-twresearch.text.TWWeapon = Awesome and Deadly
-twresearch.page.TWWeapon.0 = the tales always spoke of the Wardens' battlecross and how it slayed thousands of enemies in a flash.<LINE>Through your research you discovered how to create that battlecross again using the Warden's Sigil.<BR>The battle cross is a unique weapon and because of the Wardenic Quartz used it seems to ignore armor.
+twresearch.name.TWCROSS = The Cross
+twresearch.text.TWCROSS = Awesome and Deadly
+twresearch.page.TWCROSS.0 = the tales always spoke of the Wardens' battlecross and how it slayed thousands of enemies in a flash.<LINE>Through your research you discovered how to create that battlecross again using the Warden's Sigil.<BR>The battle cross is a unique weapon and because of the Wardenic Quartz used it seems to ignore armor.
 
-twresearch.name.TWAmulet = Warden's Talisman
-twresearch.text.TWAmulet = Dear to the heart
-twresearch.page.TWAmulet.0 = 
+twresearch.name.TWLIZBETH = Lizbeth's Hammer
+twresearch.text.TWLIZBETH = Hammer Ahoy!!!
+twresearch.page.TWLIZBETH.0 = Before Lizbeth joined Abdo, she was a master blacksmith. She was able to repair everything before you can say YOLO and now you know her secret.<BR>Basicly craft the hammer and the table then put something on the hammer.<BR>You did that , GOOD. Now hit it real hard with the hammer and Voula! It's repaired.
 
 
 

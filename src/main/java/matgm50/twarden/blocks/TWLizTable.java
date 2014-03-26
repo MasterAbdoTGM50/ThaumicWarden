@@ -81,7 +81,7 @@ public class TWLizTable extends BlockContainer {
 						
 						table.setInventorySlotContents(0, held);
 						player.destroyCurrentEquippedItem();
-						player.inventory.markDirty();
+						table.markDirty();
 						
 					}
 					

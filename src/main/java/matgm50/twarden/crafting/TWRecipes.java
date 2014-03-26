@@ -29,6 +29,8 @@ public class TWRecipes {
 	public static ShapedArcaneRecipe twFrame;
 	public static InfusionRecipe twSigil;
 	public static InfusionRecipe twFlower;
+	public static InfusionRecipe twLizHammer;
+	public static InfusionRecipe twLizTable;
 	
 	public static void init() {
 		
@@ -66,6 +68,10 @@ public class TWRecipes {
 		
 		twSigil = ThaumcraftApi.addInfusionCraftingRecipe(TWResearchConfig.TWSIGIL_KEY, new ItemStack(TWItems.twSigil, 1), 25, new AspectList().add(TWAspects.WARDEN, 32).add(Aspect.MAGIC, 32), new ItemStack(TWItems.twResource, 1, 2),
 				new ItemStack [] {new ItemStack(TWItems.twResource, 1, 3), new ItemStack(TWItems.twResource, 1, 3), new ItemStack(TWItems.twResource, 1, 3), new ItemStack(TWItems.twResource, 1, 3)});
+		twLizHammer = ThaumcraftApi.addInfusionCraftingRecipe(TWResearchConfig.TWLIZBETH_KEY, new ItemStack(TWItems.twLizHammer, 1), 25, new AspectList().add(TWAspects.WARDEN, 64).add(Aspect.MAGIC, 64).add(Aspect.EXCHANGE, 64).add(Aspect.TOOL, 64), new ItemStack(TWItems.twResource, 1, 0),
+				new ItemStack [] {new ItemStack(TWItems.twResource, 1, 3), new ItemStack(TWItems.twResource, 1, 3), new ItemStack(Blocks.anvil)});
+		twLizTable = ThaumcraftApi.addInfusionCraftingRecipe(TWResearchConfig.TWLIZBETH_KEY, new ItemStack(TWBlocks.twLizTable, 1), 25, new AspectList().add(TWAspects.WARDEN, 64).add(Aspect.MAGIC, 64).add(Aspect.EXCHANGE, 64).add(Aspect.TOOL, 64), new ItemStack(Blocks.enchanting_table, 1, 0),
+				new ItemStack [] {new ItemStack(TWItems.twResource, 1, 3), new ItemStack(TWItems.twResource, 1, 3), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil)});
 		
 	}
 	

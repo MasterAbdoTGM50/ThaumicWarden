@@ -51,10 +51,4 @@ public class TWItemConfig {
 	public static final String TWLIZHAMMER_KEY = "TWLizbethHammer";
 	public static final String TWLIZHAMMER_UN_NAME = "LizbethHammer";
 	
-	public static final String TWFEATHER_KEY = "TWFeather";
-	public static final String TWFEATHER_UN_NAME = "GryphonFeather";
-	
-	public static final String TWMAGICAMULET_KEY = "TWMagicAmulet";
-	public static final String TWMAGICAMULET_UN_NAME = "MagicAmulet";
-	
 }

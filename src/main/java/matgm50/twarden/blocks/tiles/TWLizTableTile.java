@@ -63,7 +63,6 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 	public void markDirty() {
 		
 		super.markDirty();
-		
         worldObj.markBlockForUpdate(xCoord,yCoord,zCoord);
         
 	}
@@ -200,7 +199,7 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 
 		NBTTagCompound tag = new NBTTagCompound();
 		writeCustomNBT(tag);
-        return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, 1, tag);
+        return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, -999, tag);
         
 	}
 
