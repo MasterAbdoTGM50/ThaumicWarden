@@ -2,8 +2,6 @@ package matgm50.twarden.items;
 
 import java.util.List;
 
-import javax.swing.Icon;
-
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;

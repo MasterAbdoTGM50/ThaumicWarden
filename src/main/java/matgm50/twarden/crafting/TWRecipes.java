@@ -4,7 +4,6 @@ import matgm50.twarden.aspects.TWAspects;
 import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWResearchConfig;
 import matgm50.twarden.items.TWItems;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;

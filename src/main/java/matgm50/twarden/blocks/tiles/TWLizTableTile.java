@@ -172,7 +172,7 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 		
 		for(int s = 0; s < invList.tagCount(); s++) {
 			
-			NBTTagCompound invComp = (NBTTagCompound)invList.getCompoundTagAt(s);
+			NBTTagCompound invComp = invList.getCompoundTagAt(s);
 			
 			int slot = invComp.getByte("Slot");
 			

@@ -1,9 +1,9 @@
 package matgm50.twarden.aspects;
 
-import net.minecraft.item.ItemStack;
 import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWAspectConfig;
 import matgm50.twarden.items.TWItems;
+import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;

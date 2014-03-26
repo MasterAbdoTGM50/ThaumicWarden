@@ -11,7 +11,6 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
-import thaumcraft.common.config.ConfigItems;
 
 public class TWResearch {
 	
@@ -56,7 +55,7 @@ public class TWResearch {
 		TWCROSS = new TWResearchItem(TWResearchConfig.TWWEAPON_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3).add(Aspect.WEAPON, 3), 6, 1, 5, new ItemStack(TWItems.twCross)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
 		TWCROSS.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twCross));
 		TWLIZBETH = new TWResearchItem(TWResearchConfig.TWLIZBETH_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 10).add(Aspect.MAGIC, 10).add(Aspect.EXCHANGE, 10), -2, 1, 5, new ItemStack(TWItems.twLizHammer)).setStub().setSpecial().setParents(TWResearchConfig.TWARDENS_KEY).registerResearchItem();
-		TWLIZBETH.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twLizHammer), new ResearchPage(TWRecipes.twLizTable));
+		TWLIZBETH.setPages(new ResearchPage("0"), new ResearchPage("1"), new ResearchPage(TWRecipes.twLizHammer), new ResearchPage(TWRecipes.twLizTable));
 	}
 	
 }

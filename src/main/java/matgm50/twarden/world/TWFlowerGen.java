@@ -3,8 +3,6 @@ package matgm50.twarden.world;
 import java.util.Random;
 
 import matgm50.twarden.blocks.TWBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;

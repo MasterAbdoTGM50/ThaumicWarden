@@ -6,16 +6,12 @@ import matgm50.twarden.client.proxies.TWCommonProxy;
 import matgm50.twarden.config.TWConfig;
 import matgm50.twarden.config.TWModConfig;
 import matgm50.twarden.crafting.TWRecipes;
-import matgm50.twarden.entities.TWEntities;
 import matgm50.twarden.items.TWItems;
 import matgm50.twarden.research.TWResearch;
 import matgm50.twarden.util.TWLang;
 import matgm50.twarden.util.TWTab;
 import matgm50.twarden.world.TWGen;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.WeightedRandomChestContent;
-import net.minecraftforge.common.ChestGenHooks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -45,8 +41,6 @@ public class TWarden {
 		TWGen.init();
 		TWItems.init();
 		TWBlocks.init();
-		ChestGenHooks.addItem(ChestGenHooks.DUNGEON_CHEST, new WeightedRandomChestContent(new ItemStack(TWItems.twAmulet), 1, 1, 1));
-		
 		
 	}
 	

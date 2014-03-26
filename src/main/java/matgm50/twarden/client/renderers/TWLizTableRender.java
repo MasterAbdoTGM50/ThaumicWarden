@@ -1,17 +1,13 @@
 package matgm50.twarden.client.renderers;
 
-import org.lwjgl.opengl.GL11;
-
 import matgm50.twarden.blocks.tiles.TWLizTableTile;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemRenderer;
-import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+
+import org.lwjgl.opengl.GL11;
 
 public class TWLizTableRender extends TileEntitySpecialRenderer {
 

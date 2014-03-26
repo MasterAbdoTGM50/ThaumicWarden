@@ -48,36 +48,36 @@ tc.aspect.wardena = Warden, Vigil, Victory, Sacrifice
 tc.research_category.TWARDEN = Wardenic Arts
 
 twresearch.name.TWARDENS = Thaumic Wardens
-twresearch.text.TWARDENS = What?
-twresearch.page.TWARDENS.0 = The Thaumic Wardens are an order of Ex-thaumics who dedicated their selves to fight the Eldritch and protect minecraftia.<BR>Despite everyone forgetting about them, they will have a great role in the events yet to come.
+twresearch.text.TWARDENS = I'm warden you...
+twresearch.page.TWARDENS.0 = The Thaumic Wardens are an ancient order of former thaumaturge who dedicated themselves to fighting the Eldritch and protecting the land.<BR>Despite fading into obscurity, something tells you that they wont be relegated to dusty tomes and fairy tales forever...
 
 twresearch.name.TWFLOWER = Exubitura
-twresearch.text.TWFLOWER = How beautiful
-twresearch.page.TWFLOWER.0 = This strange rose has been twisted by Thaumic energies, forming a beautiful crystal where its stigma would have otherwise grown<BR>Despite it's small size, the petals contain alot of energy.
+twresearch.text.TWFLOWER = A rose by any other name...
+twresearch.page.TWFLOWER.0 = Mutated by Thaumic essentia, this odd little rose has formed a beautiful crystal where its stigma should be.<BR>Despite it's small size, the petals are vibrant and have an unusual energy about them.
 
 twresearch.name.TWQUARTZ = Wardenic Quartz
-twresearch.text.TWQUARTZ = With no stars
-twresearch.page.TWQUARTZ.0 = Through your research you learned the old ways of making Wardenic Quartz. This material was used for most of the Wardens' weapons and machinery.<BR>Because of the concentrated amount of energy it seems to ignore metals and other mundane types of protection.
+twresearch.text.TWQUARTZ = Quartzing destiny!
+twresearch.page.TWQUARTZ.0 = Your hours spent poring over dusty tomes has paid off! You have rediscovered the ancient art of Wardenic Quartzcraft. One of the manuscripts describes Wardenic Quartz as the cornerstone of their arms and weaponry fabrication.<BR>Due to the concentrated and highly aligned energies contained within its crystals, weapons made from this stuff seem to phase through most metals and other mundane forms of protection.
 
 twresearch.name.TWFABRIC = Wardenic Fibers
-twresearch.text.TWFABRIC = They are not alive
-twresearch.page.TWFABRIC.0 = Through your research you learned the old ways of making Wardenic Fibers. These fibers have strange traits and they seem to solidify when hit yet, it's still very light and durable.<BR>These fibers were used to create any warden's robes because of their traits.
+twresearch.text.TWFABRIC = La vie est drôle
+twresearch.page.TWFABRIC.0 = You have discovered how to weave Wardenic Fibers. Wardens of old learned that when imbued with the right energies, their robes posessed the ability to harden against impact, yet remain soft and flexible normally. Naturally, it became the hottest new trend.
 
 twresearch.name.TWSIGIL = Warden's Sigil
-twresearch.text.TWSIGIL = You are sworn
-twresearch.page.TWSIGIL.0 = By combing Infused Quartz with Obsidian Tiles you were able to discover an empty sigil frame. The sigil appears to lack any energy, and thus charging must be done.<BR>To give power to the Sigil you'll need to infuse it with the energy from the petals dropped by the Exubitura roses.
+twresearch.text.TWSIGIL = Sigil fix it!
+twresearch.page.TWSIGIL.0 = By combining Infused Quartz with Obsidian Tiles you managed to create an empty sigil frame. The sigil doesn't really seem to do... anything. Yet.<BR>You have a feeling that infusing it with Exubitura petals may help.
 
 twresearch.name.TWARMOR = The Robes
-twresearch.text.TWARMOR = Cool and Protective
-twresearch.page.TWARMOR.0 = The tales always spoke of the Wardens' robes and how it protected the first Wardens.<LINE>Through your research you discovered how to create it again using the Warden's Sigil.<BR>The Warden's Sigl seems to awaken something in the fibers making them connect and create these robes.
+twresearch.text.TWARMOR = Feels like I'm wearing nothin' at all!
+twresearch.page.TWARMOR.0 = More than once have you found mention of the legendary quality of Wardenic Robes, their ability to absorb staggering blows while remaining surprisingly breathable.<LINE>Through painstaking research you have learned how to weave these robes using the Warden's Sigil.<BR>The sigil appears to enchant the fibers with a life of their own as they dance about and weave themselve together.
 
 twresearch.name.TWCROSS = The Cross
-twresearch.text.TWCROSS = Awesome and Deadly
-twresearch.page.TWCROSS.0 = the tales always spoke of the Wardens' battlecross and how it slayed thousands of enemies in a flash.<LINE>Through your research you discovered how to create that battlecross again using the Warden's Sigil.<BR>The battle cross is a unique weapon and because of the Wardenic Quartz used it seems to ignore armor.
+twresearch.text.TWCROSS = Cast the first stone!
+twresearch.page.TWCROSS.0 = One manuscript in particular has caught your attention. It describes a Warden who strode into battle weilding a mighty cross as a warhammer, using it with devastating effect.<LINE>If it was good enough for them, why not try it yourself? You discovered how to create a battlecross imbued with the power of a Warden's Sigil.<BR>Due to the Wardenic Quartz used in its construction, it seems to ignore armor. You almost feel sorry for your victims. Almost.
 
 twresearch.name.TWLIZBETH = Lizbeth's Hammer
-twresearch.text.TWLIZBETH = Hammer Ahoy!!!
-twresearch.page.TWLIZBETH.0 = Before Lizbeth joined Abdo, she was a master blacksmith. She was able to repair everything before you can say YOLO and now you know her secret.<BR>Basicly craft the hammer and the table then put something on the hammer.<BR>You did that , GOOD. Now hit it real hard with the hammer and Voula! It's repaired.
-
+twresearch.text.TWLIZBETH = Stop; it's time.
+twresearch.page.TWLIZBETH.0 = Over the course of your research, one name has popped up repeatedly. During the age of the First Wardenic Order there lived a prodigious young blacksmith named Lizbeth. Legend had it that so skilled was she, your armour would be repaired before you had even the chance to finish removing it. As luck would have it, you have stumbled across her journal, in which she describes it was her hammer and not herself that posessed the gift, which is convenient for somebody adept at crafting magical objects...
+twresearch.page.TWLIZBETH.1 = Once you have crafted the hammer & table, place something on the hammer.<BR>Congratulations, now for the hard part. Hit it very hard and very fast with the hammer. If you do it just right, the item will be repaired.
 
 
