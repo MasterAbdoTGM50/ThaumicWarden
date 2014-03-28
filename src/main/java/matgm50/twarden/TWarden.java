@@ -55,7 +55,6 @@ public class TWarden {
 		TWAspects.init();
 		TWRecipes.init();
 		TWResearch.init();
-		TWLang.init();
 		
 	}
 	

@@ -1,4 +1,4 @@
-﻿#Misc
+#Misc
 itemGroup.TWarden = Thaumic Warden
 
 #Items
@@ -60,7 +60,7 @@ twresearch.text.TWQUARTZ = Quartzing destiny!
 twresearch.page.TWQUARTZ.0 = Your hours spent poring over dusty tomes has paid off! You have rediscovered the ancient art of Wardenic Quartzcraft. One of the manuscripts describes Wardenic Quartz as the cornerstone of their arms and weaponry fabrication.<BR>Due to the concentrated and highly aligned energies contained within its crystals, weapons made from this stuff seem to phase through most metals and other mundane forms of protection.
 
 twresearch.name.TWFABRIC = Wardenic Fibers
-twresearch.text.TWFABRIC = La vie est dr�le
+twresearch.text.TWFABRIC = La vie est drôle
 twresearch.page.TWFABRIC.0 = You have discovered how to weave Wardenic Fibers. Wardens of old learned that when imbued with the right energies, their robes posessed the ability to harden against impact, yet remain soft and flexible normally. Naturally, it became the hottest new trend.
 
 twresearch.name.TWSIGIL = Warden's Sigil
