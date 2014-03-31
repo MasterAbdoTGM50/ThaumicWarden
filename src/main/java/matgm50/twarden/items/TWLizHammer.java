@@ -22,6 +22,7 @@ public class TWLizHammer extends Item {
 		super();
 		setUnlocalizedName(TWItemConfig.TWLIZHAMMER_UN_NAME);
 		setCreativeTab(TWarden.twTab);
+		setMaxStackSize(1);
 		canRepair = true;
 		
 	}

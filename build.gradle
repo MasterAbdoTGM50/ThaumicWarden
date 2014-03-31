@@ -28,7 +28,7 @@ minecraft {
 
 dependencies {
 	compile files (
-		'lib/TCDeobf.zip'
+		'lib/TC4Deobf.jar'
 	)
 }
 

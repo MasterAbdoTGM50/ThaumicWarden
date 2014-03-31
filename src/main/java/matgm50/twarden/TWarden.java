@@ -8,7 +8,6 @@ import matgm50.twarden.config.TWModConfig;
 import matgm50.twarden.crafting.TWRecipes;
 import matgm50.twarden.items.TWItems;
 import matgm50.twarden.research.TWResearch;
-import matgm50.twarden.util.TWLang;
 import matgm50.twarden.util.TWTab;
 import matgm50.twarden.world.TWGen;
 import net.minecraft.creativetab.CreativeTabs;
