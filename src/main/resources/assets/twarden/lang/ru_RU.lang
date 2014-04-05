@@ -1,0 +1,81 @@
+#Misc
+itemGroup.TWarden=Таумовый Хранитель
+
+#Items
+item.WardenHelmet.name=Шлем хранителя
+item.WardenChestplate.name=Кираса хранителя
+item.WardenLeggings.name=Поножи хранителя
+item.WardenBoots.name=Ботинки хранителя
+item.WardenCross.name=Крест хранителя
+item.WardenAmulet.name=Талисман хранителя
+item.WardenResource.0.name=Кварц хранителей
+item.WardenResource.1.name=Волокна хранителей
+item.WardenResource.2.name=Пустая рамка печати
+item.WardenResource.3.name=Лепесток экскувиторы
+item.WardenResource.4.name=Камень хранителя
+item.WardenResource.5.name=Заражённая пролитая кровь
+item.WardenSigil.name=Печать хранителя
+item.TaintedHelmet.name=Заражённый шлем
+item.TaintedChestplate.name=Заражённая кираса
+item.TaintedLeggings.name=Заражённые поножи
+item.TaintedBoots.name=Заражённые ботинки
+item.TaintedBlade.name=Заражённый клинок
+item.LizbethHammer.name=Молот Лисбет
+
+#Blocks
+tile.WardenFlower.name=Экскувитора
+tile.LizbethTable.name=Стол Лисбет
+
+#Aspects
+tc.aspect.exubitor=Хранитель, бдительность, победа, жертвенность
+
+# Special formatting codes:
+# <BR> or <BR/>         Paragraph break (<BR/> is included for people using XML for their localization)
+# <LINE> or <LINE/>     Insert a fancy linebreak between sections of text.
+# <IMG>...</IMG>  Insert a centered image into text. Parameters are separated by ':' and are:
+#                    - mod resource location name
+#                    - png file location (assumed to be a 256x256 texture, a sub-image will be grabbed from this png as specified below)
+#                    - x location of sub-image in png
+#                    - y location of sub-image in png
+#                    - x size of sub-image (255 if full x size of png must be used)
+#                    - y size of sub-image (255 if full y size of png must be used)
+#                    - scaling - 1.0 for normal 256x256 images, or smaller for proportionately smaller .png files (a 16x16 image will be 0.0625)   
+#               Examples: 
+#                   <IMG>thaumcraft:textures/gui/gui_researchbook.png:24:184:96:4:1.0</IMG>   <-- line break image as used in <LINE> above
+#                   <IMG>thaumcraft:textures/items/alumentum.png:0:0:255:255:0.0625</IMG>     <-- alumentum item icon
+
+#Research
+tc.research_category.TWARDEN=Искусство хранителя
+
+twresearch.name.TWARDENS=Таумовые хранители
+twresearch.text.TWARDENS=Я храню тебя...
+twresearch.page.TWARDENS.0=Хранители Таума - это древний орден бывших тауматургов, которые выдвинули себя как борцы с Жуткими и защитники мира.<BR>Несмотря на их забвение, что-то говорит тебе, что они не превратяться в старые сказания навечно...
+
+twresearch.name.TWFLOWER=Экскувитора
+twresearch.text.TWFLOWER=Роза под любым другим именем...
+twresearch.page.TWFLOWER.0=Смутировавшая под влиянием таумовой эссенции, эта странная маленькая роза образовала прекрасный кристалл вместо рыльца.<BR>Несмотря на свой незначительный размер, лепестки наполнены необычной энергией и жизнью.
+
+twresearch.name.TWQUARTZ=Кварц хранителей
+twresearch.text.TWQUARTZ=Откварцовывая судьбу!
+twresearch.page.TWQUARTZ.0=Часы потраченые на корпение над древними книгами в конце концов дали свои плоды! Ты смог раскрыть секрет Кварца Смотрителей. Один из манускриптов описывает этот Кварц в роли краеугольного камня в составе их оружия и снаряжения.<BR>По причине, содержащихся в нём однонаправленных сильных энергий, оружие сделаное из него способно прорезать другие формы обыденной защиты.
+
+twresearch.name.TWFABRIC=Волокна хранителей
+twresearch.text.TWFABRIC=La vie est drôle
+twresearch.page.TWFABRIC.0=Ты смог разобраться как сплетать волокна хранителей. Хранители в своё время познали, что при использовании верных энергий их мантии преобретают способность противостоять воздействиям, но при этом оставаться мягкими и гибкими. Действительно, они стали свежим трендом для них.
+
+twresearch.name.TWSIGIL=Печать хранителя
+twresearch.text.TWSIGIL=Печать всё исправит
+twresearch.page.TWSIGIL.0=Соеденив наполненный кварц с обсидиановой основой тебе удалось получить рамку для печати, пустую, и похоже она ничего не способна сделать, но это дело времени.<BR>Тебе кажеться, что если наполнить её листьями Экскувиторы, то это может помочь.
+
+twresearch.name.TWARMOR=Мантия
+twresearch.text.TWARMOR=Похоже на мне вовсе нет одежды!
+twresearch.page.TWARMOR.0=Уже не раз ты находил упоминания об отличных качествах мантий хранителей, а именно их способности поглощать удары, но при этом оставаться, на радость, свободными.<LINE>Посредством старательного поиска тебе удалось познать как же сплести эти мантии используя печать хранителей.<BR>Похоже, что печать наполняет волокна их собственной жизнью, в то время как они в танце переплетаются друг с другом.
+
+twresearch.name.TWCROSS=Крест
+twresearch.text.TWCROSS=Метни камень первым!
+twresearch.page.TWCROSS.0=Одна рукопись привлекла особенное внимание: Она описывает хранителя, который вступил в битву, орудая массивным крестом, как молотом, и вполне разрушительно.<LINE>Если это было достаточно круто для них, то почему бы и не попробывать самому? Ты открыл как создать боевой крест, наполненный энергией печати хранителей.<BR>По причине использования кварца хранителей, похоже, он игнорирует броню. Тебе почти жаль своих жертв. Почти.
+
+twresearch.name.TWLIZBETH=Молот Лисбет
+twresearch.text.TWLIZBETH=Остановись! Настало время.
+twresearch.page.TWLIZBETH.0=Во время цикла твоих исследований очень часто попадалось одно имя. В эпоху первых хранителей среди них был превосходный молодой кузнец по имени Лисбет. Легенда гласит, что она была настолько опытна, что была способна починить броню даже до того как её снимали. К счатью, тебе на глаза попался её журнал, в котором она описывала свой молот как то что обладало этим даром, который не так уж и сложен для тех кто освоился с созданием магических вещей...
+twresearch.page.TWLIZBETH.1=Как только ты создал молот и стол, помести что-нибудь на молот.<BR>Поздравляем, а теперь к трудной части: ударь это быстро и сильно молотом. Если ты сделаешь это точно верно, то предмет будет починен.
