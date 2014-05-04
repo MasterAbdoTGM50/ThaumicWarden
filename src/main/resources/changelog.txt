@@ -1,3 +1,9 @@
+0.7A2:
+-Added russain language support thanks to Itaros
+0.7A1:
+-Updated to 1.7
+-Something I don't remember
+-Lizbeth's Hammer and Table
 0.6A1:
 -Mostly everything
 0.5R2:

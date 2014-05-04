@@ -11,18 +11,18 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.1-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
     }
 }
 
 apply plugin: 'forge'
 
-version = "0.7A1"
+version = "0.7A2"
 group= "matgm50.twarden" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "TWarden"
 
 minecraft {
-    version = "1.7.2-10.12.0.1047"
+    version = "1.7.2-10.12.1.1060"
     assetDir = "run/assets"
 }
 
@@ -34,6 +34,10 @@ dependencies {
 
 processResources
 {
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
