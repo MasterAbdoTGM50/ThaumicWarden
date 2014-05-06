@@ -10,12 +10,11 @@
 /gradlew
 /gradlew.bat
 
-## Eclipse
-/.settings
-/.metadata
-/.classpath
-/.project
-/bin
+## Intellij
+/out
+/*.iml
+/*.ipr
+/*.iws
 
 ## Misc
 /lib
