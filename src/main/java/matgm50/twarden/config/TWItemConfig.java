@@ -16,8 +16,8 @@ public class TWItemConfig {
 	public static final String TWBOOTS_KEY = "TWBoots";
 	public static final String TWBOOTS_UN_NAME = "WardenBoots";
 	
-	public static final String TWCROSS_KEY = "TWCross";
-	public static final String TWCROSS_UN_NAME = "WardenCross";
+	public static final String TWSWORD_KEY = "TWSword";
+	public static final String TWSWORD_UN_NAME = "WardenSword";
 	
 	public static final String TWAMULET_KEY = "TWAmulet";
 	public static final String TWAMULET_UN_NAME = "WardenAmulet";

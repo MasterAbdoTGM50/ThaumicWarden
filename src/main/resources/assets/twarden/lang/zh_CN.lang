@@ -6,7 +6,7 @@ item.WardenHelmet.name=守望者头盔
 item.WardenChestplate.name=守望者胸甲
 item.WardenLeggings.name=守望者护腿
 item.WardenBoots.name=守望者之靴
-item.WardenCross.name=守望者十字架
+item.WardenSword.name=守望者之剑
 item.WardenAmulet.name=守望者护身符
 item.WardenResource.0.name=守望者石英
 item.WardenResource.1.name=守望者布匹
@@ -71,9 +71,9 @@ twresearch.name.TWARMOR=法袍
 twresearch.text.TWARMOR=感觉我什么都没穿!
 twresearch.page.TWARMOR.0=不止一次你看到文献里提及守卫者法袍的卓越性能,它们在能够吸收猛烈的冲击的同时还保持了惊人的透气性.<LINE>经过艰苦研究,你已经学会了如果利用守望者印记变质这种法袍.<BR>印记看起来不仅赋予了布匹以生命,并且让它们舞动了起来,自动编织成了袍子.
 
-twresearch.name.TWCROSS=十字架
-twresearch.text.TWCROSS=扔出第一块石头!
-twresearch.page.TWCROSS.0=一份独特的手稿引起了你的注意.它描述了一位守卫者步入战场,像举着战锤一样挥舞着强大的十字架,横扫一切势不可挡.<LINE>如果对他们来说它非常好用,那么为什么你不自己试试呢?你研究出利用守卫者印记制造战斗十字架的方法.<BR>由于制造十字架的过程中用到了守卫者石英,因此它似乎能忽略护甲防御.你几乎想为你的牺牲者们感到抱歉了.几乎而已.
+twresearch.name.TWSWORD=十字架
+twresearch.text.TWSWORD=扔出第一块石头!
+twresearch.page.TWSWORD.0=一份独特的手稿引起了你的注意.它描述了一位守卫者步入战场,像举着战锤一样挥舞着强大的十字架,横扫一切势不可挡.<LINE>如果对他们来说它非常好用,那么为什么你不自己试试呢?你研究出利用守卫者印记制造战斗十字架的方法.<BR>由于制造十字架的过程中用到了守卫者石英,因此它似乎能忽略护甲防御.你几乎想为你的牺牲者们感到抱歉了.几乎而已.
 
 twresearch.name.TWLIZBETH=莉兹白之锤
 twresearch.text.TWLIZBETH=停下;是时候了.

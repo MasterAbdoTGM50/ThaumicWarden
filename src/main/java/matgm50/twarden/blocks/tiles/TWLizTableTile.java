@@ -193,14 +193,14 @@ public class TWLizTableTile extends TileEntity implements IInventory {
 		readCustomNBT(packet.func_148857_g());
 		
 	}
-	
+
 	@Override
 	public S35PacketUpdateTileEntity getDescriptionPacket() {
 
 		NBTTagCompound tag = new NBTTagCompound();
 		writeCustomNBT(tag);
-        return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, -999, tag);
-        
+        return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, 0, tag);
+
 	}
 
 }

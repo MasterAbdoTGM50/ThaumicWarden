@@ -3,6 +3,7 @@ package matgm50.twarden.items;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
+import matgm50.twarden.models.TWBootsModel;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
@@ -61,7 +62,7 @@ public class TWBoots extends ItemArmor implements IRepairable, IVisDiscountGear 
     @SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase Player, ItemStack stack, int slot) {
 		
-		ModelBiped model = new ModelBiped(0.5F);
+		ModelBiped model = new TWBootsModel(0.5F);
 		
 		model.isSneak = Player.isSneaking();
 		model.isRiding = Player.isRiding();

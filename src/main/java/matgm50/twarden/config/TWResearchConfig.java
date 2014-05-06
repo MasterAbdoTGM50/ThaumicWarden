@@ -13,7 +13,7 @@ public class TWResearchConfig {
 	public static final String TWFABRIC_KEY = "TWFABRIC";
 	public static final String TWSIGIL_KEY = "TWSIGIL";
 	public static final String TWARMOR_KEY = "TWARMOR";
-	public static final String TWWEAPON_KEY = "TWCROSS";
+	public static final String TWWEAPON_KEY = "TWSWORD";
 	public static final String TWAMULET_KEY = "TWAMULET";
 	public static final String TWFLOWER_KEY = "TWFLOWER";
 	public static final String TWLIZBETH_KEY = "TWLIZBETH";

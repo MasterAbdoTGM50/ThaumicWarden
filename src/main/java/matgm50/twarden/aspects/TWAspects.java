@@ -49,7 +49,7 @@ public class TWAspects {
 		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twChest), twChestTag);
 		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twLegs), twLegsTag);
 		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twBoots), twBootsTag);
-		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twCross), twCrossTag);
+		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twSword), twCrossTag);
 		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 0), twQuartzTag);
 		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 1), twFabricTag);
 		ThaumcraftApi.registerObjectTag(new ItemStack(TWItems.twResource, 0, 2), twFrameTag);

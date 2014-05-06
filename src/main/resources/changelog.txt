@@ -1,3 +1,7 @@
+0.7A3:
+-Added chinese language support thanks to crafteverywhere
+-Just some old candy I had in my closet
+-Added Infused Quartz Blocks for Kris
 0.7A2:
 -Added russain language support thanks to Itaros
 0.7A1:

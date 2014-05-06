@@ -1,5 +1,6 @@
 package matgm50.twarden.crafting;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import matgm50.twarden.aspects.TWAspects;
 import matgm50.twarden.blocks.TWBlocks;
 import matgm50.twarden.config.TWResearchConfig;
@@ -23,11 +24,10 @@ public class TWRecipes {
 	public static ShapedArcaneRecipe twChest;
 	public static ShapedArcaneRecipe twLegs;
 	public static ShapedArcaneRecipe twBoots;
-	public static ShapedArcaneRecipe twCross;
+	public static ShapedArcaneRecipe twSword;
 	public static ShapedArcaneRecipe twStone;
 	public static ShapedArcaneRecipe twFrame;
 	public static InfusionRecipe twSigil;
-	public static InfusionRecipe twFlower;
 	public static InfusionRecipe twLizHammer;
 	public static InfusionRecipe twLizTable;
 	
@@ -36,6 +36,7 @@ public class TWRecipes {
 		initCrucible();
 		initArcane();
 		initInfusion();
+        initMundane();
 		
 	}
 	
@@ -56,7 +57,7 @@ public class TWRecipes {
 				"XXX", "XOX", "X X", 'X', new ItemStack(TWItems.twResource, 1, 1), 'O', new ItemStack(TWItems.twSigil, 1));
 		twBoots = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWARMOR_KEY, new ItemStack(TWItems.twBoots, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
 				"   ", "XOX", "X X", 'X', new ItemStack(TWItems.twResource, 1, 1), 'O', new ItemStack(TWItems.twSigil, 1));
-		twCross = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWARMOR_KEY, new ItemStack(TWItems.twCross, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
+		twSword = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWARMOR_KEY, new ItemStack(TWItems.twSword, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
 				" X ", "XOX", " X ", 'X', new ItemStack(TWItems.twResource, 1, 0), 'O', new ItemStack(TWItems.twSigil, 1));
 		twFrame = ThaumcraftApi.addArcaneCraftingRecipe(TWResearchConfig.TWSIGIL_KEY, new ItemStack(TWItems.twResource, 1, 2), new AspectList().add(Aspect.ORDER, 60).add(Aspect.ENTROPY, 60).add(Aspect.AIR, 60).add(Aspect.EARTH, 60).add(Aspect.FIRE, 60).add(Aspect.WATER, 60),
 				" X ", "XOX", " X ", 'X', new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 1), 'O', new ItemStack(TWItems.twResource, 1, 0));
@@ -73,5 +74,14 @@ public class TWRecipes {
 				new ItemStack [] {new ItemStack(TWItems.twResource, 1, 3), new ItemStack(TWItems.twResource, 1, 3), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil), new ItemStack(Blocks.anvil)});
 		
 	}
+
+    public static void initMundane() {
+
+        GameRegistry.addShapelessRecipe(new ItemStack(TWBlocks.twQuartzBlock, 4), new ItemStack(TWItems.twResource), new ItemStack(TWItems.twResource)
+                , new ItemStack(TWItems.twResource), new ItemStack(TWItems.twResource));
+        GameRegistry.addShapelessRecipe(new ItemStack(TWBlocks.twCQuartzBlock), new ItemStack(TWBlocks.twQuartzBlock));
+        GameRegistry.addShapelessRecipe(new ItemStack(TWBlocks.twLQuartzBlock, 2), new ItemStack(TWBlocks.twCQuartzBlock), new ItemStack(TWBlocks.twCQuartzBlock));
+
+    }
 	
 }

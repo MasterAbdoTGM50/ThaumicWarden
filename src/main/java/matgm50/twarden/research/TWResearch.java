@@ -19,8 +19,7 @@ public class TWResearch {
 	public static ResearchItem TWFABRIC;
 	public static ResearchItem TWSIGIL;
 	public static ResearchItem TWARMOR;
-	public static ResearchItem TWCROSS;
-	public static ResearchItem TWSTONE;
+	public static ResearchItem TWSWORD;
 	public static ResearchItem TWAMULET;
 	public static ResearchItem TWFLOWER;
 	public static ResearchItem TWLIZBETH;
@@ -52,8 +51,8 @@ public class TWResearch {
 		TWSIGIL.setPages(new ResearchPage("0"),new ResearchPage(TWRecipes.twFrame), new ResearchPage(TWRecipes.twSigil));
 		TWARMOR = new TWResearchItem(TWResearchConfig.TWARMOR_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3).add(Aspect.ARMOR, 3), 6, -1, 5, new ItemStack(TWItems.twChest)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
 		TWARMOR.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twHelm), new ResearchPage(TWRecipes.twChest), new ResearchPage(TWRecipes.twLegs), new ResearchPage(TWRecipes.twBoots));
-		TWCROSS = new TWResearchItem(TWResearchConfig.TWWEAPON_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3).add(Aspect.WEAPON, 3), 6, 1, 5, new ItemStack(TWItems.twCross)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
-		TWCROSS.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twCross));
+		TWSWORD = new TWResearchItem(TWResearchConfig.TWWEAPON_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 3).add(Aspect.MAGIC, 3).add(Aspect.WEAPON, 3), 6, 1, 5, new ItemStack(TWItems.twSword)).setStub().setSpecial().setParents(TWResearchConfig.TWSIGIL_KEY).registerResearchItem();
+		TWSWORD.setPages(new ResearchPage("0"), new ResearchPage(TWRecipes.twSword));
 		TWLIZBETH = new TWResearchItem(TWResearchConfig.TWLIZBETH_KEY, TWResearchConfig.TWCATEGORY, new AspectList().add(TWAspects.WARDEN, 10).add(Aspect.MAGIC, 10).add(Aspect.EXCHANGE, 10), -2, 1, 5, new ItemStack(TWItems.twLizHammer)).setStub().setSpecial().setParents(TWResearchConfig.TWARDENS_KEY).registerResearchItem();
 		TWLIZBETH.setPages(new ResearchPage("0"), new ResearchPage("1"), new ResearchPage(TWRecipes.twLizHammer), new ResearchPage(TWRecipes.twLizTable));
 	}

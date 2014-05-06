@@ -19,7 +19,7 @@ public class TWItems {
 	public static Item twChest;
 	public static Item twLegs;
 	public static Item twBoots;
-	public static Item twCross;
+	public static Item twSword;
 	public static Item twResource;
 	public static Item twSigil;
 	public static Item twAmulet;
@@ -36,7 +36,7 @@ public class TWItems {
 		twChest = new TWChest(wardenArmorMaterial);
 		twLegs = new TWLegs(wardenArmorMaterial);
 		twBoots = new TWBoots(wardenArmorMaterial);
-		twCross = new TWCross();
+		twSword = new TWSword();
 		twResource = new TWResource();
 		twSigil = new TWSigil();
 		twAmulet = new TWAmulet();
@@ -51,7 +51,7 @@ public class TWItems {
 		GameRegistry.registerItem(twChest, TWItemConfig.TWCHEST_KEY);
 		GameRegistry.registerItem(twLegs, TWItemConfig.TWLEGS_KEY);
 		GameRegistry.registerItem(twBoots, TWItemConfig.TWBOOTS_KEY);
-		GameRegistry.registerItem(twCross, TWItemConfig.TWCROSS_KEY);
+		GameRegistry.registerItem(twSword, TWItemConfig.TWSWORD_KEY);
 		GameRegistry.registerItem(twResource, TWItemConfig.TWRESOURCE_KEY);
 		GameRegistry.registerItem(twSigil, TWItemConfig.TWSIGIL_KEY);
 		GameRegistry.registerItem(twAmulet, TWItemConfig.TWAMULET_KEY);

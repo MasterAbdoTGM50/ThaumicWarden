@@ -6,7 +6,7 @@ item.WardenHelmet.name=Warden's Helmet
 item.WardenChestplate.name=Warden's Chestplate
 item.WardenLeggings.name=Warden's Leggings
 item.WardenBoots.name=Warden's Boots
-item.WardenCross.name=Warden's Cross
+item.WardenSword.name=Warden's Sword
 item.WardenAmulet.name=Warden's Talisman
 item.WardenResource.0.name=Wardenic Quartz
 item.WardenResource.1.name=Wardenic Fibers
@@ -25,6 +25,9 @@ item.LizbethHammer.name=Lizbeth's Hammer
 #Blocks
 tile.WardenFlower.name=Exubitura
 tile.LizbethTable.name=Lizbeth's Table
+tile.InfusedQuartz.name=Infused Quartz Block
+tile.InfusedCQuartz.name=Infused Chiseled Quartz Block
+tile.InfusedLQuartz.name=Infused Quartz Pillar Block
 
 #Aspects
 tc.aspect.exubitor=Warden, Vigilance, Victory, Sacrifice
@@ -71,9 +74,9 @@ twresearch.name.TWARMOR=The Robes
 twresearch.text.TWARMOR=Feels like I'm wearing nothin' at all!
 twresearch.page.TWARMOR.0=More than once have you found mention of the legendary quality of Wardenic Robes, their ability to absorb staggering blows while remaining surprisingly breathable.<LINE>Through painstaking research you have learned how to weave these robes using the Warden's Sigil.<BR>The sigil appears to enchant the fibers with a life of their own as they dance about and weave themselve together.
 
-twresearch.name.TWCROSS=The Cross
-twresearch.text.TWCROSS=Cast the first stone!
-twresearch.page.TWCROSS.0=One manuscript in particular has caught your attention. It describes a Warden who strode into battle wielding a mighty cross as a warhammer, using it with devastating effect.<LINE>If it was good enough for them, why not try it yourself? You discovered how to create a battlecross imbued with the power of a Warden's Sigil.<BR>Due to the Wardenic Quartz used in its construction, it seems to ignore armor. You almost feel sorry for your victims. Almost.
+twresearch.name.TWSWORD=The Sword
+twresearch.text.TWSWORD=Cast the first stone!
+twresearch.page.TWSWORD.0=One manuscript in particular has caught your attention. It describes a Warden who strode into battle wielding a mighty sword, using it with devastating effect.<LINE>If it was good enough for them, why not try it yourself? You discovered how to create a sword imbued with the power of a Warden's Sigil.<BR>Due to the Wardenic Quartz used in its construction, it seems to ignore armor. You almost feel sorry for your victims. Almost.
 
 twresearch.name.TWLIZBETH=Lizbeth's Hammer
 twresearch.text.TWLIZBETH=Stop; it's time.

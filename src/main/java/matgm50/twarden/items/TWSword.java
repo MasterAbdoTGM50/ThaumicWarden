@@ -3,7 +3,7 @@ package matgm50.twarden.items;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.config.TWItemConfig;
 import matgm50.twarden.config.TWModConfig;
-import matgm50.twarden.util.TWCrossDamage;
+import matgm50.twarden.util.TWSwordDamage;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,12 +18,12 @@ import thaumcraft.common.entities.ITaintedMob;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TWCross extends Item implements IRepairable {
+public class TWSword extends Item implements IRepairable {
 
-	public TWCross() {
+	public TWSword() {
 
 		super();
-		setUnlocalizedName(TWItemConfig.TWCROSS_UN_NAME);
+		setUnlocalizedName(TWItemConfig.TWSWORD_UN_NAME);
 		setCreativeTab(TWarden.twTab);
 		setMaxDamage(TWItems.wardenToolMaterial.getMaxUses());
 		setMaxStackSize(1);
@@ -40,15 +40,15 @@ public class TWCross extends Item implements IRepairable {
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity target) {
 		
-		DamageSource CrossDamage = new TWCrossDamage("cross", player);
+		DamageSource SwordDamage = new TWSwordDamage("sword", player);
 		
 		if (target instanceof ITaintedMob) {
-			
-			target.attackEntityFrom(CrossDamage, 10);
-			
+
+			target.attackEntityFrom(SwordDamage, 20);
+
 		} else {
 			
-			target.attackEntityFrom(CrossDamage, 5);
+			target.attackEntityFrom(SwordDamage, 10);
 			
 		}
 		
@@ -98,7 +98,7 @@ public class TWCross extends Item implements IRepairable {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register) {
 
-		itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardencross");
+		itemIcon = register.registerIcon(TWModConfig.TWMOD_ID.toLowerCase() + ":" + "wardensword");
 
 	}
 
