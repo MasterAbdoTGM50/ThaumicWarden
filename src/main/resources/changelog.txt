@@ -1,3 +1,6 @@
+0.7A4:
+-The new blocks should no longer insta-break
+-Tinkered with the textures a bit more
 0.7A3:
 -Added chinese language support thanks to crafteverywhere
 -Just some old candy I had in my closet

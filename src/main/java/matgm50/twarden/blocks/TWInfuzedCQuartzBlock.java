@@ -26,6 +26,7 @@ public class TWInfuzedCQuartzBlock extends Block {
         setBlockName(TWBlockConfig.TWCQUARTZ_UN_NAME);
         setCreativeTab(TWarden.twTab);
         setStepSound(Block.soundTypeStone);
+        setHardness(0.8F);
 
     }
 

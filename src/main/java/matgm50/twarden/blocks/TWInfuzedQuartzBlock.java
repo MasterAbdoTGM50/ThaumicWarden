@@ -8,6 +8,7 @@ import matgm50.twarden.config.TWModConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
 
 /**
@@ -26,6 +27,7 @@ public class TWInfuzedQuartzBlock extends Block {
         setBlockName(TWBlockConfig.TWQUARTZ_UN_NAME);
         setCreativeTab(TWarden.twTab);
         setStepSound(Block.soundTypeStone);
+        setHardness(0.8F);
 
     }
 
