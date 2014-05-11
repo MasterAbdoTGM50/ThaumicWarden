@@ -17,18 +17,19 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.7A4"
+version = "0.0.1"
 group= "matgm50.twarden" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "TWarden"
 
 minecraft {
-    version = "1.7.2-10.12.1.1065"
+    version = "1.7.2-10.12.1.1060"
     assetDir = "run/assets"
 }
 
 dependencies {
 	compile files (
-		'lib/TC4Deobf.jar'
+		'lib/TC4Deobf.jar',
+		'lib/BDeobf.jar'
 	)
 }
 
