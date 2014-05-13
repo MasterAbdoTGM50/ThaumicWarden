@@ -1,0 +1,7 @@
+#Misc
+itemGroup.TWarden=Thaumic Warden
+
+#Items
+item.itemWardenResource.0.name=Exubitura Petal
+item.itemWardenResource.1.name=Wardenic Stone
+item.itemWardenResource.2.name=Wardenic Quartz
