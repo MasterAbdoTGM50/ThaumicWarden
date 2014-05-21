@@ -7,7 +7,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import matgm50.twarden.item.TWItems;
+import matgm50.twarden.entity.ModEntities;
+import matgm50.twarden.item.ModItems;
 import matgm50.twarden.lib.ModLib;
 import matgm50.twarden.network.proxy.CommonProxy;
 import matgm50.twarden.util.TabTWarden;
@@ -17,7 +18,7 @@ import net.minecraft.creativetab.CreativeTabs;
  * Created by MasterAbdoTGM50 on 5/11/2014.
  */
 
-@Mod(modid = ModLib.ID, name = ModLib.NAME, version = ModLib.VERSION)
+@Mod(modid = ModLib.ID, name = ModLib.NAME, version = ModLib.VERSION, dependencies = ModLib.DEPENDENCIES)
 
 public class TWarden {
 
@@ -32,7 +33,10 @@ public class TWarden {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
-        TWItems.init();
+        proxy.initRenderers();
+
+        ModItems.init();
+        ModEntities.init();
 
     }
 

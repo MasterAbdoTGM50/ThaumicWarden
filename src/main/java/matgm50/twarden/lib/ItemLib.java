@@ -6,7 +6,9 @@ package matgm50.twarden.lib;
 
 public class ItemLib {
 
-    public static final String RESOURCE_NAME = "itemWardenResource";
+    public static final String RESOURCE_NAME = "itemResource";
     public static final String[] RESOURCE_ICON = {"wardenpetal", "wardenstone", "wardenquartz"};
+
+    public static final String PURITY_FOCUS_NAME = "itemFocusResource";
 
 }

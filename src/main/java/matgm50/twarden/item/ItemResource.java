@@ -17,11 +17,11 @@ import java.util.List;
  * Created by MasterAbdoTGM50 on 5/13/2014.
  */
 
-public class ItemWardenResource extends Item {
+public class ItemResource extends Item {
 
     private IIcon[] icons;
 
-    public ItemWardenResource() {
+    public ItemResource() {
 
         super();
         setUnlocalizedName(ItemLib.RESOURCE_NAME);

@@ -1,6 +1,6 @@
 package matgm50.twarden.util;
 
-import matgm50.twarden.item.TWItems;
+import matgm50.twarden.item.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -19,7 +19,7 @@ public class TabTWarden extends CreativeTabs {
     @Override
     public Item getTabIconItem() {
 
-        return TWItems.itemWardenResource;
+        return ModItems.itemResource;
 
     }
 
