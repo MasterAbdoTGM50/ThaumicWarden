@@ -8,4 +8,4 @@ Thaumic Warden is under the MIT license
 
 MCF Thread
 =============
-http://www.minecraftforum.net/topic/2362068-164tc4addon-thaumic-warden-05a1/
+http://www.minecraftforum.net/topic/2362068-
