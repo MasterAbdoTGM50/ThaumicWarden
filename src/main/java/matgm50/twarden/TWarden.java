@@ -7,10 +7,13 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import matgm50.twarden.block.ModBlocks;
+import matgm50.twarden.crafting.ModRecipes;
 import matgm50.twarden.entity.ModEntities;
 import matgm50.twarden.item.ModItems;
 import matgm50.twarden.lib.ModLib;
 import matgm50.twarden.network.proxy.CommonProxy;
+import matgm50.twarden.research.ModResearch;
 import matgm50.twarden.util.TabTWarden;
 import net.minecraft.creativetab.CreativeTabs;
 
@@ -36,6 +39,7 @@ public class TWarden {
         proxy.initRenderers();
 
         ModItems.init();
+        ModBlocks.init();
         ModEntities.init();
 
     }
@@ -47,6 +51,9 @@ public class TWarden {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+
+        ModRecipes.init();
+        ModResearch.init();
 
     }
 

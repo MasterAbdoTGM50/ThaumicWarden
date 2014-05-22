@@ -13,9 +13,9 @@ import thaumcraft.api.research.ResearchPage.PageType;
  * Created by MasterAbdoTGM50 on 5/13/2014.
  */
 
-public class TWResearchItem extends ResearchItem {
+public class ModResearchItem extends ResearchItem {
 
-    public TWResearchItem(String key, String category, AspectList tags, int column, int row, int complexity, ItemStack icon) {
+    public ModResearchItem(String key, String category, AspectList tags, int column, int row, int complexity, ItemStack icon) {
 
         super(key, category, tags, column, row, complexity, icon);
 

@@ -6,3 +6,11 @@ item.itemResource.0.name=Exubitura Petal
 item.itemResource.1.name=Wardenic Stone
 item.itemResource.2.name=Wardenic Quartz
 item.itemFocusResource.name=Wand Focus: Purity
+
+#Blocks
+tile.blockExubitura.name=Exubitura Rose
+tile.blockInfusedQuartzNormal.name=Infused Quartz Block
+tile.blockInfusedQuartzSlab.name=Infused Quartz Slab
+tile.blockInfusedQuartzStair.name=Infused Quartz Stair
+tile.blockInfusedQuartzChiseled.name=Chiseled Infused Quartz Block
+tile.blockInfusedQuartzPillar.name=Infused Quartz Pillar Block
