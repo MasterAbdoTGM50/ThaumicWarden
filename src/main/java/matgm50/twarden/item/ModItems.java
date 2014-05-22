@@ -11,15 +11,18 @@ import net.minecraft.item.Item;
 public class ModItems {
 
     public static Item itemResource;
+    public static Item itemWardenAmulet;
     public static Item itemFocusPurity;
 
     public static void init() {
 
         itemResource = new ItemResource();
+        itemWardenAmulet = new ItemWardenAmulet();
         itemFocusPurity = new ItemFocusPurity();
 
         GameRegistry.registerItem(itemResource, ItemLib.RESOURCE_NAME);
         GameRegistry.registerItem(itemFocusPurity, ItemLib.PURITY_FOCUS_NAME);
+        GameRegistry.registerItem(itemWardenAmulet, ItemLib.WARDEN_AMULET_NAME);
 
     }
 

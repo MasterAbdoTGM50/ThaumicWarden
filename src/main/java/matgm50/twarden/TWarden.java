@@ -1,8 +1,8 @@
 package matgm50.twarden;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -14,7 +14,9 @@ import matgm50.twarden.item.ModItems;
 import matgm50.twarden.lib.ModLib;
 import matgm50.twarden.network.proxy.CommonProxy;
 import matgm50.twarden.research.ModResearch;
+import matgm50.twarden.util.EventHandler;
 import matgm50.twarden.util.TabTWarden;
+import matgm50.twarden.world.ModGen;
 import net.minecraft.creativetab.CreativeTabs;
 
 /**
@@ -33,7 +35,7 @@ public class TWarden {
 
     public static CreativeTabs tabTWarden = new TabTWarden(ModLib.ID);
 
-    @EventHandler
+    @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
         proxy.initRenderers();
@@ -41,15 +43,16 @@ public class TWarden {
         ModItems.init();
         ModBlocks.init();
         ModEntities.init();
+        ModGen.init();
 
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
         ModRecipes.init();

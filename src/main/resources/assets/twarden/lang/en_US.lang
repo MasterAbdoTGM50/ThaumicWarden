@@ -5,6 +5,7 @@ itemGroup.TWarden=Thaumic Warden
 item.itemResource.0.name=Exubitura Petal
 item.itemResource.1.name=Wardenic Stone
 item.itemResource.2.name=Wardenic Quartz
+item.itemWardenAmulet.name=Warden's Amulet
 item.itemFocusResource.name=Wand Focus: Purity
 
 #Blocks
@@ -14,3 +15,9 @@ tile.blockInfusedQuartzSlab.name=Infused Quartz Slab
 tile.blockInfusedQuartzStair.name=Infused Quartz Stair
 tile.blockInfusedQuartzChiseled.name=Chiseled Infused Quartz Block
 tile.blockInfusedQuartzPillar.name=Infused Quartz Pillar Block
+
+#Aspects
+tc.aspect.EXUBITOR=Warden, Vigilance, Victory, Sacrifice
+
+#Research
+tc.research_category.TWARDEN=Wardenic Arts

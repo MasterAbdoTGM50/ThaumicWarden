@@ -9,6 +9,7 @@ public class ItemLib {
     public static final String RESOURCE_NAME = "itemResource";
     public static final String[] RESOURCE_ICON = {"wardenpetal", "wardenstone", "wardenquartz"};
 
+    public static final String WARDEN_AMULET_NAME = "itemWardenAmulet";
     public static final String PURITY_FOCUS_NAME = "itemFocusResource";
 
 }
