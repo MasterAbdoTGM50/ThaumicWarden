@@ -33,7 +33,7 @@ public class PurityHelper {
 
             if (mop.entityHit != null) {
 
-                checkAndPurify(mop.entityHit);
+                return isTainted(mop.entityHit);
 
             }
 
@@ -43,7 +43,7 @@ public class PurityHelper {
 
     }
 
-    public static void checkAndPurify(Entity toPurify) {
+    public static void purifyEntity(Entity toPurify) {
 
         if (toPurify != null) {
 
@@ -71,7 +71,7 @@ public class PurityHelper {
 
         if(mop.typeOfHit == MovingObjectPosition.MovingObjectType.ENTITY) {
 
-            checkAndPurify(mop.entityHit);
+            purifyEntity(mop.entityHit);
 
         }
 

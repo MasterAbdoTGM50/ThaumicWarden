@@ -3,7 +3,7 @@ itemGroup.TWarden=Thaumic Warden
 
 #Items
 item.itemResource.0.name=Exubitura Petal
-item.itemResource.1.name=Wardenic Stone
+item.itemResource.1.name=Wardenic Crystal
 item.itemResource.2.name=Wardenic Quartz
 item.itemWardenAmulet.name=Warden's Amulet
 item.itemFocusResource.name=Wand Focus: Purity
@@ -21,3 +21,23 @@ tc.aspect.EXUBITOR=Warden, Vigilance, Victory, Sacrifice
 
 #Research
 tc.research_category.TWARDEN=Wardenic Arts
+
+twresearch.name.TWARDEN=Thaumic Wardens
+twresearch.text.TWARDEN=Long forgotten to our ears
+twresearch.page.TWARDEN.0=You have read of an ancient order of former thaumaturge who dedicated themselves to fighting the Eldritch and protecting the land.<BR>They were once a branch of the Abysswalkers who became divided after the siege on their headquarters Fort Lisa.<BR>Thanks to Master Lizbeth some of the remnants are now what we call the Thaumic Wardens.
+
+twresearch.name.EXUBITURA=Exubitura
+twresearch.text.EXUBITURA=A rose by any other name...
+twresearch.page.EXUBITURA.0=Mutated by Thaumic energies, this odd little rose has formed a beautiful crystal where its stigma should be.<BR>Despite it's small size, the petals are vibrant and have an unusual energy about them.
+
+twresearch.name.INFUSEDQUARTZ=Wardenic Quartz
+twresearch.text.INFUSEDQUARTZ=Quartzing destiny!
+twresearch.page.INFUSEDQUARTZ.0=You discovered one of the ancient manuscripts that describe the strange quartz used by the Thaumic Wardens. It also tells that it was used for all of their armaments.<BR>Due to the concentrated and highly aligned energies contained within its crystals, weapons made from this stuff seem to phase through most metals and other mundane forms of protection.<BR>You think there is more to it but, yet unsure....
+
+twresearch.name.WARDENCRYSTAL=Wardenic Crystal
+twresearch.text.WARDENCRYSTAL=First step...
+twresearch.page.WARDENCRYSTAL.0=You knew these petals were unique somehow. By crystallizing the petals you were able to create the Wardenic Crystals.<BR>You don't know a use for it now but, nothing is useless in this world You guess....
+
+twresearch.name.WARDENAMULET=Warden's Amulet
+twresearch.text.WARDENAMULET=Dear to the heart
+twresearch.page.WARDENAMULET.0=You had a feeling you would find a use for those crystals and so you did.<BR>By using this crystal as an amulet you can recreate the Warden's Talisman. The relic that aided the Warden's in their battles against the withers, Eldritch and taint.<BR>You have a feeling there is more to it but, you have the least of clues....

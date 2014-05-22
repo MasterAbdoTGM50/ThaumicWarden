@@ -15,4 +15,11 @@ public class ResearchLib {
     public static final ResourceLocation CATEGORY_ICON = new ResourceLocation(ModLib.ID.toLowerCase() ,"textures/items/wardenamulet.png");
     public static final ResourceLocation CATEGORY_BACK = new ResourceLocation("thaumcraft" ,"textures/gui/gui_researchback.png");
 
+    public static final String TWARDEN_KEY = "TWARDEN";
+    public static final String EXUBITURA_KEY = "EXUBITURA";
+    public static final String QUARTZ_KEY = "INFUSEDQUARTZ";
+    public static final String CRYSTAL_KEY = "WARDENCRYSTAL";
+    public static final String WARDEN_AMULET_KEY = "WARDENAMULET";
+    public static final String PURITY_FOCUS_KEY = "PURITYFOCUS";
+
 }
