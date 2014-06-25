@@ -55,8 +55,8 @@ public class TWarden {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
-        ModRecipes.init();
-        ModResearch.init();
+        //ModRecipes.init();
+        //ModResearch.init();
 
     }
 

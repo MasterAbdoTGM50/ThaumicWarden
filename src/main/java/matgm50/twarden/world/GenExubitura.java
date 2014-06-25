@@ -20,7 +20,7 @@ public class GenExubitura implements IWorldGenerator {
         int Z = chunkZ * 16 + random.nextInt(128);
         int Y = world.getHeightValue(X, Z);
 
-        if (world.isAirBlock(X, Y, Z) && ModBlocks.blockExubitura.canBlockStay(world, X, Y, Z) && random.nextInt(100) <= 5) {
+        if (world.isAirBlock(X, Y, Z) && ModBlocks.blockExubitura.canBlockStay(world, X, Y, Z) && random.nextInt(1000) <= 10) {
 
             world.setBlock(X, Y, Z, ModBlocks.blockExubitura, 0, 2);
 

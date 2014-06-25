@@ -49,21 +49,7 @@ public class ItemWardenAmulet extends Item implements IBauble {
     public void onWornTick(ItemStack itemStack, EntityLivingBase entityLivingBase) {
 
         if (entityLivingBase instanceof EntityPlayer) {
-
-            EntityPlayer player = (EntityPlayer)entityLivingBase;
-
-            if(player.isPotionActive(Config.potionFluxTaintID)) {
-
-                player.removePotionEffect(Config.potionFluxTaintID);
-
-            }
-
-            if(player.isPotionActive(Potion.wither.getId())) {
-
-                player.removePotionEffect(Potion.wither.getId());
-
-            }
-
+            
         }
 
     }

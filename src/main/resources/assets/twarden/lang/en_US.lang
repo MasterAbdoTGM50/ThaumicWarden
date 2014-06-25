@@ -6,7 +6,8 @@ item.itemResource.0.name=Exubitura Petal
 item.itemResource.1.name=Wardenic Crystal
 item.itemResource.2.name=Wardenic Quartz
 item.itemWardenAmulet.name=Warden's Amulet
-item.itemFocusResource.name=Wand Focus: Purity
+item.itemWardenSword.name=Warden's Sword
+item.itemFocusPurity.name=Wand Focus: Purity
 
 #Blocks
 tile.blockExubitura.name=Exubitura Rose

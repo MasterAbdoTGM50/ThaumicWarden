@@ -79,8 +79,8 @@ public class ItemFocusPurity extends ItemFocusBasic {
     @Override
     public AspectList getVisCost() {
 
-        return new AspectList().add(Aspect.AIR, 5000).add(Aspect.EARTH, 5000).add(Aspect.FIRE, 5000)
-            .add(Aspect.WATER, 5000).add(Aspect.ORDER, 5000).add(Aspect.ENTROPY, 5000);
+        return new AspectList().add(Aspect.AIR, 500).add(Aspect.EARTH, 500).add(Aspect.FIRE, 500)
+            .add(Aspect.WATER, 500).add(Aspect.ORDER, 500).add(Aspect.ENTROPY, 500);
 
     }
 

@@ -17,12 +17,12 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.0.1"
+version = "1.0.0"
 group= "matgm50.twarden" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "TWarden"
 
 minecraft {
-    version = "1.7.2-10.12.1.1085"
+    version = "1.7.2-10.12.2.1133"
     assetDir = "run/assets"
 }
 
