@@ -2,13 +2,13 @@
 {
   "modid": "TWarden",
   "name": "Thaumic Warden",
-  "description": "A Thaumcraft 4 Addon aiming to add more adventure and story to Thaumcraft.",
+  "description": "A Thaumcraft 4 Addon aiming to add more adventure and story to Thaumcraft",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authors": ["MasterAbdoTGM50"],
-  "credits": "Azanor, Eldur, Vazkii, Vswe, Pahimar.",
+  "credits": "Azanor, Vswe, Pahimar",
   "logoFile": "Logo.png",
   "screenshots": [],
   "dependencies": ["Thaumcraft"]
