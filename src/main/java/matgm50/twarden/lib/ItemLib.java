@@ -11,6 +11,10 @@ public class ItemLib {
 
     public static final String WARDEN_AMULET_NAME = "itemWardenAmulet";
     public static final String WARDEN_SWORD_NAME = "itemWardenSword";
+    public static final String WARDEN_HELM_NAME = "itemWardenHelm";
+    public static final String WARDEN_CHEST_NAME = "itemWardenChest";
+    public static final String WARDEN_LEGS_NAME = "itemWardenLegs";
+    public static final String WARDEN_BOOTS_NAME = "itemWardenBoots";
     public static final String PURITY_FOCUS_NAME = "itemFocusPurity";
 
 }

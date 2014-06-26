@@ -7,7 +7,7 @@ import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.entity.passive.*;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import thaumcraft.common.entities.ITaintedMob;
+import thaumcraft.api.entities.ITaintedMob;
 import thaumcraft.common.entities.monster.*;
 
 /**
@@ -47,8 +47,6 @@ public class PurityHelper {
     public static boolean isTainted(Entity entity) {
 
         if(entity instanceof ITaintedMob) {
-
-            System.out.print("He is Tainted");
 
             return true;
 

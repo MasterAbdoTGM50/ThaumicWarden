@@ -7,6 +7,10 @@ item.itemResource.1.name=Wardenic Crystal
 item.itemResource.2.name=Wardenic Quartz
 item.itemWardenAmulet.name=Warden's Amulet
 item.itemWardenSword.name=Warden's Sword
+item.itemWardenHelm.name=Warden's Helmet
+item.itemWardenChest.name=Warden's Chestplate
+item.itemWardenLegs.name=Warden's Leggings
+item.itemWardenBoots.name=Warden's Boots
 item.itemFocusPurity.name=Wand Focus: Purity
 
 #Blocks
