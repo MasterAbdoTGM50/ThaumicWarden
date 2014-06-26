@@ -17,8 +17,10 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -52,11 +54,11 @@ public class ItemWardenSword extends Item {
     public int getMaxItemUseDuration(ItemStack par1ItemStack) {return 72000;}
 
     @Override
-    public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 
-        par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
+        par3List.add(StatCollector.translateToLocal("tooltip.sword." + WardenHelper.getEffect(par1ItemStack)));
 
-        return super.onItemRightClick(par1ItemStack, par2World, par3EntityPlayer);
+        super.addInformation(par1ItemStack, par2EntityPlayer, par3List, par4);
 
     }
 
@@ -77,6 +79,8 @@ public class ItemWardenSword extends Item {
             entity.attackEntityFrom(damageSource, 5);
 
         }
+
+        WardenHelper.doEffect(WardenHelper.getEffect(stack), stack, player, entity);
 
         stack.damageItem(1, player);
 
@@ -102,5 +106,7 @@ public class ItemWardenSword extends Item {
         }
 
     }
+
+
 
 }

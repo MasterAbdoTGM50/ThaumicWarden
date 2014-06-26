@@ -20,6 +20,9 @@ public class ResearchLib {
     public static final String QUARTZ_KEY = "INFUSEDQUARTZ";
     public static final String CRYSTAL_KEY = "WARDENCRYSTAL";
     public static final String WARDEN_AMULET_KEY = "WARDENAMULET";
+    public static final String WARDEN_ARMOR_KEY = "WARDENARMOR";
+    public static final String WARDEN_SWORD_KEY = "WARDENSWORD";
     public static final String PURITY_FOCUS_KEY = "PURITYFOCUS";
+    public static final String LOVE_RING_KEY = "LOVERING";
 
 }

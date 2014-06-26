@@ -3,6 +3,8 @@ package matgm50.twarden.util;
 import baubles.api.BaublesApi;
 import matgm50.twarden.item.ModItems;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -18,14 +20,20 @@ import java.util.Random;
 public class WardenHelper {
 
     public static final String WARDEN = "warden";
-    public static final String ORDER = "order";
+    public static final String HEAL = "heal";
     public static final String CHAOS = "chaos";
-    public static final String WATER = "water";
     public static final String FIRE = "fire";
-    public static final String EARTH = "earth";
-    public static final String AIR = "air";
+    public static final String LIGHT = "light";
 
-    public static void setEffect(ItemStack stack) {
+    public static ItemStack createSword(ItemStack stack, String effect) {
+
+        setEffect(stack, effect);
+
+        return stack;
+
+    }
+
+    public static void setEffect(ItemStack stack, String effect) {
 
         if(stack.stackTagCompound == null) {
 
@@ -33,7 +41,7 @@ public class WardenHelper {
 
         }
 
-        stack.stackTagCompound.setString("effect", WARDEN);
+        stack.stackTagCompound.setString("effect", effect);
 
     }
 
@@ -62,7 +70,11 @@ public class WardenHelper {
 
         if(BaublesApi.getBaubles(player).getStackInSlot(0) != null) {
 
-            return BaublesApi.getBaubles(player).getStackInSlot(0).getItemDamage() + 1;
+            if(BaublesApi.getBaubles(player).getStackInSlot(0).getItem() == ModItems.itemWardenAmulet) {
+
+                return BaublesApi.getBaubles(player).getStackInSlot(0).getItemDamage() + 1;
+
+            }
 
         }
 
@@ -74,8 +86,43 @@ public class WardenHelper {
 
         if(effect == WARDEN) {
 
-            DamageSource damageSource = new DamageSourceWardenSword("warden", player);
+            if(PurityHelper.isTainted(entity)) {
+
+                DamageSource damageSource = new DamageSourceWardenSword("warden", player);
+                entity.attackEntityFrom(damageSource, 4 * getBonus(player));
+
+            }
+
+        }
+
+        if(effect == HEAL) {
+
+            player.heal(2 * getBonus(player));
+
+        }
+
+        if(effect == CHAOS) {
+
+            DamageSource damageSource = new DamageSourceWardenSword("chaos", player);
             entity.attackEntityFrom(damageSource, 2 * getBonus(player));
+
+        }
+
+        if(effect == FIRE) {
+
+            entity.setFire(2 * getBonus(player));
+
+        }
+
+        if(effect == LIGHT) {
+
+            if(entity instanceof EntityZombie || entity instanceof EntitySkeleton) {
+
+                DamageSource damageSource = new DamageSourceWardenSword("chaos", player);
+
+                entity.attackEntityFrom(damageSource, 4 * getBonus(player));
+
+            }
 
         }
 

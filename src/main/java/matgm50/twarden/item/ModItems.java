@@ -22,6 +22,7 @@ public class ModItems {
     public static Item itemWardenChest;
     public static Item itemWardenLegs;
     public static Item itemWardenBoots;
+    public static Item itemLoveRing;
 
     public static void init() {
 
@@ -33,6 +34,7 @@ public class ModItems {
         itemWardenChest = new ItemWardenChest();
         itemWardenLegs = new ItemWardenLegs();
         itemWardenBoots = new ItemWardenBoots();
+        itemLoveRing = new ItemLoveRing();
 
         GameRegistry.registerItem(itemResource, ItemLib.RESOURCE_NAME);
         GameRegistry.registerItem(itemFocusPurity, ItemLib.PURITY_FOCUS_NAME);
@@ -42,6 +44,7 @@ public class ModItems {
         GameRegistry.registerItem(itemWardenChest, ItemLib.WARDEN_CHEST_NAME);
         GameRegistry.registerItem(itemWardenLegs, ItemLib.WARDEN_LEGS_NAME);
         GameRegistry.registerItem(itemWardenBoots, ItemLib.WARDEN_BOOTS_NAME);
+        GameRegistry.registerItem(itemLoveRing, ItemLib.LOVE_RING_NAME);
 
     }
 

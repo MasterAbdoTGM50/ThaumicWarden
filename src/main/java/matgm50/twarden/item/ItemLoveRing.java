@@ -8,42 +8,38 @@ import matgm50.twarden.TWarden;
 import matgm50.twarden.lib.ItemLib;
 import matgm50.twarden.lib.ModLib;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import thaumcraft.common.config.Config;
 
 /**
- * Created by MasterAbdoTGM50 on 5/22/2014.
+ * Created by MasterAbdoTGM50 on 6/26/2014.
  */
 
-public class ItemWardenAmulet extends Item implements IBauble {
+public class ItemLoveRing extends Item implements IBauble {
 
-    public ItemWardenAmulet() {
+    public ItemLoveRing() {
 
         super();
-        setUnlocalizedName(ItemLib.WARDEN_AMULET_NAME);
+        setUnlocalizedName(ItemLib.LOVE_RING_NAME);
         setCreativeTab(TWarden.tabTWarden);
 
     }
 
     @Override
-    public EnumRarity getRarity(ItemStack par1ItemStack) {return EnumRarity.rare;}
+    public EnumRarity getRarity(ItemStack par1ItemStack) {return EnumRarity.epic;}
 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister register) {
 
-        itemIcon = register.registerIcon(ModLib.ID.toLowerCase() + ":" + "wardenamulet");
+        itemIcon = register.registerIcon(ModLib.ID.toLowerCase() + ":" + "lovering");
 
     }
 
     @Override
-    public BaubleType getBaubleType(ItemStack itemStack) {return BaubleType.AMULET;}
+    public BaubleType getBaubleType(ItemStack itemStack) {return BaubleType.RING;}
 
     @Override
     public void onWornTick(ItemStack itemStack, EntityLivingBase entityLivingBase) {
@@ -60,6 +56,6 @@ public class ItemWardenAmulet extends Item implements IBauble {
     public boolean canEquip(ItemStack itemStack, EntityLivingBase entityLivingBase) {return true;}
 
     @Override
-    public boolean canUnequip(ItemStack itemStack, EntityLivingBase entityLivingBase) {return true;}
+    public boolean canUnequip(ItemStack itemStack, EntityLivingBase entityLivingBase) {return false;}
 
 }

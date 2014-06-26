@@ -14,6 +14,7 @@ import matgm50.twarden.entity.ModEntities;
 import matgm50.twarden.item.ModItems;
 import matgm50.twarden.lib.ModLib;
 import matgm50.twarden.network.proxy.CommonProxy;
+import matgm50.twarden.research.ModResearch;
 import matgm50.twarden.util.TabTWarden;
 import matgm50.twarden.world.ModGen;
 import net.minecraft.creativetab.CreativeTabs;
@@ -54,8 +55,8 @@ public class TWarden {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
-        //ModRecipes.init();
-        //ModResearch.init();
+        ModRecipes.init();
+        ModResearch.init();
 
     }
 
