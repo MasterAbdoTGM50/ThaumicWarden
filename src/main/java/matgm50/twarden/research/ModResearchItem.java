@@ -38,9 +38,9 @@ public class ModResearchItem extends ResearchItem {
     }
 
     @Override
-    public ResearchItem setPages(ResearchPage... par) {
+    public ResearchItem setPages(ResearchPage... pages) {
 
-        for(ResearchPage Page : par) {
+        for(ResearchPage Page : pages) {
 
             if(Page.type == PageType.TEXT)
 
@@ -49,7 +49,7 @@ public class ModResearchItem extends ResearchItem {
         }
 
 
-        return super.setPages(par);
+        return super.setPages(pages);
 
     }
 

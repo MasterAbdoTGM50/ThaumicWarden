@@ -1,39 +1,33 @@
 package matgm50.twarden.item;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import matgm50.twarden.TWarden;
 import matgm50.twarden.lib.ItemLib;
-import matgm50.twarden.lib.ModLib;
-import matgm50.twarden.util.DamageSourceWarden;
 import matgm50.twarden.util.WardenicHelper;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ISpecialArmor;
 
 import java.util.List;
 
 /**
- * Created by MasterAbdoTGM50 on 6/24/2014.
+ * Created by MasterAbdoTGM50 on 6/26/2014.
  */
 
-public class ItemWardenSword extends Item {
+public class ItemWardenArmor extends ItemArmor implements ISpecialArmor {
 
-    public ItemWardenSword() {
+    public ItemWardenArmor(int type) {
 
-        super();
-        setUnlocalizedName(ItemLib.WARDEN_SWORD_NAME);
+        super(ModItems.materialWarden, 3, type);
+        setUnlocalizedName(ItemLib.WARDEN_CHEST_NAME);
         setCreativeTab(TWarden.tabTWarden);
         setMaxStackSize(1);
-
-        setFull3D();
 
     }
 
@@ -53,12 +47,6 @@ public class ItemWardenSword extends Item {
     public EnumRarity getRarity(ItemStack par1ItemStack) {return EnumRarity.epic;}
 
     @Override
-    public EnumAction getItemUseAction(ItemStack par1ItemStack) {return EnumAction.block;}
-
-    @Override
-    public int getMaxItemUseDuration(ItemStack par1ItemStack) {return 72000;}
-
-    @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 
         par3List.add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("tooltip.wardenic.charge") + ": " + (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()) + "/" + par1ItemStack.getMaxDamage());
@@ -69,30 +57,33 @@ public class ItemWardenSword extends Item {
     }
 
     @Override
-    public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
+    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 
-        if(stack.getItemDamage() != stack.getMaxDamage()) {
+        WardenicHelper.getUpgrade(itemStack).onTick(world, player, itemStack);
 
-            DamageSource damageSource = new DamageSourceWarden("warden", player);
-
-            entity.attackEntityFrom(damageSource, 5);
-
-            WardenicHelper.getUpgrade(stack).onAttack(stack, player, entity);
-
-            stack.setItemDamage(stack.getItemDamage() + 1);
-
-        }
-
-        return super.onLeftClickEntity(stack, player, entity);
+        super.onArmorTick(world, player, itemStack);
 
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister register) {
+    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
 
-        itemIcon = register.registerIcon(ModLib.ID.toLowerCase() + ":" + "wardensword");
+        if(armor.getItemDamage() != armor.getMaxDamage()) {
+
+            return new ArmorProperties(0, getArmorMaterial().getDamageReductionAmount(slot) / 25D, 20);
+
+        } else {
+
+            return new ArmorProperties(0, 0, 0);
+
+        }
 
     }
+
+    @Override
+    public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {return getArmorMaterial().getDamageReductionAmount(slot);}
+
+    @Override
+    public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {}
 
 }

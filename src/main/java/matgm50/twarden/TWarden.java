@@ -1,6 +1,5 @@
 package matgm50.twarden;
 
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -16,6 +15,8 @@ import matgm50.twarden.lib.ModLib;
 import matgm50.twarden.network.proxy.CommonProxy;
 import matgm50.twarden.research.ModResearch;
 import matgm50.twarden.util.TabTWarden;
+import matgm50.twarden.util.WardenicEvents;
+import matgm50.twarden.util.upgrade.WardenicUpgrades;
 import matgm50.twarden.world.ModGen;
 import net.minecraft.creativetab.CreativeTabs;
 
@@ -40,10 +41,13 @@ public class TWarden {
 
         proxy.initRenderers();
 
+        WardenicUpgrades.init();
+
         ModItems.init();
         ModBlocks.init();
         ModEntities.init();
         ModGen.init();
+        WardenicEvents.init();
 
     }
 

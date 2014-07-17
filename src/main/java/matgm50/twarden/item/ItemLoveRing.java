@@ -42,9 +42,7 @@ public class ItemLoveRing extends Item implements IBauble {
     public BaubleType getBaubleType(ItemStack itemStack) {return BaubleType.RING;}
 
     @Override
-    public void onWornTick(ItemStack itemStack, EntityLivingBase entityLivingBase) {
-
-    }
+    public void onWornTick(ItemStack itemStack, EntityLivingBase entityLivingBase) {}
 
     @Override
     public void onEquipped(ItemStack itemStack, EntityLivingBase entityLivingBase) {}

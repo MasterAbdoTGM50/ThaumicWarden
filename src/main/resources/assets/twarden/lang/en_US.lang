@@ -1,11 +1,12 @@
 #Misc
 itemGroup.TWarden=Thaumic Warden
+tooltip.wardenic.charge=Charge
+tooltip.wardenic.upgrade=Upgrade
 
 #Items
 item.itemResource.0.name=Exubitura Petal
 item.itemResource.1.name=Wardenic Crystal
 item.itemResource.2.name=Wardenic Quartz
-item.itemResource.3.name=Ender Star
 item.itemWardenAmulet.name=Warden's Amulet
 item.itemWardenSword.name=Warden's Sword
 item.itemWardenHelm.name=Warden's Helmet
@@ -14,13 +15,14 @@ item.itemWardenLegs.name=Warden's Leggings
 item.itemWardenBoots.name=Warden's Boots
 item.itemFocusPurity.name=Wand Focus: Purity
 item.itemLoveRing.name=Ring of Love
+item.itemLizHammer.name=Lizbeth's Hammer
 
-#Tooltip
-tooltip.sword.warden=Forever a warden
-tooltip.sword.heal=I will survive
-tooltip.sword.chaos=I will destroy you
-tooltip.sword.fire=Burn to a crisp
-tooltip.sword.light=My holy aura will cleanse you
+#Quotes
+upgrade.Exubitor.quote=Forever a warden
+upgrade.*.quote=I will survive
+upgrade.*.quote=I will destroy you
+upgrade.Ignis.quote=Burn to a crisp
+upgrade.*.quote=My holy aura will cleanse you
 
 #Blocks
 tile.blockExubitura.name=Exubitura Rose
@@ -29,9 +31,10 @@ tile.blockInfusedQuartzSlab.name=Infused Quartz Slab
 tile.blockInfusedQuartzStair.name=Infused Quartz Stair
 tile.blockInfusedQuartzChiseled.name=Chiseled Infused Quartz Block
 tile.blockInfusedQuartzPillar.name=Infused Quartz Pillar Block
+tile.blockLizTable.name=Lizbeth's Table
 
 #Aspects
-tc.aspect.EXUBITOR=Warden, Vigilance, Victory, Sacrifice
+tc.aspect.exubitor=Warden, Vigilance, Victory, Sacrifice
 
 #Research
 tc.research_category.TWARDEN=Wardenic Arts
@@ -50,20 +53,20 @@ twresearch.page.INFUSEDQUARTZ.0=You discovered one of the ancient manuscripts th
 
 twresearch.name.WARDENCRYSTAL=Wardenic Crystal
 twresearch.text.WARDENCRYSTAL=First step...
-twresearch.page.WARDENCRYSTAL.0=You knew these petals were unique somehow. By crystallizing the petals you were able to create the Wardenic Crystals.<BR>You don't know a use for it now but, nothing is useless in this world You guess....
-
-twresearch.name.WARDENAMULET=Warden's Amulet
-twresearch.text.WARDENAMULET=Dear to the heart
-twresearch.page.WARDENAMULET.0=You had a feeling you would find a use for those crystals and so you did.<BR>By using this crystal as an amulet you can recreate the Warden's Talisman. The relic that aided the Warden's in their battles against the withers, Eldritch and taint.
+twresearch.page.WARDENCRYSTAL.0=You knew these petals were unique somehow. By crystallizing the petals you were able to create the Wardenic Crystals.<BR>This crystal is unique and seems to react strangely to essentia and aspects.
 
 twresearch.name.WARDENARMOR=The Armor
 twresearch.text.WARDENARMOR=Feels like I'm wearing nothin' at all!
-twresearch.page.WARDENARMOR.0=More than once have you found mention of the legendary quality of Wardenic Armor, their ability to absorb staggering blows while remaining surprisingly breathable.<LINE>Through painstaking research you have learned how to create these pieces using the Warden's Crystal.<BR>The crystal appears to enchant the quartz with a surprising power to absorb power from nearby crystals.
+twresearch.page.WARDENARMOR.0=More than once have you found mention of the legendary quality of Wardenic Armor, their ability to absorb staggering blows while remaining surprisingly breathable.<LINE>Through painstaking research you have learned how to create these pieces using the Warden's Crystal.<BR>The quartz used seems to make it absorb more hits and rebuild itself and the crystal gives it the ability to be imbued with aspects for unique effects.
 
 twresearch.name.WARDENSWORD=The Sword
 twresearch.text.WARDENSWORD=The ramnents remain
-twresearch.page.WARDENSWORD.0=When the Nameless one helped Lizbeth found the Thaumic Wardens, he entrusted her with the ramnents of the Light Blade.<BR>She repaired the sword to manipulate the power of aspects to create different effects depending on the imbued aspect.
+twresearch.page.WARDENSWORD.0=When the Nameless one helped Lizbeth found the Thaumic Wardens, he entrusted her with the ramnents of the Light Blade.<BR>She repaired the sword to manipulate the power of aspects to create different effects depending on the imbued aspect and to rebuild itself so that it never gets broken again.
 
 twresearch.name.LOVERING=Ring of Love
 twresearch.text.LOVERING=I <3 U
 twresearch.page.LOVERING.0=Before leaving Lizbeth, the Nameless gave her this ring.<BR>"Only use it when you feel lost"<BR>Nothing more is known about it. Only that it's power is unimaginable.
+
+twresearch.name.LIZKIT=Lizbeth's Kit
+twresearch.text.LIZKIT=She was a smith afterall
+twresearch.page.LIZKIT.0=Master Lizbeth was a daughter to a smith. She learned his craft and became the legendary smith known to all.Although this is not the only use to this kit.<BR>This table can be used to imbue the Wardenic armamebts using aspects from the essentis vials.

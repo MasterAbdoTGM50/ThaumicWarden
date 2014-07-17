@@ -1,6 +1,7 @@
 package matgm50.twarden.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import matgm50.twarden.block.tile.TileLizTable;
 import matgm50.twarden.lib.BlockLib;
 import net.minecraft.block.Block;
 
@@ -10,21 +11,15 @@ import net.minecraft.block.Block;
 
 public class ModBlocks {
 
-    public static Block blockExubitura;
-    public static Block blockInfusedQuartzNormal;
-    public static Block blockInfusedQuartzSlab;
-    public static Block blockInfusedQuartzStair;
-    public static Block blockInfusedQuartzChiseled;
-    public static Block blockInfusedQuartzPillar;
+    public static Block blockExubitura = new BlockExubitura();
+    public static Block blockInfusedQuartzNormal = new BlockQuartzNormal();
+    public static Block blockInfusedQuartzChiseled = new BlockQuartzChiseled();
+    public static Block blockInfusedQuartzPillar = new BlockQuartzPillar();
+    public static Block blockInfusedQuartzSlab = new BlockQuartzSlab();
+    public static Block blockInfusedQuartzStair = new BlockQuartzStair();
+    public static Block blockLizTable = new BlockLizTable();
 
     public static void init() {
-
-        blockExubitura = new BlockExubitura();
-        blockInfusedQuartzNormal = new BlockQuartzNormal();
-        blockInfusedQuartzChiseled = new BlockQuartzChiseled();
-        blockInfusedQuartzPillar = new BlockQuartzPillar();
-        blockInfusedQuartzSlab = new BlockQuartzSlab();
-        blockInfusedQuartzStair = new BlockQuartzStair();
 
         GameRegistry.registerBlock(blockExubitura, BlockLib.EXUBITURA_NAME);
         GameRegistry.registerBlock(blockInfusedQuartzNormal, BlockLib.QUARTZ_NORMAL_NAME);
@@ -32,6 +27,9 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockInfusedQuartzPillar, BlockLib.QUARTZ_PILLAR_NAME);
         GameRegistry.registerBlock(blockInfusedQuartzSlab, BlockLib.QUARTZ_SLAB_NAME);
         GameRegistry.registerBlock(blockInfusedQuartzStair, BlockLib.QUARTZ_STAIR_NAME);
+        GameRegistry.registerBlock(blockLizTable, BlockLib.LIZBETH_TABLE_NAME);
+
+        GameRegistry.registerTileEntity(TileLizTable.class, BlockLib.LIZBETH_TABLE_TILE_NAME);
 
     }
 

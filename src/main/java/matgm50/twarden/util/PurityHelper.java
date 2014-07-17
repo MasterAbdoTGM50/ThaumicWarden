@@ -1,6 +1,5 @@
 package matgm50.twarden.util;
 
-import matgm50.twarden.entity.IEldritchMob;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntitySpider;
@@ -15,34 +14,6 @@ import thaumcraft.common.entities.monster.*;
  */
 
 public class PurityHelper {
-
-    public static boolean isEldritch(Entity entity) {
-
-        if(entity instanceof IEldritchMob) {
-
-            return true;
-
-        }
-
-        return false;
-
-    }
-
-    public static boolean isEldritch(MovingObjectPosition mop) {
-
-        if(mop.typeOfHit == MovingObjectPosition.MovingObjectType.ENTITY) {
-
-            if (mop.entityHit != null) {
-
-                return isEldritch(mop.entityHit);
-
-            }
-
-        }
-
-        return false;
-
-    }
 
     public static boolean isTainted(Entity entity) {
 
