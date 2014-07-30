@@ -1,5 +1,7 @@
 #Misc
 itemGroup.TWarden=神秘守望者
+tooltip.wardenic.charge=充能
+tooltip.wardenic.upgrade=升级
 
 #Items
 item.itemResource.0.name=Exubitura花瓣
@@ -29,6 +31,7 @@ tile.blockInfusedQuartzSlab.name=蕴魔石英半砖
 tile.blockInfusedQuartzStair.name=蕴魔石英楼梯
 tile.blockInfusedQuartzChiseled.name=鉴制蕴魔石英块
 tile.blockInfusedQuartzPillar.name=蕴魔石英柱
+tile.blockLizTable.name=莉兹白的桌子
 
 #Aspects
 tc.aspect.EXUBITOR=守护,警戒,胜利,牺牲
