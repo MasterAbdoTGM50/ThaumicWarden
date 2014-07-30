@@ -1,11 +1,12 @@
 #Misc
 itemGroup.TWarden=神秘守望者
+tooltip.wardenic.charge=充能
+tooltip.wardenic.upgrade=升级
 
 #Items
 item.itemResource.0.name=Exubitura花瓣
 item.itemResource.1.name=守护水晶
 item.itemResource.2.name=守护石英
-item.itemResource.3.name=末影之星
 item.itemWardenAmulet.name=守望者项链
 item.itemWardenSword.name=守护之剑
 item.itemWardenHelm.name=守望者头盔
@@ -14,13 +15,14 @@ item.itemWardenLegs.name=守望者护腿
 item.itemWardenBoots.name=守望者靴子
 item.itemFocusPurity.name=法杖核心: 净化
 item.itemLoveRing.name=爱之指环
+item.itemLizHammer.name=莉兹白之锤
 
-#Tooltip
-tooltip.sword.warden=永远的守望者
-tooltip.sword.heal=我将活下去
-tooltip.sword.chaos=我将摧毁你
-tooltip.sword.fire=烧成焦炭吧
-tooltip.sword.light=我的神圣光环将会净化你
+#Quotes
+upgrade.Exubitor.quote=永远的守望者
+upgrade.*.quote=我将活下去
+upgrade.*.quote=我将摧毁你
+upgrade.Ignis.quote=烧成焦炭吧
+upgrade.*.quote=我的神圣光环将会净化你
 
 #Blocks
 tile.blockExubitura.name=Exubitura玫瑰
@@ -29,12 +31,13 @@ tile.blockInfusedQuartzSlab.name=蕴魔石英半砖
 tile.blockInfusedQuartzStair.name=蕴魔石英楼梯
 tile.blockInfusedQuartzChiseled.name=鉴制蕴魔石英块
 tile.blockInfusedQuartzPillar.name=蕴魔石英柱
+tile.blockLizTable.name=莉兹白之桌
 
 #Aspects
-tc.aspect.EXUBITOR=守护,警戒,胜利,牺牲
+tc.aspect.exubitor=守护,警戒,胜利,牺牲
 
 #Research
-tc.research_category.TWARDEN=守望之道
+tc.research_category.TWARDEN=守望者
 
 twresearch.name.TWARDEN=神秘守望者
 twresearch.text.TWARDEN=被我们遗忘已久..
@@ -50,11 +53,7 @@ twresearch.page.INFUSEDQUARTZ.0=你发现了一份古老的手稿，描述了神
 
 twresearch.name.WARDENCRYSTAL=守护水晶
 twresearch.text.WARDENCRYSTAL=第一步...
-twresearch.page.WARDENCRYSTAL.0=你知道这些花瓣是不太寻常的。通过使花瓣结晶你做出了守护水晶.<BR>尽管现在不知道该怎么使用它，但你觉得这世上没有什么是无用的....
-
-twresearch.name.WARDENAMULET=守望者项链
-twresearch.text.WARDENAMULET=无比珍贵
-twresearch.page.WARDENAMULET.0=你觉得你能找到使用这些水晶的方法并且你真的找到了.<BR>将它作为护符使用，你重新制作出了守望者的护身符——帮助守望者们与凋零,恶法师和腐化战斗的圣物。
+twresearch.page.WARDENCRYSTAL.0=你知道这些花瓣某种程度上来说是不寻常的.通过将将它们结晶化就能做出守护水晶.<BR>这个独一无二的水晶似乎对源质和要素有着奇怪的反应.
 
 twresearch.name.WARDENARMOR=护甲
 twresearch.text.WARDENARMOR=感觉我什么都没穿!
@@ -67,3 +66,7 @@ twresearch.page.WARDENSWORD.0=当那位无名者帮助莉兹白找到神秘守�
 twresearch.name.LOVERING=爱之指环
 twresearch.text.LOVERING=I <3 U
 twresearch.page.LOVERING.0=与莉兹白告别前，无名者给了她这个指环。<BR>"在你感觉迷失的时候再使用"<BR>关于它没有更多所知的了。只有它那不可思议的力量....
+
+twresearch.name.LIZKIT=莉兹白工具箱
+twresearch.text.LIZKIT=她毕竟也是个铁匠
+twresearch.page.LIZKIT.0=莉兹白大师是铁匠之女.她学习了精湛的技术并成为了一个传奇的铁匠.尽管这并不是这个工具箱唯一的用处.<BR>它能使用源质瓶的要素给守望装备注入魔力.
