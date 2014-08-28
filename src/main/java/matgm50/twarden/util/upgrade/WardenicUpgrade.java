@@ -26,7 +26,7 @@ public class WardenicUpgrade {
 
     public void onTick(World world, EntityPlayer player, ItemStack stack) {}
 
-    public void onHit(LivingHurtEvent event) {}
+    public void onAttacked(LivingHurtEvent event) {}
 
     public String getQuote() {
 

@@ -1,4 +1,4 @@
-package matgm50.twarden.network.proxy;
+package matgm50.twarden.proxy;
 
 /**
  * Created by MasterAbdoTGM50 on 5/11/2014.

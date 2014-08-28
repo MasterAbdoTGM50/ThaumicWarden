@@ -23,7 +23,7 @@ public class ModItems {
     public static Item itemWardenLegs = new ItemWardenLegs();
     public static Item itemWardenBoots = new ItemWardenBoots();
     public static Item itemLoveRing = new ItemLoveRing();
-    public static Item itemLizHammer = new ItemLizHammer();
+    public static Item itemWaslieHammer = new ItemWaslieHammer();
 
     public static void init() {
 
@@ -36,7 +36,7 @@ public class ModItems {
         GameRegistry.registerItem(itemWardenLegs, ItemLib.WARDEN_LEGS_NAME);
         GameRegistry.registerItem(itemWardenBoots, ItemLib.WARDEN_BOOTS_NAME);
         GameRegistry.registerItem(itemLoveRing, ItemLib.LOVE_RING_NAME);
-        GameRegistry.registerItem(itemLizHammer, ItemLib.LIZ_HAMMER_NAME);
+        GameRegistry.registerItem(itemWaslieHammer, ItemLib.WASLIE_HAMMER_NAME);
 
     }
 

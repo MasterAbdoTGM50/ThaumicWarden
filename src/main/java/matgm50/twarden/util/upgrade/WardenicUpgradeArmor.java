@@ -8,19 +8,17 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import thaumcraft.api.aspects.Aspect;
 
 /**
- * Created by MasterAbdoTGM50 on 7/16/2014.
+ * Created by MasterAbdoTGM50 on 8/28/2014.
  */
 
-public class WardenicUpgradeFire extends WardenicUpgrade {
+public class WardenicUpgradeArmor extends WardenicUpgrade{
 
-    public WardenicUpgradeFire(Aspect aspect) {super(aspect);}
+    public WardenicUpgradeArmor(Aspect aspect) {super(aspect);}
 
     @Override
     public void onAttack(ItemStack stack, EntityPlayer player, Entity entity) {
 
         super.onAttack(stack, player, entity);
-
-        entity.setFire(5);
 
     }
 
@@ -29,24 +27,12 @@ public class WardenicUpgradeFire extends WardenicUpgrade {
 
         super.onTick(world, player, stack);
 
-        if(player.isBurning()) {
-
-            player.extinguish();
-
-        }
-
     }
 
     @Override
     public void onAttacked(LivingHurtEvent event) {
 
         super.onAttacked(event);
-
-        if(event.source.getEntity() != null) {
-
-            event.source.getEntity().setFire(2);
-
-        }
 
     }
 }

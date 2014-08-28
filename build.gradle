@@ -22,8 +22,8 @@ group= "matgm50.twarden" // http://maven.apache.org/guides/mini/guide-naming-con
 archivesBaseName = "TWarden"
 
 minecraft {
-    version = "1.7.2-10.12.2.1121"
-    assetDir = "run/assets"
+    version = "1.7.10-10.13.0.1208"
+    runDir = "run"
 }
 
 dependencies {

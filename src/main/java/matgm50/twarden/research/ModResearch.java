@@ -25,7 +25,7 @@ public class ModResearch {
     public static ResearchItem researchCrystal;
     public static ResearchItem researchWardenArmor;
     public static ResearchItem researchWardenSword;
-    public static ResearchItem researchLizKit;
+    public static ResearchItem researchWaslieHammer;
 
     public static void init() {
 
@@ -54,8 +54,8 @@ public class ModResearch {
         researchWardenArmor.setPages(new ResearchPage("0"), new ResearchPage(ModRecipes.recipeWardenHelm), new ResearchPage(ModRecipes.recipeWardenChest), new ResearchPage(ModRecipes.recipeWardenLegs), new ResearchPage(ModRecipes.recipeWardenBoots));
         researchWardenSword = new ModResearchItem(ResearchLib.WARDEN_SWORD_KEY, ResearchLib.CATEGORY_KEY, new AspectList().add(EXUBITOR, 4).add(Aspect.CRYSTAL, 4).add(Aspect.WEAPON, 4), -1, 2, 3, new ItemStack(ModItems.itemWardenSword)).setParents(ResearchLib.CRYSTAL_KEY, ResearchLib.QUARTZ_KEY).setRound().setSpecial().registerResearchItem();
         researchWardenSword.setPages(new ResearchPage("0"), new ResearchPage(ModRecipes.recipeWardenSword));
-        researchLizKit = new ModResearchItem(ResearchLib.LIZ_KIT_KEY, ResearchLib.CATEGORY_KEY, new AspectList().add(EXUBITOR, 4).add(Aspect.CRYSTAL, 4), 0, 4, 3, new ItemStack(ModItems.itemLizHammer)).setParents(ResearchLib.CRYSTAL_KEY, ResearchLib.QUARTZ_KEY).setRound().setSpecial().registerResearchItem();
-        researchLizKit.setPages(new ResearchPage("0"), new ResearchPage(ModRecipes.recipeLizTable), new ResearchPage(ModRecipes.recipeLizHammer));
+        researchWaslieHammer = new ModResearchItem(ResearchLib.WASLIE_HAMMER_KEY, ResearchLib.CATEGORY_KEY, new AspectList().add(EXUBITOR, 4).add(Aspect.CRYSTAL, 4), 0, 4, 3, new ItemStack(ModItems.itemWaslieHammer)).setParents(ResearchLib.CRYSTAL_KEY, ResearchLib.QUARTZ_KEY).setRound().setSpecial().registerResearchItem();
+        researchWaslieHammer.setPages(new ResearchPage("0"), new ResearchPage(ModRecipes.recipeWaslieHammer));
 
     }
 

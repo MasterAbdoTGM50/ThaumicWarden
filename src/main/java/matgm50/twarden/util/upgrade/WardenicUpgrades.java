@@ -11,7 +11,7 @@ import thaumcraft.api.aspects.Aspect;
 public class WardenicUpgrades {
 
     public static final WardenicUpgrade WARDEN = new WardenicUpgradeWarden(ModResearch.EXUBITOR);
-    public static final WardenicUpgrade FIRE = new WardenicUpgradeWarden(Aspect.FIRE);
+    public static final WardenicUpgrade FIRE = new WardenicUpgradeFire(Aspect.FIRE);
 
     public static void init() {
 

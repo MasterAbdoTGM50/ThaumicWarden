@@ -73,7 +73,7 @@ public class WardenicEvents {
                         if(player.getEquipmentInSlot(i).getItemDamage() != player.getEquipmentInSlot(i).getMaxDamage()) {
 
                             player.getEquipmentInSlot(i).setItemDamage(player.getEquipmentInSlot(i).getItemDamage() + 1);
-                            WardenicHelper.getUpgrade(player.getEquipmentInSlot(i)).onHit(event);
+                            WardenicHelper.getUpgrade(player.getEquipmentInSlot(i)).onAttacked(event);
 
                         }
 

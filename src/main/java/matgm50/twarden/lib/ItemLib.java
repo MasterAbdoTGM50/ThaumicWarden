@@ -17,6 +17,6 @@ public class ItemLib {
     public static final String WARDEN_BOOTS_NAME = "itemWardenBoots";
     public static final String PURITY_FOCUS_NAME = "itemFocusPurity";
     public static final String LOVE_RING_NAME = "itemLoveRing";
-    public static final String LIZ_HAMMER_NAME = "itemLizHammer";
+    public static final String WASLIE_HAMMER_NAME = "itemWaslieHammer";
 
 }

@@ -12,7 +12,8 @@ import matgm50.twarden.crafting.ModRecipes;
 import matgm50.twarden.entity.ModEntities;
 import matgm50.twarden.item.ModItems;
 import matgm50.twarden.lib.ModLib;
-import matgm50.twarden.network.proxy.CommonProxy;
+import matgm50.twarden.client.gui.GuiHandler;
+import matgm50.twarden.proxy.CommonProxy;
 import matgm50.twarden.research.ModResearch;
 import matgm50.twarden.util.TabTWarden;
 import matgm50.twarden.util.WardenicEvents;
@@ -40,6 +41,7 @@ public class TWarden {
     public void preInit(FMLPreInitializationEvent event) {
 
         proxy.initRenderers();
+        GuiHandler.init();
 
         WardenicUpgrades.init();
 

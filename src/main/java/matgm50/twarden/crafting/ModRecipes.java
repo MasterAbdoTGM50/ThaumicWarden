@@ -4,9 +4,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import matgm50.twarden.block.ModBlocks;
 import matgm50.twarden.item.ModItems;
 import matgm50.twarden.lib.ResearchLib;
-import matgm50.twarden.research.ModResearch;
-import matgm50.twarden.util.WardenicHelper;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;
@@ -16,7 +13,6 @@ import thaumcraft.api.crafting.CrucibleRecipe;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.common.config.ConfigBlocks;
-import thaumcraft.common.config.ConfigItems;
 
 /**
  * Created by MasterAbdoTGM50 on 5/22/2014.
@@ -31,8 +27,7 @@ public class ModRecipes {
     public static ShapedArcaneRecipe recipeWardenLegs;
     public static ShapedArcaneRecipe recipeWardenBoots;
     public static ShapedArcaneRecipe recipeWardenSword;
-    public static InfusionRecipe recipeLizTable;
-    public static ShapedArcaneRecipe recipeLizHammer;
+    public static ShapedArcaneRecipe recipeWaslieHammer;
 
     public static void init() {
 
@@ -67,8 +62,7 @@ public class ModRecipes {
         recipeWardenSword = ThaumcraftApi.addArcaneCraftingRecipe(ResearchLib.WARDEN_SWORD_KEY, new ItemStack(ModItems.itemWardenSword, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
                 " X ", " X ", " O ", 'X', new ItemStack(ModItems.itemResource, 1, 2), 'O', new ItemStack(ModItems.itemResource, 1, 1));
 
-        recipeLizTable = ThaumcraftApi.addInfusionCraftingRecipe(ResearchLib.LIZ_KIT_KEY, new ItemStack(ModBlocks.blockLizTable), 5, new AspectList().add(ModResearch.EXUBITOR, 64).add(Aspect.MAGIC, 32), new ItemStack(ConfigBlocks.blockMagicalLog), new ItemStack[]{new ItemStack(ModItems.itemResource,0, 1)});
-        recipeLizHammer = ThaumcraftApi.addArcaneCraftingRecipe(ResearchLib.LIZ_KIT_KEY, new ItemStack(ModItems.itemLizHammer, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
+        recipeWaslieHammer = ThaumcraftApi.addArcaneCraftingRecipe(ResearchLib.WASLIE_HAMMER_KEY, new ItemStack(ModItems.itemWaslieHammer, 1), new AspectList().add(Aspect.ORDER, 125).add(Aspect.ENTROPY, 125).add(Aspect.AIR, 125).add(Aspect.EARTH, 125).add(Aspect.FIRE, 125).add(Aspect.WATER, 125),
                 "XXX", "XOX", " I ", 'X', new ItemStack(ModItems.itemResource, 1, 2), 'O', new ItemStack(ModItems.itemResource, 1, 1), 'I', new ItemStack(ConfigBlocks.blockMagicalLog));
 
     }

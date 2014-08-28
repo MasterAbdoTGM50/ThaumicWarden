@@ -21,6 +21,6 @@ public class ResearchLib {
     public static final String CRYSTAL_KEY = "WARDENCRYSTAL";
     public static final String WARDEN_ARMOR_KEY = "WARDENARMOR";
     public static final String WARDEN_SWORD_KEY = "WARDENSWORD";
-    public static final String LIZ_KIT_KEY = "LIZKIT";
+    public static final String WASLIE_HAMMER_KEY = "WASLIEHAMMER";
 
 }

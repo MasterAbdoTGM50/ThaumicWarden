@@ -1,15 +1,9 @@
-package matgm50.twarden.network.client.renderer;
+package matgm50.twarden.client.renderer;
 
 import net.minecraft.client.entity.AbstractClientPlayer;
-import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
-import org.lwjgl.opengl.GL11;
-import thaumcraft.client.lib.UtilsFX;
-
-import java.util.Random;
 
 /**
  * Created by MasterAbdoTGM50 on 5/20/2014.

@@ -15,7 +15,7 @@ item.itemWardenLegs.name=Warden's Leggings
 item.itemWardenBoots.name=Warden's Boots
 item.itemFocusPurity.name=Wand Focus: Purity
 item.itemLoveRing.name=Ring of Love
-item.itemLizHammer.name=Lizbeth's Hammer
+item.itemWaslieHammer.name=Wesly's Hammer
 
 #Quotes
 upgrade.Exubitor.quote=Forever a warden
@@ -31,7 +31,6 @@ tile.blockInfusedQuartzSlab.name=Infused Quartz Slab
 tile.blockInfusedQuartzStair.name=Infused Quartz Stair
 tile.blockInfusedQuartzChiseled.name=Chiseled Infused Quartz Block
 tile.blockInfusedQuartzPillar.name=Infused Quartz Pillar Block
-tile.blockLizTable.name=Lizbeth's Table
 
 #Aspects
 tc.aspect.exubitor=Warden, Vigilance, Victory, Sacrifice
