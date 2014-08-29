@@ -1,4 +1,4 @@
-package matgm50.twarden.util;
+package matgm50.twarden.util.wardenic;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import matgm50.twarden.item.ItemWardenArmor;
@@ -14,13 +14,13 @@ import java.util.Random;
  * Created by MasterAbdoTGM50 on 7/16/2014.
  */
 
-public class WardenicEvents {
+public class WardenicChargeEvents {
 
     private Random random = new Random();
 
     public static void init() {
 
-        MinecraftForge.EVENT_BUS.register(new WardenicEvents());
+        MinecraftForge.EVENT_BUS.register(new WardenicChargeEvents());
 
     }
 
@@ -73,7 +73,7 @@ public class WardenicEvents {
                         if(player.getEquipmentInSlot(i).getItemDamage() != player.getEquipmentInSlot(i).getMaxDamage()) {
 
                             player.getEquipmentInSlot(i).setItemDamage(player.getEquipmentInSlot(i).getItemDamage() + 1);
-                            WardenicHelper.getUpgrade(player.getEquipmentInSlot(i)).onAttacked(event);
+                            WardenicChargeHelper.getUpgrade(player.getEquipmentInSlot(i)).onAttacked(event);
 
                         }
 

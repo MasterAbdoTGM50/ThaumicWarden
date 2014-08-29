@@ -1,4 +1,4 @@
-package matgm50.twarden.util.upgrade;
+package matgm50.twarden.util.wardenic.upgrade;
 
 import matgm50.twarden.util.DamageSourceWarden;
 import net.minecraft.entity.Entity;
@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.entities.ITaintedMob;
+import thaumcraft.common.config.Config;
 import thaumcraft.common.entities.monster.EntityEldritchGuardian;
 
 /**
@@ -38,6 +39,12 @@ public class WardenicUpgradeWarden extends WardenicUpgrade {
     public void onTick(World world, EntityPlayer player, ItemStack stack) {
 
         super.onTick(world, player, stack);
+
+        if(player.isPotionActive(Config.potionDeathGazeID)) {
+
+            player.removePotionEffect(Config.potionDeathGazeID);
+
+        }
 
     }
 

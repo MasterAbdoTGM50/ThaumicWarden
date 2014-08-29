@@ -2,7 +2,7 @@ package matgm50.twarden.inventory;
 
 import matgm50.twarden.item.ItemWardenArmor;
 import matgm50.twarden.item.ItemWardenSword;
-import matgm50.twarden.util.WardenicHelper;
+import matgm50.twarden.util.wardenic.WardenicChargeHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
@@ -15,22 +15,19 @@ import thaumcraft.api.aspects.IEssentiaContainerItem;
 
 public class ContainerHammer extends Container {
 
-    InventoryPlayer pInv;
-    InventoryCrafting cInv;
-    IInventory rInv;
-    EntityPlayer player;
+    InventoryPlayer playerInv;
+    InventoryCrafting hammerInv;
+    IInventory resultInv;
 
     public ContainerHammer(EntityPlayer player) {
 
-        pInv = player.inventory;
-        cInv = new InventoryCrafting(this, 2, 1);
-        rInv = new InventoryCraftResult();
-
-        this.player = player;
+        playerInv = player.inventory;
+        hammerInv = new InventoryCrafting(this, 2, 1);
+        resultInv = new InventoryCraftResult();
 
         for(int hotbar = 0; hotbar < 9; hotbar++) {
 
-            addSlotToContainer(new Slot(pInv, hotbar, 8 + 18 * hotbar, 142));
+            addSlotToContainer(new Slot(playerInv, hotbar, 8 + 18 * hotbar, 142));
 
         }
 
@@ -38,25 +35,25 @@ public class ContainerHammer extends Container {
 
             for(int collumn = 0; collumn < 9; collumn++) {
 
-                addSlotToContainer(new Slot(pInv, 9 + row * 9  + collumn, 8 + 18 * collumn, 84 + row * 18));
+                addSlotToContainer(new Slot(playerInv, 9 + row * 9  + collumn, 8 + 18 * collumn, 84 + row * 18));
 
             }
 
         }
 
-        addSlotToContainer(new SlotEssentia(cInv, 0, 80, 54));
-        addSlotToContainer(new Slot(cInv, 1, 80, 33));
-        addSlotToContainer(new SlotCrafting(player, cInv, rInv, 0, 80, 12));
+        addSlotToContainer(new SlotEssentia(hammerInv, 0, 80, 54));
+        addSlotToContainer(new Slot(hammerInv, 1, 80, 33));
+        addSlotToContainer(new SlotCrafting(player, hammerInv, resultInv, 0, 80, 12));
 
-        onCraftMatrixChanged(cInv);
+        onCraftMatrixChanged(hammerInv);
 
     }
 
     @Override
-    public void onCraftMatrixChanged(IInventory matrix) {
+    public void onCraftMatrixChanged(IInventory craftingMatrix) {
 
-        ItemStack essentia = matrix.getStackInSlot(0);
-        ItemStack item = matrix.getStackInSlot(1);
+        ItemStack essentia = craftingMatrix.getStackInSlot(0);
+        ItemStack item = craftingMatrix.getStackInSlot(1);
 
         if(item != null) {
 
@@ -67,7 +64,7 @@ public class ContainerHammer extends Container {
                 if(item.getItemDamage() != 0 && item.getItem().isRepairable()) {
 
                     repairedItem.setItemDamage(0);
-                    rInv.setInventorySlotContents(0, repairedItem);
+                    resultInv.setInventorySlotContents(0, repairedItem);
 
                 }
 
@@ -76,17 +73,17 @@ public class ContainerHammer extends Container {
                 ItemStack infusedArmor = new ItemStack(item.getItem());
                 String aspectKey = ((IEssentiaContainerItem)essentia.getItem()).getAspects(essentia).getAspects()[0].getName();
 
-                if(WardenicHelper.upgrades.containsKey(aspectKey)) {
+                if(WardenicChargeHelper.upgrades.containsKey(aspectKey)) {
 
-                    WardenicHelper.setUpgradeOnStack(infusedArmor, aspectKey);
+                    WardenicChargeHelper.setUpgradeOnStack(infusedArmor, aspectKey);
 
                 }
 
-                rInv.setInventorySlotContents(0, infusedArmor);
+                resultInv.setInventorySlotContents(0, infusedArmor);
 
-            } else {rInv.setInventorySlotContents(0, null);}
+            } else {resultInv.setInventorySlotContents(0, null);}
 
-        } else {rInv.setInventorySlotContents(0, null);}
+        } else {resultInv.setInventorySlotContents(0, null);}
 
     }
 
@@ -95,10 +92,10 @@ public class ContainerHammer extends Container {
 
         super.onContainerClosed(player);
 
-        ItemStack essentia = this.cInv.getStackInSlotOnClosing(0);
+        ItemStack essentia = this.hammerInv.getStackInSlotOnClosing(0);
         if(essentia != null) {player.dropPlayerItemWithRandomChoice(essentia, false);}
 
-        ItemStack item = this.cInv.getStackInSlotOnClosing(1);
+        ItemStack item = this.hammerInv.getStackInSlotOnClosing(1);
         if(item != null) {player.dropPlayerItemWithRandomChoice(item, false);}
 
     }

@@ -16,8 +16,8 @@ import matgm50.twarden.client.gui.GuiHandler;
 import matgm50.twarden.proxy.CommonProxy;
 import matgm50.twarden.research.ModResearch;
 import matgm50.twarden.util.TabTWarden;
-import matgm50.twarden.util.WardenicEvents;
-import matgm50.twarden.util.upgrade.WardenicUpgrades;
+import matgm50.twarden.util.wardenic.WardenicChargeEvents;
+import matgm50.twarden.util.wardenic.WardenicUpgrades;
 import matgm50.twarden.world.ModGen;
 import net.minecraft.creativetab.CreativeTabs;
 
@@ -43,13 +43,13 @@ public class TWarden {
         proxy.initRenderers();
         GuiHandler.init();
 
+        WardenicChargeEvents.init();
         WardenicUpgrades.init();
 
         ModItems.init();
         ModBlocks.init();
         ModEntities.init();
         ModGen.init();
-        WardenicEvents.init();
 
     }
 

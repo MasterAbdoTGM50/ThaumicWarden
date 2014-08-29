@@ -23,6 +23,7 @@ upgrade.*.quote=I will survive
 upgrade.*.quote=I will destroy you
 upgrade.Ignis.quote=Burn to a crisp
 upgrade.*.quote=My holy aura will cleanse you
+upgrade.Tutamen.quote=Why are you hurting yourself?
 
 #Blocks
 tile.blockExubitura.name=Exubitura Rose

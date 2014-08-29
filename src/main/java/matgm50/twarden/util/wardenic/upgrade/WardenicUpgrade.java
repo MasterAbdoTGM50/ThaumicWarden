@@ -1,4 +1,4 @@
-package matgm50.twarden.util.upgrade;
+package matgm50.twarden.util.wardenic.upgrade;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,11 +16,7 @@ public class WardenicUpgrade {
 
     private Aspect aspect;
 
-    public WardenicUpgrade(Aspect aspect) {
-
-        this.aspect = aspect;
-
-    }
+    public WardenicUpgrade(Aspect aspect) {this.aspect = aspect;}
 
     public void onAttack(ItemStack stack, EntityPlayer player, Entity entity) {}
 

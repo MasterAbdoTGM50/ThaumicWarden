@@ -1,4 +1,4 @@
-package matgm50.twarden.util.upgrade;
+package matgm50.twarden.util.wardenic.upgrade;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

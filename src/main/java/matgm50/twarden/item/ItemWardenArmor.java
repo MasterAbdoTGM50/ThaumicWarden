@@ -2,7 +2,7 @@ package matgm50.twarden.item;
 
 import matgm50.twarden.TWarden;
 import matgm50.twarden.lib.ItemLib;
-import matgm50.twarden.util.WardenicHelper;
+import matgm50.twarden.util.wardenic.WardenicChargeHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -50,7 +50,7 @@ public class ItemWardenArmor extends ItemArmor implements ISpecialArmor {
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 
         par3List.add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("tooltip.wardenic.charge") + ": " + (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()) + "/" + par1ItemStack.getMaxDamage());
-        par3List.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("tooltip.wardenic.upgrade") + ": " + WardenicHelper.getUpgrade(par1ItemStack).getQuote());
+        par3List.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("tooltip.wardenic.upgrade") + ": " + WardenicChargeHelper.getUpgrade(par1ItemStack).getQuote());
 
         super.addInformation(par1ItemStack, par2EntityPlayer, par3List, par4);
 
@@ -59,7 +59,7 @@ public class ItemWardenArmor extends ItemArmor implements ISpecialArmor {
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 
-        WardenicHelper.getUpgrade(itemStack).onTick(world, player, itemStack);
+        WardenicChargeHelper.getUpgrade(itemStack).onTick(world, player, itemStack);
 
         super.onArmorTick(world, player, itemStack);
 

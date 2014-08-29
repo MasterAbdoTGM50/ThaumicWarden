@@ -1,7 +1,7 @@
-package matgm50.twarden.util;
+package matgm50.twarden.util.wardenic;
 
 import matgm50.twarden.research.ModResearch;
-import matgm50.twarden.util.upgrade.WardenicUpgrade;
+import matgm50.twarden.util.wardenic.upgrade.WardenicUpgrade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
@@ -11,7 +11,7 @@ import java.util.HashMap;
  * Created by MasterAbdoTGM50 on 6/24/2014.
  */
 
-public class WardenicHelper {
+public class WardenicChargeHelper {
 
     public static HashMap<String, WardenicUpgrade> upgrades = new HashMap<String, WardenicUpgrade>();
 
