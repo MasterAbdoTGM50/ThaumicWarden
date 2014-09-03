@@ -1,6 +1,7 @@
 package matgm50.twarden.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import matgm50.twarden.block.tile.TileWitor;
 import matgm50.twarden.lib.BlockLib;
 import net.minecraft.block.Block;
 
@@ -16,6 +17,7 @@ public class ModBlocks {
     public static Block blockInfusedQuartzPillar = new BlockQuartzPillar();
     public static Block blockInfusedQuartzSlab = new BlockQuartzSlab();
     public static Block blockInfusedQuartzStair = new BlockQuartzStair();
+    public static Block blockWitor = new BlockWitor();
 
     public static void init() {
 
@@ -25,6 +27,9 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockInfusedQuartzPillar, BlockLib.QUARTZ_PILLAR_NAME);
         GameRegistry.registerBlock(blockInfusedQuartzSlab, BlockLib.QUARTZ_SLAB_NAME);
         GameRegistry.registerBlock(blockInfusedQuartzStair, BlockLib.QUARTZ_STAIR_NAME);
+        GameRegistry.registerBlock(blockWitor, BlockLib.BLOCK_WITOR_NAME);
+
+        GameRegistry.registerTileEntity(TileWitor.class, BlockLib.TILE_WITOR_NAME);
 
     }
 

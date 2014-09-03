@@ -19,7 +19,6 @@ public class ItemWardenBoots extends ItemWardenArmor {
 
         super(3);
         setUnlocalizedName(ItemLib.WARDEN_BOOTS_NAME);
-        setCreativeTab(TWarden.tabTWarden);
 
     }
 

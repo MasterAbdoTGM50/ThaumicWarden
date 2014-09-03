@@ -9,9 +9,11 @@ import matgm50.twarden.lib.ItemLib;
 import matgm50.twarden.lib.ModLib;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 /**
  * Created by MasterAbdoTGM50 on 6/26/2014.
@@ -35,6 +37,15 @@ public class ItemLoveRing extends Item implements IBauble {
     public void registerIcons(IIconRegister register) {
 
         itemIcon = register.registerIcon(ModLib.ID.toLowerCase() + ":" + "lovering");
+
+    }
+
+    @Override
+    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+
+        world.playSoundAtEntity(player, "twarden:abderp", 1, 1);
+
+        return super.onItemRightClick(stack, world, player);
 
     }
 

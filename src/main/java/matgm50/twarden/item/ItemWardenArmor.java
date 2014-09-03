@@ -13,6 +13,8 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
+import thaumcraft.api.IVisDiscountGear;
+import thaumcraft.api.aspects.Aspect;
 
 import java.util.List;
 
@@ -20,12 +22,11 @@ import java.util.List;
  * Created by MasterAbdoTGM50 on 6/26/2014.
  */
 
-public class ItemWardenArmor extends ItemArmor implements ISpecialArmor {
+public class ItemWardenArmor extends ItemArmor implements ISpecialArmor, IVisDiscountGear {
 
     public ItemWardenArmor(int type) {
 
         super(ModItems.materialWarden, 3, type);
-        setUnlocalizedName(ItemLib.WARDEN_CHEST_NAME);
         setCreativeTab(TWarden.tabTWarden);
         setMaxStackSize(1);
 
@@ -85,5 +86,8 @@ public class ItemWardenArmor extends ItemArmor implements ISpecialArmor {
 
     @Override
     public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {}
+
+    @Override
+    public int getVisDiscount(ItemStack stack, EntityPlayer player, Aspect aspect) {return 5;}
 
 }

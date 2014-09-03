@@ -8,7 +8,7 @@ item.itemResource.0.name=Exubitura Petal
 item.itemResource.1.name=Wardenic Crystal
 item.itemResource.2.name=Wardenic Quartz
 item.itemWardenAmulet.name=Warden's Amulet
-item.itemWardenSword.name=Warden's Sword
+item.itemWardenWeapon.name=Warden's Sword
 item.itemWardenHelm.name=Warden's Helmet
 item.itemWardenChest.name=Warden's Chestplate
 item.itemWardenLegs.name=Warden's Leggings
@@ -16,14 +16,17 @@ item.itemWardenBoots.name=Warden's Boots
 item.itemFocusPurity.name=Wand Focus: Purity
 item.itemLoveRing.name=Ring of Love
 item.itemWaslieHammer.name=Wesly's Hammer
+item.itemFocusIllumination.name=Wand Focus: Illumination
 
 #Quotes
 upgrade.Exubitor.quote=Forever a warden
-upgrade.*.quote=I will survive
-upgrade.*.quote=I will destroy you
+upgrade..quote=I will survive
+upgrade.Entropy.quote=I will destroy you
 upgrade.Ignis.quote=Burn to a crisp
-upgrade.*.quote=My holy aura will cleanse you
 upgrade.Tutamen.quote=Why are you hurting yourself?
+upgrade.Aqua.quote=Smells fishy
+upgrade.Aer.quote=Free like wind
+upgrade.Terra.quote=Strong like rock
 
 #Blocks
 tile.blockExubitura.name=Exubitura Rose
@@ -32,6 +35,7 @@ tile.blockInfusedQuartzSlab.name=Infused Quartz Slab
 tile.blockInfusedQuartzStair.name=Infused Quartz Stair
 tile.blockInfusedQuartzChiseled.name=Chiseled Infused Quartz Block
 tile.blockInfusedQuartzPillar.name=Infused Quartz Pillar Block
+tile.blockWitor.name=Wardenic Light
 
 #Aspects
 tc.aspect.exubitor=Warden, Vigilance, Victory, Sacrifice
@@ -59,14 +63,49 @@ twresearch.name.WARDENARMOR=The Armor
 twresearch.text.WARDENARMOR=Feels like I'm wearing nothin' at all!
 twresearch.page.WARDENARMOR.0=More than once have you found mention of the legendary quality of Wardenic Armor, their ability to absorb staggering blows while remaining surprisingly breathable.<LINE>Through painstaking research you have learned how to create these pieces using the Warden's Crystal.<BR>The quartz used seems to make it absorb more hits and rebuild itself and the crystal gives it the ability to be imbued with aspects for unique effects.
 
-twresearch.name.WARDENSWORD=The Sword
-twresearch.text.WARDENSWORD=The ramnents remain
-twresearch.page.WARDENSWORD.0=When the Nameless one helped Lizbeth found the Thaumic Wardens, he entrusted her with the ramnents of the Light Blade.<BR>She repaired the sword to manipulate the power of aspects to create different effects depending on the imbued aspect and to rebuild itself so that it never gets broken again.
+twresearch.name.WARDENWEAPON=The Sword
+twresearch.text.WARDENWEAPON=The ramnents remain
+twresearch.page.WARDENWEAPON.0=When the Nameless one helped Lizbeth found the Thaumic Wardens, he entrusted her with the ramnents of the Light Blade.<BR>She repaired the sword to manipulate the power of aspects to create different effects depending on the imbued aspect and to rebuild itself so that it never gets broken again.
 
 twresearch.name.LOVERING=Ring of Love
 twresearch.text.LOVERING=I <3 U
-twresearch.page.LOVERING.0=Before leaving Lizbeth, the Nameless gave her this ring.<BR>"Only use it when you feel lost"<BR>Nothing more is known about it. Only that it's power is unimaginable.
+twresearch.page.LOVERING.0=Before leaving Lizbeth, Wesly gave her this ring.<BR>"Only use it when you feel lost"<BR>Nothing more is known about it. Only that it's power is unimaginable.
 
-twresearch.name.LIZKIT=Lizbeth's Kit
-twresearch.text.LIZKIT=She was a smith afterall
-twresearch.page.LIZKIT.0=Master Lizbeth was a daughter to a smith. She learned his craft and became the legendary smith known to all.Although this is not the only use to this kit.<BR>This table can be used to imbue the Wardenic armamebts using aspects from the essentis vials.
+twresearch.name.WASLIEHAMMER=Wesly's Hammer
+twresearch.text.WASLIEHAMMER=OP as flux
+twresearch.page.WASLIEHAMMER.0=This hammer was created by the Master Wanderer Wesly to help Lizbeth and the Thaumic Wardens<LINE>Using the hammer is easy since it doesn't require a kit.<BR>The hammer can also be used to infuse various aspects into the Wardenic Armaments.
+
+twresearch.name.ILLUMINATION=Wand Focus: Illumination
+twresearch.text.ILLUMINATION=They know...
+twresearch.page.ILLUMINATION.0=We know all about your plans<BR>You know you should join us<BR>Our thaumic focus that creates illumination on right click will illuminate you to the right path
+
+twresearch.name.LORE1=The Prologue
+twresearch.text.LORE1=Everything has a beginning
+twresearch.page.LORE1.0=When Lizbeth was young there was always an old man that used to visit her and her family. His name was Wesly and he was the leader of the Wanderer's Order at his time.<BR>By the time Young Master Lizbeth turned 16 she had an affection to the thaumic arts and wanted to learn them.<BR>"Wesly, Can you take me to the college of thaumturges so that I learn the thaumic arts?" Lizbeth asked<BR>"What's that gibberish you're talking about Liz?" Wesly replied
+twresearch.page.LORE1.1="The ancient arts are much powerful" he added. "I think that choice should be left to me, don't you think?" Lizbeth said. "Alright alright, don't get all angry on me" he said<BR>"Have you even asked your parents lizzy?" Wesly asked<BR>"Oh they already agreed and told me to ask you to accompany me" Lizbeth said<BR>"So you've already made up your mind huh" "Prepare yourself. We leave tomorrow morning" he said <BR>Lizbeth was happy to hear these new but she felt Wesly didn't agree because she asked and that he had other reasons. In the monring Wesly picked up Lizbeth and began talking to her.<BR>
+twresearch.page.LORE1.2="Look at you all grown up and going on a journey" he said "before we reach that college take this and only open it when you feel lost"<BR>"should I expect a powerful spell that you harnessed the last years in this box" lizbeth said sarcastically<BR>"No but, it will guide you in a moment of despair" he said<BR>And so they reached the college with Lizbeth one step away from here dream<BR>
+
+twresearch.name.LORE2=Learning The Ropes
+twresearch.text.LORE2=And so it begins
+twresearch.page.LORE2.0=In the front of the college yet another old man was waiting. That old man was Master Azanor, the man behind the thaumic arts.<BR>"I see that time has been rather kind to you old friend" Wesly said to Azanor.<BR>"Well I couldn't sit behind doing nothing after his death" Azanor replied<BR>"Wait a minute you know eachother!!!" Lizbeth said in surprise "Well Lizzy there's a legend that says all old men know eachother" Wesly said<BR>
+twresearch.page.LORE2.1="Speak for yourself I'm still in the middle of my youth" Azanor replied "So is this little girl the student you told me about?" "Well Little liz since you are this old chap's daughter I'm gonna appoint you to aspecial thaumturge" Azanor said<BR>"I'm not his daughter" "She's not my daughter" Wesly and Lizbeth said in sync<BR>"Sure you're not" old annoying Azanor teased<BR>And so Wesly took his leave and Azanor took her to her teacher and frankly he wasn't what she imagined.<BR>"Lizbeth meet your teacher Vana and his cat.... Vana" Azanor said<BR>
+twresearch.page.LORE2.2="You must be Lizbeth, I heard a ton o' good things bout ya" Vana said in his tacky pirate accent<BR>"You must be kidding me.. that's my teacher. He doesn't even know how to talk properly" Lizbeth said<BR>"OOOH you've got a temper, I think we're gonna get along just fiiine" Vana said<BR>Lizbeth really was quite the thaumturge. It was as if she was born with the talent and not to mention that she has grown to like Vana and not the way you're thinking
+twresearch.page.LORE2.3=you Twilight lover. He was crazy and warped but he wasn't strict as the other teachers and gave Lizbeth the freedom she needed to practice.<BR>After a couple of weeks Lizbeth has become a fully fledged thaumturge and maybe ready to become a teacher after a couple of days.<BR>Vana was requested to meet Azanor the next morning<BR>
+
+twresearch.name.LORE3=Not Making Sense
+twresearch.text.LORE3=At All
+twresearch.page.LORE3.0=The meeting with Azanor and Vana wasn't the pleasant kind. They knew something dangerous was coming but, what could it be?<BR>"Master, I have trained her as you and Master Wesly ordered but time is growing short. She must be told the truth before it's too late" Vana said with fear on his voice<BR>"Yes but, I fear that it's already too late" Azanor replied then aloud sundering sound was heard from outside the college.<BR>
+twresearch.page.LORE3.1=Meanwhile the students were being attacked by mysterious creatures. Their attacks weren't affecting them so Lizbeth drew their atention inorder to allow the other students to escape.<BR>Sadly Lizbeth made her run to a deadend in the main hallway. Why is there a deadend in the "main" hallway? who knows? only the dead architect knows.<BR>When Lizbeth got surrounded she remembered the box Wesly gave her. She opened the box only to find a ring within it. She tried to put it on but the moment she touched it a blinding aura came out of it burning all the creatures surrounding the area.
+twresearch.page.LORE3.2=Then out of a sudden a spirit of a white armored man appeared and confronted her.<BR>"Who are you and where did you come from?" Lizbeth asked<BR>"Who I am doesn't matter. What matters is what I'm going to say" The spirit said<BR>"We're surrounded by weird monsters and you want to TALK!!!" Lizbeth said<BR>"You need not worry, the ring may be carrying a very small amount of me but even that should be enough to put them at bay. Now allow me to start" The spirit replied<BR>
+twresearch.page.LORE3.3="As you might have noticed these creatures were trying to kill all of you and especially you. They are called the Eldritch and they are spawns of the void that was sealed many centuries ago"<BR>"The seal is growing weaker and weaker each year. It's far from broken but what managed to escape became those abominations and we had to seal them off 42 years ago"<BR>"Your role in this is far greater than you can imagine. You are to be their slayer. I and those who were with me are not the heroes of this story we never was. Each master acknowledged this very fact as I passed it to the masters after me"
+twresearch.page.LORE3.4="We Master Wanderers are not meant to be heroes but to guide them when the time comes with one. I know this doesn't make much sense Lizbeth but you'll have to believe me" The spirit said<BR>Vana entered the room and didn't seem surprised that a weird spirit is talking to his student and so he said "It's an honour to meet you sir"<BR>"Oh I'm glad to know you survived young one" The Spirit said<BR>"My energy is becoming weaker and I must save what's remaining for this ring to stay functional" "Seek Wesly he'll lead you to the right path" The Spirit said<BR>The spirit faded away leaving Lizbeth in a wonder<BR>
+twresearch.page.LORE3.5="Where were you when I was being attacked" Lizbeth said to Vana<BR>"Oh I was drinking tea with our guests and trading war stories... WHAT IN THE NAME OF THAUMTURGY DO YOU THINK I WAS DOING?" Vana replied<BR>"Probably patting your cat" Lizbeth said<BR>"How did she know?" Vana whispered to himself<BR>
+
+twresearch.name.LORE4=The Journey Begins
+twresearch.text.LORE4=Memories Lost?
+twresearch.page.LORE4.0=After a couple of days Lizbeth and Vana reached Fort Rose and sought Wesly for help.<BR>"Vana is with you..... that doesn't mean well" Wesly said "He's crazy but he's good" Lizbeth said sarcastically<BR>"I opened that box you gave me and the old spirit told me about the Eldritch and that I must seek you to stop them" Lizbeth said<BR>"That easy!!! you're not gonna ask for details" Vana interrupted<BR>
+twresearch.page.LORE4.1="They tried killing me and my friends and that's not something I take lightly" Lizbeth said<BR>"Wesly can you create something to help defeat them. When I fought them I wasn't even able to pass through their runes" Lizbeth said<BR>"Yes they will prove difficult to fight. I will need your help. Create that magical metal of yours and come see me in the reliquary room" Wesly replied<BR>
+twresearch.page.LORE4.2=*The text changes into weird runes as if you are not supposed to learn what they say*
+twresearch.page.LORE4.3="Now we're ready. Prepare yourself dear we leave at dawn" Wesly said<BR>The morning came and Vana and Wesly went to check on Lizbeth before leaving. They didn't find her. She had already left alone before everyone woke up. How did she pass through the guards though? probably used an invisibility Focus or something<BR>"We have to reach her before she does something rash" Vana said<BR>"I only hope we make it in time" Wesly replied to him
+
+

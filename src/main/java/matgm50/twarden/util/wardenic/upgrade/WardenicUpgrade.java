@@ -8,13 +8,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import thaumcraft.api.aspects.Aspect;
 
+import java.util.Random;
+
 /**
  * Created by MasterAbdoTGM50 on 7/14/2014.
  */
 
 public class WardenicUpgrade {
 
-    private Aspect aspect;
+    public Aspect aspect;
+    public Random random = new Random();
 
     public WardenicUpgrade(Aspect aspect) {this.aspect = aspect;}
 

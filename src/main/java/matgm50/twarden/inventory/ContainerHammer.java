@@ -1,7 +1,7 @@
 package matgm50.twarden.inventory;
 
 import matgm50.twarden.item.ItemWardenArmor;
-import matgm50.twarden.item.ItemWardenSword;
+import matgm50.twarden.item.ItemWardenWeapon;
 import matgm50.twarden.util.wardenic.WardenicChargeHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -57,7 +57,7 @@ public class ContainerHammer extends Container {
 
         if(item != null) {
 
-            if(!(item.getItem() instanceof ItemWardenArmor || item.getItem() instanceof ItemWardenSword)) {
+            if(!(item.getItem() instanceof ItemWardenArmor || item.getItem() instanceof ItemWardenWeapon)) {
 
                 ItemStack repairedItem = new ItemStack(item.getItem());
 

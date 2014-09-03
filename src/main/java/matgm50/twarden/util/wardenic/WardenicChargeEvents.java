@@ -2,7 +2,7 @@ package matgm50.twarden.util.wardenic;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import matgm50.twarden.item.ItemWardenArmor;
-import matgm50.twarden.item.ItemWardenSword;
+import matgm50.twarden.item.ItemWardenWeapon;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
@@ -35,7 +35,7 @@ public class WardenicChargeEvents {
 
                 if(player.getEquipmentInSlot(i) != null) {
 
-                    if(player.getEquipmentInSlot(i).getItem() instanceof ItemWardenArmor || player.getEquipmentInSlot(i).getItem() instanceof ItemWardenSword) {
+                    if(player.getEquipmentInSlot(i).getItem() instanceof ItemWardenArmor || player.getEquipmentInSlot(i).getItem() instanceof ItemWardenWeapon) {
 
                         if(player.getEquipmentInSlot(i).getItemDamage() != player.getEquipmentInSlot(i).getMaxDamage()) {
 

@@ -15,6 +15,12 @@ public class WardenicChargeHelper {
 
     public static HashMap<String, WardenicUpgrade> upgrades = new HashMap<String, WardenicUpgrade>();
 
+    public static void addUpgrade(WardenicUpgrade upgrade) {
+
+        addUpgrade(upgrade.aspect.getName(), upgrade);
+
+    }
+
     public static void addUpgrade(String key, WardenicUpgrade upgrade) {
 
         upgrades.put(key, upgrade);

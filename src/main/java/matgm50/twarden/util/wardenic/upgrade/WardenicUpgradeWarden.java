@@ -4,6 +4,7 @@ import matgm50.twarden.util.DamageSourceWarden;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -42,7 +43,19 @@ public class WardenicUpgradeWarden extends WardenicUpgrade {
 
         if(player.isPotionActive(Config.potionDeathGazeID)) {
 
-            player.removePotionEffect(Config.potionDeathGazeID);
+            if(random.nextInt(5) == 1) {player.removePotionEffect(Config.potionDeathGazeID);}
+
+        }
+
+        if(player.isPotionActive(Config.potionTaintPoisonID)) {
+
+            if(random.nextInt(5) == 1) {player.removePotionEffect(Config.potionTaintPoisonID);}
+
+        }
+
+        if(player.isPotionActive(Potion.wither.getId())) {
+
+            if(random.nextInt(5) == 1) {player.removePotionEffect(Potion.wither.getId());}
 
         }
 
@@ -53,5 +66,12 @@ public class WardenicUpgradeWarden extends WardenicUpgrade {
 
         super.onAttacked(event);
 
+        if(event.source.getEntity() instanceof EntityEldritchGuardian || event.source.getEntity() instanceof ITaintedMob) {
+
+            event.setCanceled(true);
+
+        }
+
     }
+
 }

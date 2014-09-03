@@ -22,7 +22,6 @@ public class ItemWardenHelm extends ItemWardenArmor implements IRevealer, IGoggl
 
         super(0);
         setUnlocalizedName(ItemLib.WARDEN_HELM_NAME);
-        setCreativeTab(TWarden.tabTWarden);
 
     }
 

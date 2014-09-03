@@ -19,7 +19,6 @@ public class ItemWardenLegs extends ItemWardenArmor {
 
         super(2);
         setUnlocalizedName(ItemLib.WARDEN_LEGS_NAME);
-        setCreativeTab(TWarden.tabTWarden);
 
     }
 
