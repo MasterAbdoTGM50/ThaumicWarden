@@ -19,7 +19,7 @@ public class TabTWarden extends CreativeTabs {
     @Override
     public Item getTabIconItem() {
 
-        return ModItems.itemResource;
+        return ModItems.itemWardenAmulet;
 
     }
 

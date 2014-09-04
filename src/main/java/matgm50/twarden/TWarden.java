@@ -15,7 +15,6 @@ import matgm50.twarden.lib.ModLib;
 import matgm50.twarden.client.gui.GuiHandler;
 import matgm50.twarden.proxy.CommonProxy;
 import matgm50.twarden.research.ModResearch;
-import matgm50.twarden.util.BeautyTick;
 import matgm50.twarden.util.TabTWarden;
 import matgm50.twarden.util.wardenic.WardenicChargeEvents;
 import matgm50.twarden.util.wardenic.WardenicUpgrades;
@@ -46,7 +45,6 @@ public class TWarden {
 
         WardenicChargeEvents.init();
         WardenicUpgrades.init();
-        BeautyTick.init();
 
         ModItems.init();
         ModBlocks.init();
